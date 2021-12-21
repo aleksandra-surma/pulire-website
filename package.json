@@ -1,6 +1,6 @@
 {
   "name": "pulire",
-  "version": "1.0.1",
+  "version": "0.0.1",
   "description": "pulire - kompleksowe sprzątanie obiektów",
   "main": "index.js",
   "private": true,
@@ -14,7 +14,7 @@
     "url": "git+https://github.com/sebastian-lucjan/pulire-website.git"
   },
   "browserslist": "> 0.1%",
-  "author": "Sebastian Łucjan",
+  "author": "ioten.io - Sebastian Łucjan",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/sebastian-lucjan/pulire-website/issues"

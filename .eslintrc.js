@@ -33,7 +33,7 @@ module.exports = {
       {
         semi: true,
         tabWidth: 2,
-        printWidth: 100,
+        printWidth: 120,
         singleQuote: true,
         trailingComma: 'all',
         jsxBracketSameLine: true,
@@ -49,8 +49,10 @@ module.exports = {
     'jsx-a11y/anchor-is-valid': 'off',
     'func-names': 'off',
     'import/no-extraneous-dependencies': 'off',
+    'import/no-unresolved': 'off',
     'react/jsx-props-no-spreading': 'off',
     'no-console': 'off',
+    'react/function-component-definition': 'off',
   },
 };
 
@@ -63,5 +65,4 @@ module.exports = {
 // "no-use-before-define": "off",
 // "import/no-unresolved": "off",
 // "no-undef": "off",
-// "react/function-component-definition": "off",
 // "@typescript-eslint/no-use-before-define": ["error"]
