@@ -1,16 +1,32 @@
 {
+  "name": "pulire",
+  "version": "1.0.1",
+  "description": "pulire - kompleksowe sprzątanie obiektów",
+  "main": "index.js",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sebastian-lucjan/pulire-website.git"
+  },
+  "browserslist": "> 0.1%",
+  "author": "Sebastian Łucjan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sebastian-lucjan/pulire-website/issues"
+  },
+  "homepage": "https://www.pulire.co",
   "dependencies": {
     "next": "latest",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
+    "@next/eslint-plugin-next": "^12.0.7",
     "autoprefixer": "^10.2.6",
     "eslint": "^8.4.1",
     "eslint-config-airbnb": "^19.0.2",
