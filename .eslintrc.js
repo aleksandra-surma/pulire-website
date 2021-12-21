@@ -4,19 +4,19 @@ module.exports = {
     ecmaVersion: 2021, // Use the latest ecmascript standard
     sourceType: 'module', // Allows using import/export statements
     ecmaFeatures: {
-      jsx: true // Enable JSX since we're using React
-    }
+      jsx: true, // Enable JSX since we're using React
+    },
   },
   settings: {
     react: {
-      version: 'detect' // Automatically detect the react version
-    }
+      version: 'detect', // Automatically detect the react version
+    },
   },
   env: {
     browser: true, // Enables browser globals like window and document
     amd: true, // Enables require() and define() as global variables as per the amd spec.
     node: true, // Enables Node.js global variables and Node.js scoping.
-    es2021: true
+    es2021: true,
   },
   plugins: ['react'],
   extends: [
@@ -24,11 +24,22 @@ module.exports = {
     'eslint:recommended',
     'plugin:react/recommended',
     'plugin:jsx-a11y/recommended',
-    'plugin:prettier/recommended' // Make this the last element so prettier config overrides other formatting rules
+    'plugin:prettier/recommended', // Make this the last element so prettier config overrides other formatting rules
   ],
   rules: {
     'react/prop-types': 'off',
-    'prettier/prettier': ['error', {}, { usePrettierrc: true }], // Use our .prettierrc file as source
+    'prettier/prettier': [
+      'error',
+      {
+        semi: true,
+        tabWidth: 2,
+        printWidth: 100,
+        singleQuote: true,
+        trailingComma: 'all',
+        jsxBracketSameLine: true,
+      },
+      { usePrettierrc: true },
+    ], // Use our .prettierrc file as source
     'react/react-in-jsx-scope': 'off',
     'react/jsx-filename-extension': 'off',
     'jsx-a11y/click-events-have-key-events': 'off',
@@ -39,8 +50,8 @@ module.exports = {
     'func-names': 'off',
     'import/no-extraneous-dependencies': 'off',
     'react/jsx-props-no-spreading': 'off',
-    'no-console': 'off'
-  }
+    'no-console': 'off',
+  },
 };
 
 // 'import/extensions': 'off',
