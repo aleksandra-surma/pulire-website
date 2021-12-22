@@ -1,10 +1,12 @@
 import 'styles/globals.css';
 import { StrictMode } from 'react';
+import HeadContainer from 'components/Head/Head';
 
 const MyApp = ({ Component, pageProps }) => {
   return (
     <StrictMode>
-      <Component {...pageProps} />
+      <HeadContainer />
+      <div suppressHydrationWarning>{typeof window === 'undefined' ? null : <Component {...pageProps} />}</div>
     </StrictMode>
   );
 };
