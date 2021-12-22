@@ -1,12 +1,29 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
   mode: 'jit',
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        barlow: ["'Barlow', sans-serif", ...defaultTheme.fontFamily.sans],
+        redHat: ['Red Hat Display', ...defaultTheme.fontFamily.sans],
+      },
+    },
   },
   variants: {
     extend: {},
   },
   plugins: [],
 };
+
+// @layer base {
+//   body {
+//     font-family: 'Red Hat Display', sans-serif;
+//     font-weight: 400;
+//   }
+//   nav {
+//     font-family: 'Barlow', sans-serif;
+//   }
+// }
