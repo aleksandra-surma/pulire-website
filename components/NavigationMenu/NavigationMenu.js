@@ -1,12 +1,12 @@
-import { NavLink } from 'react-router-dom';
+import Link from 'next/link';
 
 const NavigationMenu = ({ isBurgerMenu }) => {
   return (
     <nav className="col-start-3 font-normal flex justify-end align-center items-center pr-8">
-      <NavLink to="/">HOME</NavLink>
-      <NavLink to="/about">O NAS</NavLink>
-      <NavLink to="/offer">OFERTA</NavLink>
-      <NavLink to="/contact">KONTAKT</NavLink>
+      <Link href="/">HOME</Link>
+      <Link href="/o-nas">O NAS</Link>
+      <Link href="/oferta">OFERTA</Link>
+      <Link href="/kontakt">KONTAKT</Link>
     </nav>
   );
 };

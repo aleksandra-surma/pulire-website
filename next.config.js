@@ -3,7 +3,7 @@ module.exports = {
     return [
       {
         source: '/o-nas',
-        destination: '/about',
+        destination: '/o-nas',
         permanent: true,
       },
     ];
