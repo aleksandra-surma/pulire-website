@@ -1,9 +1,15 @@
 import { Link } from 'routes';
 import navButtonsData from 'data/buttons';
-import useNavButtonClasses from 'hooks/useNavButtonClasses';
+import { useRouter } from 'next/router';
 
 const NavigationMenu = () => {
-  const [navButtonClasses] = useNavButtonClasses();
+  const { asPath: pathnameUrl } = useRouter();
+
+  const navButtonClasses = (index, path) => {
+    return `${pathnameUrl === path ? 'text-gray-800 font-semibold' : 'text-gray-500'} ${
+      index === navButtonsData.length - 1 ? '' : 'pr-14'
+    }`;
+  };
 
   return (
     <nav className="flex col-start-3 justify-end items-center pr-8 font-normal align-center">
