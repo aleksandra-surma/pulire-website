@@ -1,7 +1,14 @@
-import 'tailwindcss/tailwind.css'
+import 'styles/globals.css';
+import { StrictMode } from 'react';
+import HeadContainer from 'components/Head/Head';
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
-}
+const MyApp = ({ Component, pageProps }) => {
+  return (
+    <StrictMode>
+      <HeadContainer />
+      <Component {...pageProps} />
+    </StrictMode>
+  );
+};
 
-export default MyApp
+export default MyApp;

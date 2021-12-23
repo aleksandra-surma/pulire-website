@@ -1,18 +1,46 @@
 {
+  "name": "pulire",
+  "version": "0.0.1",
+  "description": "pulire - kompleksowe sprzątanie obiektów",
+  "main": "index.js",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "node server.js",
     "build": "next build",
-    "start": "next start"
+    "start": "NODE_ENV=production node server.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sebastian-lucjan/pulire-website.git"
+  },
+  "browserslist": "> 0.1%",
+  "author": "ioten.io - Sebastian Łucjan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sebastian-lucjan/pulire-website/issues"
+  },
+  "homepage": "https://www.pulire.co",
   "dependencies": {
+    "express": "^4.17.2",
     "next": "latest",
+    "next-routes": "^1.4.2",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^6.2.1"
   },
   "devDependencies": {
+    "@next/eslint-plugin-next": "^12.0.7",
     "autoprefixer": "^10.2.6",
+    "eslint": "^8.4.1",
+    "eslint-config-airbnb": "^19.0.2",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.27.1",
+    "eslint-plugin-react-hooks": "^4.3.0",
     "postcss": "^8.3.5",
-    "tailwindcss": "^2.2.4"
+    "prettier": "^2.5.1",
+    "tailwindcss": "^3.0.7"
   }
 }
