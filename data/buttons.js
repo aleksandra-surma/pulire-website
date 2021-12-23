@@ -3,7 +3,6 @@ const navButtonsData = [
     label: 'HOME',
     path: '/',
   },
-
   {
     label: 'O NAS',
     path: '/o-nas',
