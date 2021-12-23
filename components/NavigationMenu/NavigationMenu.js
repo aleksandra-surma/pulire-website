@@ -1,19 +1,19 @@
-import Link from 'next/link';
+import { Link } from 'routes';
 
-const NavigationMenu = ({ isBurgerMenu }) => {
+const NavigationMenu = () => {
   return (
-    <nav className="col-start-3 font-normal flex justify-end align-center items-center pr-8">
+    <nav className="flex col-start-3 justify-end items-center pr-8 font-normal align-center">
       <div className="pr-14 text-gray-800">
-        <Link href="/">HOME</Link>
+        <Link route="/">HOME</Link>
       </div>
       <div className="pr-14 text-gray-800">
-        <Link href="/o-nas">O NAS</Link>
+        <Link route="/o-nas">O NAS</Link>
       </div>
       <div className="pr-14 text-gray-800">
-        <Link href="/oferta">OFERTA</Link>
+        <Link route="/oferta">OFERTA</Link>
       </div>
       <div className="text-gray-800">
-        <Link href="/kontakt">KONTAKT</Link>
+        <Link route="/kontakt">KONTAKT</Link>
       </div>
     </nav>
   );

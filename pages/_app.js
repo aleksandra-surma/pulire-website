@@ -6,7 +6,7 @@ const MyApp = ({ Component, pageProps }) => {
   return (
     <StrictMode>
       <HeadContainer />
-      <div suppressHydrationWarning>{typeof window === 'undefined' ? null : <Component {...pageProps} />}</div>
+      <Component {...pageProps} />
     </StrictMode>
   );
 };
