@@ -6,7 +6,7 @@ export default function BaseLayout({ children }) {
     <>
       <Header />
       {children}
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
