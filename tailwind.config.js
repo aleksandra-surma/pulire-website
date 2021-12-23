@@ -10,6 +10,15 @@ module.exports = {
         barlow: ["'Barlow', sans-serif", ...defaultTheme.fontFamily.sans],
         redHat: ['Red Hat Display', ...defaultTheme.fontFamily.sans],
       },
+      letterSpacing: {
+        logo: '0.5rem',
+      },
+      colors: {
+        black: '#111',
+      },
+      lineHeight: {
+        full: '100%',
+      },
     },
   },
   variants: {
