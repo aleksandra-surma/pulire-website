@@ -2,7 +2,7 @@ import BaseLayout from 'components/BaseLayout/BaseLayout';
 
 const Home = () => {
   return (
-    <BaseLayout>
+    <BaseLayout currentPageUrl="/">
       <div>Start page - pulire.co</div>
     </BaseLayout>
   );
