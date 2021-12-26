@@ -1,8 +1,9 @@
 const Logo = () => {
+  // lg:col-start-2
   return (
-    <h1 className="col-start-1 self-center text-2xl font-light text-center sm:col-start-2 tracking-logo font-barlow">
-      PULIRE
-    </h1>
+    <div className="col-start-1 self-center pl-4 xxs:pl-6 tablet:pl-8">
+      <h1 className="text-2xl font-light text-left tracking-logo font-barlow">PULIRE</h1>
+    </div>
   );
 };
 

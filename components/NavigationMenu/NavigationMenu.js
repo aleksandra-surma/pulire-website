@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { Link } from 'routes';
 import navButtonsData from 'data/buttons';
 import { PageContext } from 'data/pageContext';
@@ -7,6 +7,22 @@ const NavigationMenu = () => {
   const { currentPage: pathnameUrl } = useContext(PageContext);
 
   const navButtonsInfo = Object.values(navButtonsData);
+
+  // const windowSizes = useWindowSize();
+
+  const mediaQuery = window.matchMedia(`(min-width: 1024px)`);
+
+  useEffect(() => {
+    mediaQuery.addEventListener('change', () => {
+      console.log('change query 1024px');
+    });
+
+    return () => {
+      mediaQuery.removeEventListener('change', () => {});
+    };
+  }, []);
+
+  // console.log('window.matchMedia -> ', window.matchMedia(`(min-width: 1024px)`));
 
   const navButtonClasses = (path) => {
     // 1. if nav button is active -> bold string / 2.if last button ("/kontakt") don't add right padding
