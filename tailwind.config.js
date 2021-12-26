@@ -21,6 +21,8 @@ module.exports = {
       },
       screens: {
         // https://tailwindcss.com/docs/screens
+        xxs: '360px',
+        xs: '480px',
         tablet: '640px',
         // => @media (min-width: 640px) { ... }
 
