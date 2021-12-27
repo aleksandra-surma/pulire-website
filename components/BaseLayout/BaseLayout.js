@@ -3,60 +3,26 @@ import ViewWrapper from 'components/ContentWrapper/ContentWrapper';
 import Footer from 'components/Footer/Footer';
 import PageWrapper from 'components/PageWrapper/PageWrapper';
 import { PageContext } from 'data/pageContext';
-import { useEffect, useState } from 'react';
-import MobileNavigation from '../MobileNavigation/MobileNavigation';
-import useWindowSize from '../../hooks/useWindowSize';
+import MobileNavigation from 'components/MobileNavigation/MobileNavigation';
+import useMobileNav from 'hooks/useMobileNav';
 
 export default function BaseLayout({ children, currentPageUrl = '/' }) {
   const providedData = { currentPage: currentPageUrl };
-
-  const [isShortNav, setIsShortNav] = useState(true);
-  const [isMobileMenuActive, setIsMobileMenuActive] = useState(false);
-
-  const toggleMenuActive = () => setIsMobileMenuActive((prevState) => !prevState);
-
-  const { width } = useWindowSize();
-
-  useEffect(() => {
-    if (width > 768) {
-      setIsShortNav(false);
-    } else if (width <= 768) {
-      setIsShortNav(true);
-    }
-  }, [width]);
-
-  let mediaQuery = null;
-  if (typeof window !== 'undefined') {
-    mediaQuery = window.matchMedia(`(min-width: 768px)`);
-  }
-
-  useEffect(() => {
-    mediaQuery.addEventListener('change', () => {
-      console.log('change query 768px');
-      setIsShortNav((prevState) => !prevState);
-    });
-
-    return () => {
-      mediaQuery.removeEventListener('change', () => {});
-    };
-  }, [width]);
+  const { isHamburger, isMobileMenuActive, toggleMenuActive } = useMobileNav();
 
   return (
     <PageContext.Provider value={providedData}>
       <PageWrapper>
         <div className="min-h-screen">
-          <Header isMobileMenuActive={isMobileMenuActive} toggleMenuActive={toggleMenuActive} isShortNav={isShortNav} />
+          <Header
+            isMobileMenuActive={isMobileMenuActive}
+            toggleMenuActive={toggleMenuActive}
+            isHamburger={isHamburger}
+          />
           <ViewWrapper>{children}</ViewWrapper>
-
-          {isShortNav && isMobileMenuActive ? (
-            <MobileNavigation
-              isMobileMenuActive={isMobileMenuActive}
-              toggleMenuActive={toggleMenuActive}
-              isShortNav={isShortNav}
-            />
-          ) : null}
+          {isHamburger && isMobileMenuActive ? <MobileNavigation toggleMenuActive={toggleMenuActive} /> : null}
         </div>
-        {isShortNav && isMobileMenuActive ? null : <Footer />}
+        {isHamburger && isMobileMenuActive ? null : <Footer />}
       </PageWrapper>
     </PageContext.Provider>
   );

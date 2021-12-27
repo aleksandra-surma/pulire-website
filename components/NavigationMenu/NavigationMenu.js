@@ -1,15 +1,14 @@
-import MobileMenu from '../MobileMenu/MobileMenu';
-import NavButtons from '../NavButtons/NavButtons';
+import MobileMenu from 'components/MobileMenu/MobileMenu';
+import NavButtons from 'components/NavButtons/NavButtons';
 
-const NavigationMenu = ({ isShortNav, isMobileMenuActive, toggleMenuActive }) => {
+const NavigationMenu = ({ isHamburger, isMobileMenuActive, toggleMenuActive }) => {
   return (
     <nav className="flex col-start-3 justify-end items-center pr-4 font-normal xxs:pr-6 tablet:pr-8 align-center">
-      {isShortNav ? (
+      {isHamburger ? (
         <MobileMenu isMobileMenuActive={isMobileMenuActive} toggleMenuActive={toggleMenuActive} />
       ) : (
         <NavButtons isMobile={false} />
       )}
-      {/* {isShortNav && isMobileMenuActive ? <MobileNavigation /> : null} */}
     </nav>
   );
 };

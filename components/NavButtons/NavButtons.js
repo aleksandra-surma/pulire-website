@@ -2,7 +2,6 @@ import { useContext } from 'react';
 import { Link } from 'routes';
 import navButtonsData from 'data/buttons';
 import { PageContext } from 'data/pageContext';
-import log from 'tailwindcss/lib/util/log';
 
 const NavButtons = ({ isMobile = true, toggleMenuActive }) => {
   const navButtonsInfo = Object.values(navButtonsData);
@@ -21,7 +20,10 @@ const NavButtons = ({ isMobile = true, toggleMenuActive }) => {
     <>
       {navButtonsInfo.map(({ label, path }) => {
         return (
-          <div key={label} className={isMobile ? mobileNavButtonClasses : nonMobileNavButtonClasses(path)}>
+          <div
+            key={label}
+            onClick={toggleMenuActive}
+            className={isMobile ? mobileNavButtonClasses : nonMobileNavButtonClasses(path)}>
             <Link route={path}>{label}</Link>
           </div>
         );
