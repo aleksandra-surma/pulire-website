@@ -7,9 +7,9 @@ export default function useWindowSize() {
     width: null,
     height: null,
   });
-  if (typeof window === 'undefined') {
-    return null;
-  }
+  // if (typeof window === 'undefined') {
+  //   return null;
+  // }
 
   useEffect(() => {
     // only execute all the code below in client side

@@ -4,7 +4,7 @@ const navButtonsData = {
     path: '/',
   },
   about: {
-    label: 'O NAS',
+    label: 'O\xa0NAS',
     path: '/o-nas',
   },
   offer: {

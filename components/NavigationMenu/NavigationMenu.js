@@ -1,45 +1,15 @@
-import { useContext, useEffect } from 'react';
-import { Link } from 'routes';
-import navButtonsData from 'data/buttons';
-import { PageContext } from 'data/pageContext';
+import MobileMenu from '../MobileMenu/MobileMenu';
+import NavButtons from '../NavButtons/NavButtons';
 
-const NavigationMenu = () => {
-  const { currentPage: pathnameUrl } = useContext(PageContext);
-
-  const navButtonsInfo = Object.values(navButtonsData);
-
-  // const windowSizes = useWindowSize();
-
-  const mediaQuery = window.matchMedia(`(min-width: 1024px)`);
-
-  useEffect(() => {
-    mediaQuery.addEventListener('change', () => {
-      console.log('change query 1024px');
-    });
-
-    return () => {
-      mediaQuery.removeEventListener('change', () => {});
-    };
-  }, []);
-
-  // console.log('window.matchMedia -> ', window.matchMedia(`(min-width: 1024px)`));
-
-  const navButtonClasses = (path) => {
-    // 1. if nav button is active -> bold string / 2.if last button ("/kontakt") don't add right padding
-    return `${pathnameUrl === path ? 'text-gray-800 font-semibold' : 'text-gray-500'} ${
-      path === '/kontakt' ? '' : 'pr-14'
-    }`;
-  };
-
+const NavigationMenu = ({ isShortNav, isMobileMenuActive, toggleMenuActive }) => {
   return (
-    <nav className="flex col-start-3 justify-end items-center pr-8 font-normal align-center">
-      {navButtonsInfo.map(({ label, path }) => {
-        return (
-          <div key={label} className={navButtonClasses(path)}>
-            <Link route={path}>{label}</Link>
-          </div>
-        );
-      })}
+    <nav className="flex col-start-3 justify-end items-center pr-4 font-normal xxs:pr-6 tablet:pr-8 align-center">
+      {isShortNav ? (
+        <MobileMenu isMobileMenuActive={isMobileMenuActive} toggleMenuActive={toggleMenuActive} />
+      ) : (
+        <NavButtons isMobile={false} />
+      )}
+      {/* {isShortNav && isMobileMenuActive ? <MobileNavigation /> : null} */}
     </nav>
   );
 };
