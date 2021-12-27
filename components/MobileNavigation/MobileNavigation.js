@@ -1,9 +1,9 @@
 import NavButtons from 'components/NavButtons/NavButtons';
 
-const MobileNavigation = () => {
+const MobileNavigation = ({ isMobileMenuActive, toggleMenuActive, isShortNav }) => {
   return (
     <nav className="flex flex-col w-full h-full items-center bg-white justify-center absolute top-0 left-0 z-10">
-      <NavButtons />
+      <NavButtons isMobile toggleMenuActive={toggleMenuActive} />
     </nav>
   );
 };

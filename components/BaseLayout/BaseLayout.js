@@ -10,8 +10,7 @@ import useWindowSize from '../../hooks/useWindowSize';
 export default function BaseLayout({ children, currentPageUrl = '/' }) {
   const providedData = { currentPage: currentPageUrl };
 
-  const [isShortNav, setIsShortNav] = useState(null);
-  // const [isMobileNavActive, setIsMobileNavActive] = useState(null);
+  const [isShortNav, setIsShortNav] = useState(true);
   const [isMobileMenuActive, setIsMobileMenuActive] = useState(false);
 
   const toggleMenuActive = () => setIsMobileMenuActive((prevState) => !prevState);

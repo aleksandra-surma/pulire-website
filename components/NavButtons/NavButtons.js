@@ -2,8 +2,9 @@ import { useContext } from 'react';
 import { Link } from 'routes';
 import navButtonsData from 'data/buttons';
 import { PageContext } from 'data/pageContext';
+import log from 'tailwindcss/lib/util/log';
 
-const NavButtons = ({ isMobile = true }) => {
+const NavButtons = ({ isMobile = true, toggleMenuActive }) => {
   const navButtonsInfo = Object.values(navButtonsData);
 
   const nonMobileNavButtonClasses = (path) => {
@@ -14,7 +15,7 @@ const NavButtons = ({ isMobile = true }) => {
     }`;
   };
 
-  const mobileNavButtonClasses = '';
+  const mobileNavButtonClasses = 'text-xl xs:text-2xl font-bold font-redHat tracking-xl tracking-wider pt-5 pb-5';
 
   return (
     <>
