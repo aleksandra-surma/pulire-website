@@ -12,7 +12,7 @@ const MobileMenu = ({ isMobileMenuActive, toggleMenuActive }) => {
           height="40"
         />
       ) : (
-        <div className="text-md xs:text-lg text-gray-600" onClick={toggleMenuActive}>
+        <div className="text-md xs:text-lg text-gray-600 tracking-widest" onClick={toggleMenuActive}>
           menu
         </div>
       )}
