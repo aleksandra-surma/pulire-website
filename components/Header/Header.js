@@ -1,14 +1,16 @@
-// import { useState } from 'react';
 import NavigationMenu from 'components/NavigationMenu/NavigationMenu';
 import Logo from 'components/Logo/Logo';
 
-const Header = () => {
-  // const [isBurgerMenu, setIsBurgerMenu] = useState(false);
+const Header = ({ isHamburger, isMobileMenuActive, toggleMenuActive }) => {
   return (
-    <nav className="grid grid-cols-3 w-full h-16 font-barlow">
+    <header className="grid grid-cols-3 w-full h-16 font-barlow">
       <Logo />
-      <NavigationMenu />
-    </nav>
+      <NavigationMenu
+        isMobileMenuActive={isMobileMenuActive}
+        toggleMenuActive={toggleMenuActive}
+        isHamburger={isHamburger}
+      />
+    </header>
   );
 };
 
