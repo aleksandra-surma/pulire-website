@@ -1,17 +1,16 @@
 import Head from 'next/head';
-// import { useRouter } from 'next/router';
 import BaseLayout from 'components/BaseLayout/BaseLayout';
+import navButtonsData from 'data/buttons';
 
 const About = () => {
-  // const router = useRouter();
-  // console.log('router.route: ', router.route);
+  const aboutPath = navButtonsData.about.path;
 
   return (
     <>
       <Head>
         <title>Pulire - o nas</title>
       </Head>
-      <BaseLayout>
+      <BaseLayout currentPageUrl={aboutPath}>
         <div>about</div>
       </BaseLayout>
     </>

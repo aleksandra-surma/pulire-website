@@ -1,25 +1,15 @@
-import { Link } from 'routes';
-import navButtonsData from 'data/buttons';
-import { useRouter } from 'next/router';
+import MobileMenu from '../MobileMenu/MobileMenu';
+import NavButtons from '../NavButtons/NavButtons';
 
-const NavigationMenu = () => {
-  const { asPath: pathnameUrl } = useRouter();
-
-  const navButtonClasses = (index, path) => {
-    return `${pathnameUrl === path ? 'text-gray-800 font-semibold' : 'text-gray-500'} ${
-      index === navButtonsData.length - 1 ? '' : 'pr-14'
-    }`;
-  };
-
+const NavigationMenu = ({ isShortNav, isMobileMenuActive, toggleMenuActive }) => {
   return (
-    <nav className="flex col-start-3 justify-end items-center pr-8 font-normal align-center">
-      {navButtonsData.map(({ label, path }, index) => {
-        return (
-          <div key={label} className={navButtonClasses(index, path)}>
-            <Link route={path}>{label}</Link>
-          </div>
-        );
-      })}
+    <nav className="flex col-start-3 justify-end items-center pr-4 font-normal xxs:pr-6 tablet:pr-8 align-center">
+      {isShortNav ? (
+        <MobileMenu isMobileMenuActive={isMobileMenuActive} toggleMenuActive={toggleMenuActive} />
+      ) : (
+        <NavButtons isMobile={false} />
+      )}
+      {/* {isShortNav && isMobileMenuActive ? <MobileNavigation /> : null} */}
     </nav>
   );
 };

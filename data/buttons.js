@@ -1,20 +1,20 @@
-const navButtonsData = [
-  {
+const navButtonsData = {
+  home: {
     label: 'HOME',
     path: '/',
   },
-  {
-    label: 'O NAS',
+  about: {
+    label: 'O\xa0NAS',
     path: '/o-nas',
   },
-  {
+  offer: {
     label: 'OFERTA',
     path: '/oferta',
   },
-  {
+  contact: {
     label: 'KONTAKT',
     path: '/kontakt',
   },
-];
+};
 
 export default navButtonsData;
