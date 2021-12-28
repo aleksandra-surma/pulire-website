@@ -10,7 +10,7 @@ import ContactForm from 'components/ContactForm/ContactForm';
 const Contact = () => {
   const { companyName, shortDescription, contactText: rawContactText, phoneNumber, email } = contactData;
   const contactPath = navButtonsData.contact.path;
-  const { isHamburger } = useMobileNav();
+  const { isDesktop } = useMobileNav();
 
   const contactText = addNonBreakableSpaces(rawContactText);
 
@@ -22,16 +22,19 @@ const Contact = () => {
       <BaseLayout currentPageUrl={contactPath}>
         <section className="flex flex-col text-justify lg:w-1/2 font-redHat">
           {/* from lg */}
-          {!isHamburger ? (
+          {isDesktop ? (
             <h2 className="pb-2 text-5xl font-bold font-redHat tracking-logo">{companyName.toUpperCase()}</h2>
           ) : null}
           <p className="pb-6 text-sm xxs:text-base">{shortDescription.toUpperCase()}</p>
-          <p className="pb-6 text-sm xxs:text-base">{contactText}</p>
-          <div className="flex py-2 ">
+          <p className="pb-6 text-sm leading-8 xxs:text-base">{contactText}</p>
+          <div className="flex py-4">
             <Icon icon="bx:bxs-phone-call" width="24" height="24" className="mr-4" />
-            <p>{phoneNumber}</p>
+            <div>
+              <a href={`tel:${phoneNumber}`}>{phoneNumber}</a>
+              {/* todo: verify if phone dialling works properly */}
+            </div>
           </div>
-          <div className="flex py-2">
+          <div className="flex pb-4">
             <Icon icon="bx:bx-mail-send" width="24" height="24" className="mr-4" />
             <p>
               <a href={`mailto:${email}`}>{email}</a>
