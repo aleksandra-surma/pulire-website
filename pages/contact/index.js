@@ -31,7 +31,7 @@ const Contact = () => {
             <Icon icon="bx:bxs-phone-call" width="24" height="24" className="mr-4" />
             <div>
               <a href={`tel:${phoneNumber}`}>{phoneNumber}</a>
-              {/* todo: verify if phone dialling works properly */}
+              {/* todo: verify if phone dialling after click works properly */}
             </div>
           </div>
           <div className="flex pb-4">
