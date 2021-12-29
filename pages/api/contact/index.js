@@ -6,11 +6,11 @@ export default async (req, res) => {
       try {
         const payload = req.body;
 
-        const validatedPayload = validate(payload);
+        await validate(payload);
 
         res.status(200).json({ status: 'payload_sent' });
       } catch (error) {
-        console.log(error.message);
+        console.log('POST error.message', error.message);
         res.status(422).json({ status: 'not_created', error });
       }
 

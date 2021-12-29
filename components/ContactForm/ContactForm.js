@@ -1,6 +1,7 @@
 import contactData from 'data/contact';
 import { useRef, useState } from 'react';
 import getPayload from 'utils/getPayload';
+import ErrorCommunique from '../ErrorComunicate/ErrorComunicate';
 
 const initialState = {
   name: '',
@@ -10,6 +11,7 @@ const initialState = {
 
 const ContactForm = () => {
   const offerForm = useRef();
+  const [error, setError] = useState(null);
 
   const {
     contactFormPlaceholders: { name, email, message },
@@ -39,15 +41,18 @@ const ContactForm = () => {
       },
     });
 
-    if (response.ok) {
+    console.log('response', response);
+
+    if (response.status === 200) {
       console.log('response OK!!!');
-      // await router.push(`/offers/${offer.id}`);
+      setError(null);
+      // setFormValues(initialState); todo: cleanning after sent contact form content
     } else {
       console.log('response FAILED :(');
-      // const payload = await response.json();
-      // console.log(response);
+      const payloadError = await response.json();
+      console.log('payloadError', payloadError);
       // setFormProcessing(false);
-      // setError(payload.error?.details[0]?.message);
+      setError(payloadError.error?.details[0]?.message);
     }
   };
 
@@ -78,7 +83,7 @@ const ContactForm = () => {
           onChange={(e) => handleOnChange(e, 'email')}
         />
       </div>
-      <div className="pb-8">
+      <div className="pb-5">
         <textarea
           placeholder={message}
           id="message"
@@ -89,9 +94,11 @@ const ContactForm = () => {
           onChange={(e) => handleOnChange(e, 'message')}
         />
       </div>
+      {error ? <ErrorCommunique error={error} /> : null}
+
       <button
         type="submit"
-        className="px-4 py-3 mt-4 w-full text-lg font-bold text-white bg-gray-800 rounded-md disabled:opacity-60 lg:w-60 hover:bg-gray-700">
+        className="px-4 py-3 mt-5 w-full text-lg font-bold text-white bg-gray-800 rounded-md disabled:opacity-60 lg:w-60 hover:bg-gray-700">
         Wyślij
       </button>
     </form>
