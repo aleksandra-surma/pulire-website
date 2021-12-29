@@ -1,24 +1,29 @@
 import { formData } from 'data/contact';
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import getPayload from 'utils/getPayload';
 import ErrorCommunique from '../ErrorComunicate/ErrorComunicate';
 
-const initialState = {
+const formValueInitialState = {
   name: '',
   email: '',
   message: '',
 };
 
+const errorInitialState = {
+  label: '',
+  message: '',
+  type: '',
+};
+
 const ContactForm = () => {
   const offerForm = useRef();
-  const [error, setError] = useState({ message: '', type: '' });
-  const [responseState, setResponseState] = useState(null);
+  const [error, setError] = useState(errorInitialState);
 
   const {
     contactFormPlaceholders: { name, email, message },
   } = formData;
 
-  const [formValues, setFormValues] = useState(initialState);
+  const [formValues, setFormValues] = useState(formValueInitialState);
 
   const handleOnChange = (event, formField) => {
     const text = event.target.value;
@@ -28,8 +33,8 @@ const ContactForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    // setResponseState(null);
     // if (formProcessing) return;
-    // setError(null);
     // setFormProcessing(true);
 
     const payload = await getPayload(offerForm.current);
@@ -42,26 +47,25 @@ const ContactForm = () => {
       },
     });
 
-    setResponseState(response);
-    console.log('response', response);
-  };
-
-  useEffect(() => {
-    if (responseState?.status === 200) {
-      console.log('responseState OK!!!');
-      setError(null);
-      // setFormValues(initialState); todo: cleanning after sent contact form content
-    } else if (!responseState?.ok) {
-      console.log('responseState FAILED :(');
-      const payloadError = responseState?.json();
-      // setFormProcessing(false);
-      setError({
-        message: payloadError?.error?.details[0]?.message,
-        type: payloadError?.error?.details[0]?.type,
+    if (response?.ok) {
+      setError(errorInitialState);
+      // setFormValues(formValueInitialState); todo: cleanning after sent contact form content
+    } else if (!response?.ok) {
+      console.log('response FAILED :(');
+      const payloadError = response?.clone().json();
+      payloadError?.then((errorFulfilled) => {
+        setError((prevState) => {
+          return {
+            ...prevState,
+            label: errorFulfilled?.payloadError?.label,
+            message: errorFulfilled?.payloadError?.message,
+            type: errorFulfilled?.payloadError?.type,
+          };
+        });
       });
-      // setError(payloadError.error?.details[0]?.message);
+      // setFormProcessing(false);
     }
-  }, [responseState]);
+  };
 
   return (
     <form onSubmit={handleSubmit} className="pt-10" ref={offerForm}>
@@ -101,7 +105,7 @@ const ContactForm = () => {
           onChange={(e) => handleOnChange(e, 'message')}
         />
       </div>
-      {error?.message ? <ErrorCommunique error={error} /> : null}
+      {error?.label ? <ErrorCommunique error={error} /> : null}
 
       <button
         type="submit"

@@ -21,8 +21,8 @@ const Contact = () => {
   const contactText = addNonBreakableSpaces(rawContactText);
 
   const handleCopyContent = (text, copyCategory) => {
+    // double-click on the same field
     if (isCopied[copyCategory] === true) {
-      console.log('double copied');
       return;
     }
 

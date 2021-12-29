@@ -14,8 +14,15 @@ export const formData = {
       'string.min': 'W pierwszym polu użyto zbyt krótkiej nazwy (min. 3 znaki).',
       'string.max': 'W pierwszym polu użyto zbyt długiej nazwy (max. 40 znaków)',
     },
-    email: 'e-mail',
-    message: 'treść wiadomości',
+    email: {
+      'string.min': 'Podano niepoprawny adres email, proszę spróbować ponownie.',
+      'string.max': 'Podano niepoprawny adres email, proszę spróbować ponownie.',
+      'string.email': 'Podano niepoprawny adres email, proszę spróbować ponownie.',
+    },
+    message: {
+      'string.min': 'W treści wiadomości użyto zbyt małej ilości znaków (min. 3 znaki).',
+      'string.max': 'W treści wiadomości użyto zbyt dużej ilości znaków (max. 2000 znaków)',
+    },
   },
   contactFormPlaceholders: {
     name: 'imię, nazwisko lub nazwa firmy',
