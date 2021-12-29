@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Head from 'next/head';
 import BaseLayout from 'components/BaseLayout/BaseLayout';
-import contactData from 'data/contact';
+import { contactData } from 'data/contact';
 import navButtonsData from 'data/buttons';
 import addNonBreakableSpaces from 'utils/addNonBreakableSpaces';
 import { Icon } from '@iconify/react';
@@ -9,9 +9,10 @@ import useMobileNav from 'hooks/useMobileNav';
 import ContactForm from 'components/ContactForm/ContactForm';
 
 const initialIsCopiedState = { email: false, phoneNumber: false };
-
+const initialSetTimeoutIDs = { email: null, phoneNumber: null };
 const Contact = () => {
   const [isCopied, setIsCopied] = useState(initialIsCopiedState);
+  const [timeoutIDs, setTimeoutIDs] = useState(initialSetTimeoutIDs);
 
   const { companyName, shortDescription, contactText: rawContactText, phoneNumber, email } = contactData;
   const contactPath = navButtonsData.contact.path;
@@ -26,11 +27,16 @@ const Contact = () => {
     }
 
     navigator.clipboard.writeText(text);
-    setIsCopied({ ...isCopied, [copyCategory]: true });
+    setIsCopied({ ...initialIsCopiedState, [copyCategory]: true });
 
-    setTimeout(() => {
+    const timeoutID = setTimeout(() => {
       setIsCopied(initialIsCopiedState);
     }, 3000);
+
+    clearTimeout(timeoutIDs?.email);
+    clearTimeout(timeoutIDs?.phoneNumber);
+
+    setTimeoutIDs({ ...timeoutIDs, [copyCategory]: timeoutID });
   };
 
   return (

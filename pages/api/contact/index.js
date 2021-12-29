@@ -11,6 +11,7 @@ export default async (req, res) => {
         res.status(200).json({ status: 'payload_sent' });
       } catch (error) {
         console.log('POST error.message', error.message);
+        console.log('POST error', error);
         res.status(422).json({ status: 'not_created', error });
       }
 
