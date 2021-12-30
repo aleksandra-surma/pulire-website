@@ -11,7 +11,7 @@ export const formData = {
   formFields: ['name', 'email', 'phoneNumber'],
   errors: {
     name: {
-      'string.min': 'W pierwszym polu użyto zbyt krótkiej nazwy (min. 3 znaki).',
+      'string.min': 'W pierwszym polu użyto zbyt krótkiej nazwy.',
       'string.max': 'W pierwszym polu użyto zbyt długiej nazwy (max. 40 znaków)',
     },
     email: {
@@ -20,7 +20,7 @@ export const formData = {
       'string.email': 'Podano niepoprawny adres email, proszę spróbować ponownie.',
     },
     message: {
-      'string.min': 'W treści wiadomości użyto zbyt małej ilości znaków (min. 3 znaki).',
+      'string.min': 'W treści wiadomości użyto zbyt małej ilości znaków.',
       'string.max': 'W treści wiadomości użyto zbyt dużej ilości znaków (max. 2000 znaków)',
     },
   },

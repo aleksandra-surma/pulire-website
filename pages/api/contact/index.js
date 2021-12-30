@@ -1,4 +1,5 @@
 import validate from 'services/contactForm/validate';
+import { sendMessageToPulire } from '../../../services/contactForm/sendMessageToPulire';
 
 export default async (req, res) => {
   switch (req.method) {
@@ -6,7 +7,9 @@ export default async (req, res) => {
       try {
         const payload = req.body;
 
-        await validate(payload);
+        const { name, email, message } = await validate(payload);
+
+        await sendMessageToPulire(name, email, message);
 
         res.status(200).json({ status: 'payload_sent' });
       } catch (error) {
