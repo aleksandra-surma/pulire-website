@@ -10,6 +10,7 @@ import ContactForm from 'components/ContactForm/ContactForm';
 
 const initialIsCopiedState = { email: false, phoneNumber: false };
 const initialSetTimeoutIDs = { email: null, phoneNumber: null };
+
 const Contact = () => {
   const [isCopied, setIsCopied] = useState(initialIsCopiedState);
   const [timeoutIDs, setTimeoutIDs] = useState(initialSetTimeoutIDs);
@@ -93,10 +94,3 @@ const Contact = () => {
 };
 
 export default Contact;
-
-// companyName: 'Pulire',
-//   shortDescription: 'Kompleksowe sprzątanie obiektów',
-//   contactText:
-// 'Masz pytanie, chcesz otrzymać wycenę albo nawiązać współpracę? Skontaktuj się z nami za pomocą telefonu, maila albo formularza kontaktowego.',
-//   phoneNumber: '535 412 571',
-//   email: 'info@pulire.co',

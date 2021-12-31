@@ -1,5 +1,5 @@
 import validate from 'services/contactForm/validate';
-import { sendMessageToPulire } from '../../../services/contactForm/sendMessageToPulire';
+import sendMessageToPulire from 'services/contactForm/sendMessageToPulire';
 
 export default async (req, res) => {
   switch (req.method) {
@@ -13,13 +13,17 @@ export default async (req, res) => {
 
         res.status(200).json({ status: 'payload_sent' });
       } catch (error) {
-        const payloadError = {
-          label: error.details[0].context.label,
-          message: error.details[0].message,
-          type: error.details[0].type,
-        };
+        console.log('error', error);
+        if (error.details) {
+          const payloadError = {
+            label: error.details[0].context.label,
+            message: error.details[0].message,
+            type: error.details[0].type,
+          };
 
-        res.status(422).json({ status: 'not_created', payloadError });
+          res.status(422).json({ status: 'not_created', payloadError });
+        }
+        res.status(422).json({ status: 'not_created', error });
       }
 
       break;

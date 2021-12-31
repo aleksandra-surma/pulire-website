@@ -1,7 +1,15 @@
 import { formData } from 'data/contact';
-import { useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import getPayload from 'utils/getPayload';
 import ErrorCommunique from '../ErrorComunicate/ErrorComunicate';
+
+const SendConfirmation = () => {
+  return (
+    <div className="flex justify-center p-4 text-green-600 rounded-md border-2 border-green-500 border-dotted">
+      <p className="self-center">Wiadomość została wysłana</p> <span className="ml-6 text-2xl">🎉</span>
+    </div>
+  );
+};
 
 const formValueInitialState = {
   name: '',
@@ -17,6 +25,7 @@ const errorInitialState = {
 
 const ContactForm = () => {
   const offerForm = useRef();
+  const [isMessageSend, setIsMessageSend] = useState(false);
   const [error, setError] = useState(errorInitialState);
 
   const {
@@ -33,9 +42,6 @@ const ContactForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // setResponseState(null);
-    // if (formProcessing) return;
-    // setFormProcessing(true);
 
     const payload = await getPayload(offerForm.current);
 
@@ -49,7 +55,12 @@ const ContactForm = () => {
 
     if (response?.ok) {
       setError(errorInitialState);
-      // setFormValues(formValueInitialState); todo: cleanning after sent contact form content
+      setFormValues(formValueInitialState);
+      setIsMessageSend(true);
+      const timeoutID = setTimeout(() => {
+        setIsMessageSend(false);
+        clearTimeout(timeoutID);
+      }, 6000);
     } else if (!response?.ok) {
       console.log('response FAILED :(');
       const payloadError = response?.clone().json();
@@ -63,7 +74,6 @@ const ContactForm = () => {
           };
         });
       });
-      // setFormProcessing(false);
     }
   };
 
@@ -106,6 +116,7 @@ const ContactForm = () => {
         />
       </div>
       {error?.label ? <ErrorCommunique error={error} /> : null}
+      {isMessageSend ? <SendConfirmation /> : null}
 
       <button
         type="submit"
