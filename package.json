@@ -22,8 +22,10 @@
   "homepage": "https://www.pulire.co",
   "dependencies": {
     "express": "^4.17.2",
+    "joi": "^17.5.0",
     "next": "latest",
     "next-routes": "^1.4.2",
+    "nodemailer": "^6.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^6.2.1"
