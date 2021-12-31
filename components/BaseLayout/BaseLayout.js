@@ -13,7 +13,7 @@ export default function BaseLayout({ children, currentPageUrl = '/' }) {
   return (
     <PageContext.Provider value={providedData}>
       <PageWrapper>
-        <div className="min-h-screen">
+        <div className="">
           <Header
             isMobileMenuActive={isMobileMenuActive}
             toggleMenuActive={toggleMenuActive}

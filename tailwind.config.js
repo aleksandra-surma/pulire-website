@@ -10,6 +10,9 @@ module.exports = {
         barlow: ["'Barlow', sans-serif", ...defaultTheme.fontFamily.sans],
         redHat: ['Red Hat Display', ...defaultTheme.fontFamily.sans],
       },
+      fontSize: {
+        base: '1rem',
+      },
       letterSpacing: {
         logo: '0.5rem',
       },
@@ -31,6 +34,9 @@ module.exports = {
 
         desktop: '1280px',
         // => @media (min-width: 1280px) { ... }
+      },
+      outline: {
+        green: '2px solid #00cc00',
       },
     },
   },
