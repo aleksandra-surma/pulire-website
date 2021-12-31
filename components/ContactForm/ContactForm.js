@@ -1,84 +1,22 @@
 import { formData } from 'data/contact';
-import React, { useRef, useState } from 'react';
-import getPayload from 'utils/getPayload';
-import ErrorCommunique from '../ErrorComunicate/ErrorComunicate';
-
-const SendConfirmation = () => {
-  return (
-    <div className="flex justify-center p-4 text-green-600 rounded-md border-2 border-green-500 border-dotted">
-      <p className="self-center">Wiadomość została wysłana</p> <span className="ml-6 text-2xl">🎉</span>
-    </div>
-  );
-};
-
-const formValueInitialState = {
-  name: '',
-  email: '',
-  message: '',
-};
-
-const errorInitialState = {
-  label: '',
-  message: '',
-  type: '',
-};
+import ErrorCommunique from 'components/ErrorComunicate/ErrorComunicate';
+import SendConfirmation from 'components/SendConfirmation/SendConfirmation';
+import useFormState from 'hooks/useFormState';
+import { useRef } from 'react';
+import { handleOnChange, handleSubmit } from '../helpers/form';
 
 const ContactForm = () => {
-  const offerForm = useRef();
-  const [isMessageSend, setIsMessageSend] = useState(false);
-  const [error, setError] = useState(errorInitialState);
+  const formState = useFormState();
+  const offerFormRef = useRef();
+
+  const { formValues, error, isMessageSend } = formState;
 
   const {
     contactFormPlaceholders: { name, email, message },
   } = formData;
 
-  const [formValues, setFormValues] = useState(formValueInitialState);
-
-  const handleOnChange = (event, formField) => {
-    const text = event.target.value;
-
-    setFormValues({ ...formValues, [formField]: text });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    const payload = await getPayload(offerForm.current);
-
-    const response = await fetch('/api/contact', {
-      method: 'POST',
-      body: JSON.stringify(payload),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
-
-    if (response?.ok) {
-      setError(errorInitialState);
-      setFormValues(formValueInitialState);
-      setIsMessageSend(true);
-      const timeoutID = setTimeout(() => {
-        setIsMessageSend(false);
-        clearTimeout(timeoutID);
-      }, 6000);
-    } else if (!response?.ok) {
-      console.log('response FAILED :(');
-      const payloadError = response?.clone().json();
-      payloadError?.then((errorFulfilled) => {
-        setError((prevState) => {
-          return {
-            ...prevState,
-            label: errorFulfilled?.payloadError?.label,
-            message: errorFulfilled?.payloadError?.message,
-            type: errorFulfilled?.payloadError?.type,
-          };
-        });
-      });
-    }
-  };
-
   return (
-    <form onSubmit={handleSubmit} className="pt-10" ref={offerForm}>
+    <form onSubmit={(e) => handleSubmit(e, formState, offerFormRef)} className="pt-10" ref={offerFormRef}>
       <div className="pb-8">
         <input
           placeholder={name}
@@ -88,7 +26,7 @@ const ContactForm = () => {
           className="pl-10 w-full h-8 text-gray-800 border-b-2 border-l-2 border-gray-300 outline-none autofill:bg-yellow-200 invalid:hover:border-red-500 valid:hover:border-green-500"
           required
           value={formValues.name}
-          onChange={(e) => handleOnChange(e, 'name')}
+          onChange={(e) => handleOnChange(e, 'name', formState)}
         />
       </div>
       <div className="pb-8">
@@ -101,7 +39,7 @@ const ContactForm = () => {
           aria-describedby="email"
           required
           value={formValues.email}
-          onChange={(e) => handleOnChange(e, 'email')}
+          onChange={(e) => handleOnChange(e, 'email', formState)}
         />
       </div>
       <div className="pb-5">
@@ -112,7 +50,7 @@ const ContactForm = () => {
           className="pl-10 w-full h-32 text-gray-800 border-b-2 border-l-2 border-gray-300 outline-none resize-y invalid:hover:border-red-500 valid:hover:border-green-500"
           required
           value={formValues.message}
-          onChange={(e) => handleOnChange(e, 'message')}
+          onChange={(e) => handleOnChange(e, 'message', formState)}
         />
       </div>
       {error?.label ? <ErrorCommunique error={error} /> : null}

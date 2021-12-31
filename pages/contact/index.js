@@ -14,10 +14,10 @@ const initialSetTimeoutIDs = { email: null, phoneNumber: null };
 const Contact = () => {
   const [isCopied, setIsCopied] = useState(initialIsCopiedState);
   const [timeoutIDs, setTimeoutIDs] = useState(initialSetTimeoutIDs);
+  const { isDesktop } = useMobileNav();
 
   const { companyName, shortDescription, contactText: rawContactText, phoneNumber, email } = contactData;
   const contactPath = navButtonsData.contact.path;
-  const { isDesktop } = useMobileNav();
 
   const contactText = addNonBreakableSpaces(rawContactText);
 

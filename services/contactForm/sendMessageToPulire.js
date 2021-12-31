@@ -13,8 +13,8 @@ const sendMessageToPulire = async (name, email, description) => {
     host: 'smtp.ethereal.email',
     port: 587,
     auth: {
-      user: 'oliver.hamill67@ethereal.email',
-      pass: 'HYquw6xNbxGCbEqc49',
+      user: 'oliver.hamill67@ethereal.email', // todo: hide -> .env
+      pass: 'HYquw6xNbxGCbEqc49', // todo: hide -> .env
     },
   });
 
