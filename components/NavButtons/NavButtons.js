@@ -9,7 +9,7 @@ const NavButtons = ({ isMobile = true, toggleMenuActive }) => {
   const nonMobileNavButtonClasses = (path) => {
     const { currentPage: pathnameUrl } = useContext(PageContext);
 
-    return `${pathnameUrl === path ? 'text-gray-800 font-semibold' : 'text-gray-500'} ${
+    return `${pathnameUrl === path ? 'text-neutral-800 font-semibold' : 'text-neutral-500'} ${
       path === '/kontakt' ? '' : 'pr-4 xxs:pr-6 tablet:pr-8'
     }`;
   };

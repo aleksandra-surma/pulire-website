@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import BaseLayout from 'components/BaseLayout/BaseLayout';
-import navButtonsData from '../../data/buttons';
+import navButtonsData from 'data/buttons';
 
 const Offer = () => {
   const offerPath = navButtonsData.offer.path;

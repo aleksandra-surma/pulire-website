@@ -5,14 +5,14 @@ const MobileMenu = ({ isMobileMenuActive, toggleMenuActive }) => {
     <>
       {isMobileMenuActive ? (
         <Icon
-          className="z-20 text-gray-600"
+          className="z-20 text-neutral-600"
           onClick={toggleMenuActive}
           icon="clarity:close-line"
           width="40"
           height="40"
         />
       ) : (
-        <div className="text-md xs:text-lg text-gray-600 tracking-widest" onClick={toggleMenuActive}>
+        <div className="text-md xs:text-lg text-neutral-600 tracking-widest" onClick={toggleMenuActive}>
           menu
         </div>
       )}

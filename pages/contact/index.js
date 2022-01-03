@@ -60,11 +60,11 @@ const Contact = () => {
                 <a href={`tel:${phoneNumber}`}>{phoneNumber}</a>
               </p>
               <button onClick={() => handleCopyContent(phoneNumber, 'phoneNumber')} type="button">
-                <Icon className="text-gray-400" icon="ant-design:copy-outlined" hFlip vFlip />
+                <Icon className="text-neutral-400" icon="ant-design:copy-outlined" hFlip vFlip />
               </button>
               {isCopied.phoneNumber ? (
                 <div className="absolute w-full left-full ml-4">
-                  <p className="text-sm text-gray-400">telefon skopiowany</p>
+                  <p className="text-sm text-neutral-400">telefon skopiowany</p>
                 </div>
               ) : null}
               {/* todo: verify if phone dialling after click works properly */}
@@ -77,11 +77,11 @@ const Contact = () => {
                 <a href={`mailto:${email}`}>{email}</a>
               </p>
               <button onClick={() => handleCopyContent(email, 'email')} type="button">
-                <Icon className="text-gray-400" icon="ant-design:copy-outlined" hFlip vFlip />
+                <Icon className="text-neutral-400" icon="ant-design:copy-outlined" hFlip vFlip />
               </button>
               {isCopied.email ? (
                 <div className="absolute w-full left-full ml-4">
-                  <p className="text-sm text-gray-400">email skopiowany</p>
+                  <p className="text-sm text-neutral-400">email skopiowany</p>
                 </div>
               ) : null}
             </div>

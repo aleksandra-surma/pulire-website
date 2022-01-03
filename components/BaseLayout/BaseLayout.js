@@ -1,5 +1,5 @@
 import Header from 'components/Header/Header';
-import ViewWrapper from 'components/ContentWrapper/ContentWrapper';
+import ViewWrapper from 'components/ViewWrapper/ViewWrapper';
 import Footer from 'components/Footer/Footer';
 import PageWrapper from 'components/PageWrapper/PageWrapper';
 import { PageContext } from 'data/pageContext';
