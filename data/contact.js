@@ -1,5 +1,6 @@
 export const contactData = {
   companyName: 'Pulire',
+  title: 'Kontakt',
   shortDescription: 'Kompleksowe sprzątanie obiektów',
   contactText:
     'Masz pytanie, chcesz otrzymać wycenę albo nawiązać współpracę? Skontaktuj się z nami za pomocą telefonu, maila albo formularza kontaktowego.',
