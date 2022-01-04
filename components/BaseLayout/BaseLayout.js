@@ -19,7 +19,7 @@ export default function BaseLayout({ children, currentPageUrl = '/' }) {
             toggleMenuActive={toggleMenuActive}
             isHamburger={isHamburger}
           />
-          <ViewWrapper>{children}</ViewWrapper>
+          {!isMobileMenuActive ? <ViewWrapper>{children}</ViewWrapper> : null}
           {isHamburger && isMobileMenuActive ? <MobileNavigation toggleMenuActive={toggleMenuActive} /> : null}
         </div>
         {isHamburger && isMobileMenuActive ? null : <Footer />}

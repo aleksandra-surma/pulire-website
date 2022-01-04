@@ -87,7 +87,9 @@ const Contact = () => {
           </div>
           <ContactForm />
         </section>
-        <div className="bg-neutral-100 w-full min-h-[400px] lg:w-1/2 lg:m-10 text-neutral-100">.</div>
+        {isDesktop ? (
+          <div className="bg-neutral-100 w-full min-h-[400px] lg:w-1/2 lg:m-10 text-neutral-100">.</div>
+        ) : null}
       </BaseLayout>
     </>
   );
