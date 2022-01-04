@@ -46,8 +46,7 @@ const Contact = () => {
         <title>Pulire - kontakt</title>
       </Head>
       <BaseLayout currentPageUrl={contactPath}>
-        <section className="flex flex-col text-justify lg:w-1/2 font-redHat">
-          {/* from lg */}
+        <section className="flex flex-col lg:justify-center text-justify w-full min-h-pageView tall:min-h-[70vh] tallMobile:min-h-[calc(100vh-100px)] lg:w-2/5 font-redHat">
           {isDesktop ? (
             <h2 className="pb-2 text-5xl font-bold font-redHat tracking-logo">{companyName.toUpperCase()}</h2>
           ) : null}
@@ -88,6 +87,7 @@ const Contact = () => {
           </div>
           <ContactForm />
         </section>
+        <div className="bg-neutral-100 w-full min-h-[400px] lg:w-1/2 lg:m-10 text-neutral-100">.</div>
       </BaseLayout>
     </>
   );
