@@ -9,58 +9,64 @@ import MoreInfo from 'components/MoreInfo/MoreInfo';
 
 const Footer = () => {
   const { currentPage: pathnameUrl } = useContext(PageContext);
-
+  console.log('Path current', pathnameUrl);
   return (
-    <footer className="flex flex-col font-extralight p-4 w-full h-full bg-neutral-800 text-white xs:flex-row items-left justify-left xxs:p-6 tablet:p-8">
+    <>
       {pathnameUrl !== '/kontakt' ? (
-        <>
-          <section className="footer__intro pb-10">
-            <h2 className="pb-4 text-4xl font-bold font-redHat tracking-logo">
-              {contactData.companyName.toUpperCase()}
-            </h2>
-            <div className="pb-10 ">
-              {home.motto.map((mottoLine) => (
-                <p key={uuid()} className="py-2 font-extralight">
-                  {mottoLine}
+        <footer>
+          <section className="flex flex-col justify-between p-4 w-full font-extralight text-white bg-neutral-800 sm:flex-row items-left justify-left xxs:p-6 tablet:p-8">
+            <article className="footer__intro md:w-1/4 mb-20">
+              <h2 className="pb-4 text-3xl laptop:text-4xl font-bold font-redHat tracking-logo">
+                {contactData.companyName.toUpperCase()}
+              </h2>
+              <div className="">
+                {home.motto.map((mottoLine) => (
+                  <p key={uuid()} className="py-2 font-extralight">
+                    {mottoLine}
+                  </p>
+                ))}
+              </div>
+              {pathnameUrl !== '/' ? <MoreInfo directionPage="/" /> : null}
+            </article>
+            <article className="footer__offers md:w-3/10 mb-20">
+              <h2 className="pb-4 text-3xl laptop:text-4xl font-bold font-redHat tracking-logo">{offers.title}</h2>
+              <ul className="">
+                {offers.offers.map(({ offerName }) => (
+                  <li key={uuid()} className="flex py-2">
+                    <Icon icon="bi:check-lg" width="24" height="24" className="mr-4 text-green-400" />
+                    <p className="font-extralight">{offerName}</p>
+                  </li>
+                ))}
+              </ul>
+              {pathnameUrl !== '/oferta' ? <MoreInfo directionPage="/oferta" /> : null}
+            </article>
+            <article className="flex flex-col pb-10 footer__contact md:w-1/5">
+              <h2 className="pb-4 text-3xl laptop:text-4xl font-bold font-redHat tracking-logo">{contactData.title}</h2>
+              <div className="flex pt-4">
+                <Icon icon="bx:bxs-phone-call" width="24" height="24" className="mr-4" />
+                <p>
+                  <a href={`tel:${contactData.phoneNumber}`}>{contactData.phoneNumber}</a>
                 </p>
-              ))}
-            </div>
-            {pathnameUrl !== '/' ? <MoreInfo directionPage="/" /> : null}
+              </div>
+              <div className="flex py-4">
+                <Icon icon="bx:bx-mail-send" width="24" height="24" className="mr-4" />
+                <p>
+                  <a href={`mailto:${contactData.email}`}>{contactData.email}</a>
+                </p>
+              </div>
+              {pathnameUrl !== '/kontakt' ? <MoreInfo directionPage="/kontakt" /> : null}
+            </article>
           </section>
-          <section className="footer__offers pb-10">
-            <h2 className="pb-4 text-4xl font-bold font-redHat tracking-logo">{offers.title}</h2>
-            <ul className="pb-10 ">
-              {offers.offers.map(({ offerName }) => (
-                <li key={uuid()} className="flex">
-                  <Icon icon="bx:bxs-phone-call" width="24" height="24" className="mr-4" />
-                  <p className="py-2 font-extralight">{offerName}</p>
-                </li>
-              ))}
-            </ul>
-            {pathnameUrl !== '/oferta' ? <MoreInfo directionPage="/oferta" /> : null}
-          </section>
-          <section className="footer__contact pb-10">
-            <h2 className="pb-4 text-4xl font-bold font-redHat tracking-logo">{contactData.title}</h2>
-            <div className="flex pt-4">
-              <Icon icon="bx:bxs-phone-call" width="24" height="24" className="mr-4" />
-              <p>
-                <a href={`tel:${contactData.phoneNumber}`}>{contactData.phoneNumber}</a>
-              </p>
-            </div>
-            <div className="flex py-4">
-              <Icon icon="bx:bx-mail-send" width="24" height="24" className="mr-4" />
-              <p>
-                <a href={`mailto:${contactData.email}`}>{contactData.email}</a>
-              </p>
-            </div>
-            {pathnameUrl !== '/kontakt' ? <MoreInfo directionPage="/kontakt" /> : null}
-          </section>
-          <p className="pt-2 text-xs text-neutral-500">Copyright © 2022 pulire.co All Rights Reserved</p>
-        </>
+          <p className="flex flex-col p-4 w-full h-full font-extralight text-white bg-neutral-800 xs:flex-row items-left justify-left xxs:p-6 tablet:p-8 pt-2 text-xs text-neutral-300">
+            Copyright © 2022 pulire.co All Rights Reserved
+          </p>
+        </footer>
       ) : (
-        <p className="text-xs text-neutral-500">Copyright © 2022 pulire.co All Rights Reserved</p>
+        <footer className="p-4 pt-8 w-full h-full font-extralight text-center tablet:text-left bg-white xxs:pt-10 tablet:pt-12 xs:flex-row items-left justify-left xxs:p-6 tablet:p-8">
+          <p className="text-xs text-neutral-600">Copyright © 2022 pulire.co All Rights Reserved</p>
+        </footer>
       )}
-    </footer>
+    </>
   );
 };
 

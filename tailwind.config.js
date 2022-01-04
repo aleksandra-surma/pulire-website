@@ -10,6 +10,12 @@ module.exports = {
         barlow: ["'Barlow', sans-serif", ...defaultTheme.fontFamily.sans],
         redHat: ['Red Hat Display', ...defaultTheme.fontFamily.sans],
       },
+      minHeight: {
+        pageView: 'calc(100vh - 128px)',
+      },
+      maxHeight: {
+        about: '600px',
+      },
       fontSize: {
         base: '1rem',
       },
@@ -33,7 +39,10 @@ module.exports = {
         // => @media (min-width: 1024px) { ... }
 
         desktop: '1280px',
+
         // => @media (min-width: 1280px) { ... }
+        tall: { raw: '(min-height: 900px)' },
+        tallMobile: { raw: '(orientation: portrait) and (max-width: 500px)' },
       },
       outline: {
         green: '2px solid #00cc00',
