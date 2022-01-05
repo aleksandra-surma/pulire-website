@@ -55,12 +55,15 @@ const ContactForm = () => {
       </div>
       {error?.label ? <ErrorCommunique error={error} /> : null}
       {isMessageSend ? <SendConfirmation /> : null}
-
       <button
         type="submit"
         className="px-4 py-3 mt-5 w-full text-lg font-bold text-white bg-neutral-800 rounded-md disabled:opacity-60 lg:w-60 hover:bg-neutral-700">
         Wyślij
       </button>
+      <p className="text-xs text-neutral-600 pt-6">
+        * Zgodnie z naszą polityką prywatności Twoje dane nie zostaną przekazane do żadnych podmiotów. Będą przetwarzane
+        tylko w ramach naszej oferty.
+      </p>
     </form>
   );
 };

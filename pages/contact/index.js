@@ -7,6 +7,7 @@ import addNonBreakableSpaces from 'utils/addNonBreakableSpaces';
 import { Icon } from '@iconify/react';
 import useMobileNav from 'hooks/useMobileNav';
 import ContactForm from 'components/ContactForm/ContactForm';
+import Title from 'components/Title/Title';
 
 const initialIsCopiedState = { email: false, phoneNumber: false };
 const initialSetTimeoutIDs = { email: null, phoneNumber: null };
@@ -47,9 +48,7 @@ const Contact = () => {
       </Head>
       <BaseLayout currentPageUrl={contactPath}>
         <section className="flex flex-col lg:justify-center text-justify w-full min-h-pageView tall:min-h-[70vh] tallMobile:min-h-[calc(100vh-100px)] lg:w-2/5 font-redHat">
-          {isDesktop ? (
-            <h2 className="pb-2 text-5xl font-bold font-redHat tracking-logo">{companyName.toUpperCase()}</h2>
-          ) : null}
+          {isDesktop ? <Title title={companyName.toUpperCase()} /> : null}
           <p className="pb-6 text-sm xxs:text-base">{shortDescription.toUpperCase()}</p>
           <p className="pb-6 text-sm leading-8 xxs:text-base">{contactText}</p>
           <div className="flex py-4">

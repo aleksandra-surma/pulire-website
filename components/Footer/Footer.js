@@ -9,7 +9,7 @@ import MoreInfo from 'components/MoreInfo/MoreInfo';
 
 const Footer = () => {
   const { currentPage: pathnameUrl } = useContext(PageContext);
-  console.log('Path current', pathnameUrl);
+
   return (
     <>
       {pathnameUrl !== '/kontakt' ? (
@@ -31,10 +31,10 @@ const Footer = () => {
             <article className="footer__offers md:w-3/10 mb-20 md:mb-0">
               <h2 className="pb-4 text-3xl laptop:text-4xl font-bold font-redHat tracking-logo">{offers.title}</h2>
               <ul className="">
-                {offers.offers.map(({ offerName }) => (
+                {offers.offers.map(({ title }) => (
                   <li key={uuid()} className="flex py-2">
                     <Icon icon="bi:check-lg" width="24" height="24" className="mr-4 text-green-400" />
-                    <p className="font-extralight">{offerName}</p>
+                    <p className="font-extralight">{title}</p>
                   </li>
                 ))}
               </ul>
