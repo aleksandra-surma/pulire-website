@@ -5,14 +5,18 @@ import PageWrapper from 'components/PageWrapper/PageWrapper';
 import { PageContext } from 'data/pageContext';
 import MobileNavigation from 'components/MobileNavigation/MobileNavigation';
 import useMobileNav from 'hooks/useMobileNav';
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Router } from 'next/router';
 import PuffLoader from 'react-spinners/PuffLoader';
 
 export default function BaseLayout({ children, currentPageUrl = '/' }) {
   const { isHamburger, isMobileMenuActive, isDesktop, toggleMenuActive } = useMobileNav();
   const [isLoading, setIsLoading] = useState(false);
-  const providedData = { currentPage: currentPageUrl };
+
+  const providedData = useMemo(
+    () => ({ currentPage: currentPageUrl, isMobileMenuActive, toggleMenuActive, isHamburger }),
+    [currentPageUrl, isMobileMenuActive, toggleMenuActive, isHamburger],
+  );
 
   useEffect(() => {
     const startLoaded = () => setIsLoading(true);
@@ -29,13 +33,9 @@ export default function BaseLayout({ children, currentPageUrl = '/' }) {
 
   return (
     <PageContext.Provider value={providedData}>
-      <PageWrapper className isMobileMenuActive={isMobileMenuActive}>
+      <PageWrapper className>
         <div className="">
-          <Header
-            isMobileMenuActive={isMobileMenuActive}
-            toggleMenuActive={toggleMenuActive}
-            isHamburger={isHamburger}
-          />
+          <Header />
           {isLoading && !isDesktop ? (
             <div className="flex fix top-0 left-0 overflow-hidden justify-center items-center w-screen h-screen bg-white">
               <PuffLoader size={120} />
@@ -43,9 +43,7 @@ export default function BaseLayout({ children, currentPageUrl = '/' }) {
           ) : (
             <ViewWrapper>{children}</ViewWrapper>
           )}
-          {isHamburger && isMobileMenuActive ? (
-            <MobileNavigation setIsLoading={setIsLoading} toggleMenuActive={toggleMenuActive} />
-          ) : null}
+          {isHamburger && isMobileMenuActive ? <MobileNavigation setIsLoading={setIsLoading} /> : null}
         </div>
         {isHamburger && isMobileMenuActive ? null : <Footer />}
       </PageWrapper>

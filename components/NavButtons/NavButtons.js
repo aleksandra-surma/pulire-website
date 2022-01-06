@@ -2,8 +2,11 @@ import { useContext } from 'react';
 import { Link } from 'routes';
 import navButtonsData from 'data/buttons';
 import { PageContext } from 'data/pageContext';
+import useMobileNav from 'hooks/useMobileNav';
 
-const NavButtons = ({ isMobile = true, toggleMenuActive }) => {
+const NavButtons = ({ isMobile = true }) => {
+  const { toggleMenuActive } = useMobileNav();
+
   const navButtonsInfo = Object.values(navButtonsData);
 
   const nonMobileNavButtonClasses = (path) => {

@@ -4,6 +4,7 @@ import { v4 as uuid } from 'uuid';
 
 const Offer = ({ offer }) => {
   const [isOpened, setIsOpened] = useState(false);
+
   return (
     <article key={offer.uuid} className="p-4 py-5 my-8 w-full border-2 text-sm">
       <div className="flex mb-5 items-center">

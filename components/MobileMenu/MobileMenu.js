@@ -1,6 +1,9 @@
 import { Icon } from '@iconify/react';
+import { PageContext } from 'data/pageContext';
+import { useContext } from 'react';
 
-const MobileMenu = ({ isMobileMenuActive, toggleMenuActive }) => {
+const MobileMenu = () => {
+  const { isMobileMenuActive, toggleMenuActive } = useContext(PageContext);
   return (
     <>
       {isMobileMenuActive ? (

@@ -1,15 +1,11 @@
 import NavigationMenu from 'components/NavigationMenu/NavigationMenu';
 import Logo from 'components/Logo/Logo';
 
-const Header = ({ isHamburger, isMobileMenuActive, toggleMenuActive }) => {
+const Header = () => {
   return (
     <header className="fixed bg-white grid grid-cols-3 w-full h-16 font-barlow z-20">
       <Logo />
-      <NavigationMenu
-        isMobileMenuActive={isMobileMenuActive}
-        toggleMenuActive={toggleMenuActive}
-        isHamburger={isHamburger}
-      />
+      <NavigationMenu />
     </header>
   );
 };
