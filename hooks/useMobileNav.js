@@ -6,7 +6,9 @@ const useMobileNav = () => {
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobileMenuActive, setIsMobileMenuActive] = useState(false);
 
-  const toggleMenuActive = () => setIsMobileMenuActive((prevState) => !prevState);
+  const toggleMenuActive = () => {
+    setIsMobileMenuActive((prevState) => !prevState);
+  };
 
   const { width } = useWindowSize();
 

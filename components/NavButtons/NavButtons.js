@@ -5,7 +5,12 @@ import { PageContext } from 'data/pageContext';
 import useMobileNav from 'hooks/useMobileNav';
 
 const NavButtons = ({ isMobile = true }) => {
+  const { currentPage } = useContext(PageContext);
   const { toggleMenuActive } = useMobileNav();
+
+  const handleClick = (path) => {
+    toggleMenuActive();
+  };
 
   const navButtonsInfo = Object.values(navButtonsData);
 
@@ -17,7 +22,10 @@ const NavButtons = ({ isMobile = true }) => {
     }`;
   };
 
-  const mobileNavButtonClasses = 'text-xl xs:text-2xl font-bold font-redHat tracking-xl tracking-wider pt-5 pb-5';
+  const mobileNavButtonClasses = (path) =>
+    `${
+      path === currentPage ? ' underline underline-offset-8' : null
+    } text-xl xs:text-2xl font-bold font-redHat tracking-xl tracking-wider pt-5 pb-5`;
 
   return (
     <>
@@ -25,8 +33,10 @@ const NavButtons = ({ isMobile = true }) => {
         return (
           <div
             key={label}
-            onClick={toggleMenuActive}
-            className={isMobile ? mobileNavButtonClasses : nonMobileNavButtonClasses(path)}>
+            onClick={() => {
+              handleClick(path);
+            }}
+            className={isMobile ? mobileNavButtonClasses(path) : nonMobileNavButtonClasses(path)}>
             <Link route={path}>{label}</Link>
           </div>
         );
