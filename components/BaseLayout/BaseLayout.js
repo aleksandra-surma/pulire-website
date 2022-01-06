@@ -7,19 +7,20 @@ import MobileNavigation from 'components/MobileNavigation/MobileNavigation';
 import useMobileNav from 'hooks/useMobileNav';
 
 export default function BaseLayout({ children, currentPageUrl = '/' }) {
-  const providedData = { currentPage: currentPageUrl };
   const { isHamburger, isMobileMenuActive, toggleMenuActive } = useMobileNav();
+  const providedData = { currentPage: currentPageUrl };
 
   return (
     <PageContext.Provider value={providedData}>
-      <PageWrapper>
+      <PageWrapper className isMobileMenuActive={isMobileMenuActive}>
         <div className="">
           <Header
             isMobileMenuActive={isMobileMenuActive}
             toggleMenuActive={toggleMenuActive}
             isHamburger={isHamburger}
           />
-          {!isMobileMenuActive ? <ViewWrapper>{children}</ViewWrapper> : null}
+          <ViewWrapper>{children}</ViewWrapper>
+          {/* {!isMobileMenuActive ? <ViewWrapper>{children}</ViewWrapper> : null} */}
           {isHamburger && isMobileMenuActive ? <MobileNavigation toggleMenuActive={toggleMenuActive} /> : null}
         </div>
         {isHamburger && isMobileMenuActive ? null : <Footer />}

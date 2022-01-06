@@ -3,7 +3,7 @@ import Logo from 'components/Logo/Logo';
 
 const Header = ({ isHamburger, isMobileMenuActive, toggleMenuActive }) => {
   return (
-    <header className="fixed bg-white grid grid-cols-3 w-full h-16 font-barlow">
+    <header className="fixed bg-white grid grid-cols-3 w-full h-16 font-barlow z-20">
       <Logo />
       <NavigationMenu
         isMobileMenuActive={isMobileMenuActive}
