@@ -41,6 +41,7 @@ const offersData = {
         'Specjalizujemy się w utrzymywaniu porządku w budynkach wielorodzinnych administrowanych przez Wspólnoty Mieszkaniowe i Spółdzielnie. Jesteśmy świadomi jak ważną kwestią są dla mieszkańców tych budynków są czyste powierzchnie wspólne tj. klatki schodowe i przedsionki. Myjemy podłogi i ściany. Czyścimy i dezynfekujemy poręcze i klamki. Czyścimy wejścia do klatek, przeszklenia i szyby. Myjemy okna. Czyścimy parapety. Porządkujemy windy.',
       shortDescription:
         'Specjalizujemy się w utrzymywaniu porządku w budynkach wielorodzinnych administrowanych przez Wspólnoty Mieszkaniowe i Spółdzielnie...',
+      offerChecklistTitle: 'Oferta zawiera mi.:',
       offerChecklist: [
         'mycie klatek schodowych i przedsionków',
         'mycie ścian i podłóg',

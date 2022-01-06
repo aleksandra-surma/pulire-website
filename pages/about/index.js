@@ -4,7 +4,7 @@ import navButtonsData from 'data/buttons';
 import { v4 as uuid } from 'uuid';
 import aboutData from 'data/about';
 import addNonBreakableSpaces from 'utils/addNonBreakableSpaces';
-import Title from '../../components/Title/Title';
+import Title from 'components/Title/Title';
 
 const About = () => {
   const aboutPath = navButtonsData.about.path;
@@ -30,7 +30,7 @@ const About = () => {
               })}
             </div>
           </div>
-          <div className="bg-neutral-100 w-full min-h-[400px] lg:w-1/2 lg:mx-10 lg:py-10 lg:h-full text-neutral-100">
+          <div className="bg-neutral-100 w-full min-h-[400px] lg:w-1/2 lg:ml-10 lg:py-10 lg:h-full text-neutral-100">
             .
           </div>
         </section>
