@@ -4,7 +4,7 @@ import debounce from 'lodash.debounce';
 const useCurrentY = () => {
   const [currentPositionY, setCurrentPositionY] = useState(0);
 
-  const [isMounted, setIsMounted] = useState(true);
+  const [isMounted, setIsMounted] = useState(true); // prevent react warning about changing state of unmounting component
 
   useEffect(() => {
     const handleScroll = () => {

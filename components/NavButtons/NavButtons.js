@@ -24,7 +24,7 @@ const NavButtons = ({ isMobile = true }) => {
 
   const mobileNavButtonClasses = (path) =>
     `${
-      path === currentPage ? ' underline underline-offset-8' : null
+      path === currentPage ? 'underline underline-offset-8' : null
     } text-xl xs:text-2xl font-bold font-redHat tracking-xl tracking-wider pt-5 pb-5`;
 
   return (

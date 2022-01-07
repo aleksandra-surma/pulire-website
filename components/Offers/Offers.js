@@ -1,5 +1,5 @@
-import offersData from '../../data/offers';
-import Offer from '../Offer/Offer';
+import offersData from 'data/offers';
+import Offer from 'components/Offers/Offer';
 
 const Offers = () => {
   return (
