@@ -4,7 +4,7 @@ const ButtonMoreOrLess = ({ isOpened, setIsOpened }) => {
   return (
     <button
       type="button"
-      className={`${additionalClasses} text-sm tracking-wider underline underline-offset-4`}
+      className={`${additionalClasses} text-sm tracking-wider underline underline-offset-4 cursor-pointer`}
       onClick={() => setIsOpened((prevVal) => !prevVal)}>
       {isOpened ? 'mniej info...' : 'więcej...'}
     </button>

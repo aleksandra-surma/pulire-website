@@ -4,7 +4,6 @@ import SendConfirmation from 'components/SendConfirmation/SendConfirmation';
 import useFormState from 'hooks/useFormState';
 import { useRef } from 'react';
 import { handleOnChange, handleSubmit } from 'helpers/form';
-import Button from '../Offers/Offer/ButtonReserve';
 
 const ContactForm = () => {
   const formState = useFormState();
