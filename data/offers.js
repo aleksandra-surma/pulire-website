@@ -92,7 +92,7 @@ export const faq = {
     {
       question: 'Ile kosztują Wasze usługi?',
       answer:
-        'Wielu czynników wpływa na cenę końcową naszych usług. Dla każdego naszego klienta sporządzamy wycenę w oparciu o informacje na temat warunków pracy, częstotliwości wykonywanych usług, czy też technologii jakie powinny być wykorzystane przy wykonaniu zlecenia.',
+        'Wiele czynników wpływa na cenę końcową naszych usług. Dla każdego naszego klienta sporządzamy wycenę w oparciu o informacje na temat warunków pracy, częstotliwości wykonywanych usług, czy też technologii jakie powinny być wykorzystane przy wykonaniu zlecenia.',
     },
     {
       question: 'Czy możliwa jest stała współpraca?',

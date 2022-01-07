@@ -15,12 +15,13 @@ const OffersView = () => {
         <title>Pulire - oferta</title>
       </Head>
       <BaseLayout currentPageUrl={offerPath}>
-        <section className="offers_offers flex flex-col lg:justify-center text-justify w-full min-h-pageView tall:min-h-[70vh] tallMobile:min-h-[calc(100vh-100px)]  font-redHat">
+        <section className="offers_offers flex flex-col lg:justify-center text-justify w-full min-h-pageView tall:min-h-[70vh] tallMobile:min-h-[calc(100vh-100px)] font-redHat">
           <Title title={offersData.title} />
           <Offers />
         </section>
-        <section className="offers_">
+        <section className="offers w-full flex flex-col lg:flex-row mt-10">
           <FAQ />
+          <div className="lg:w-1/2 w-full bg-green-200">img</div>
         </section>
       </BaseLayout>
     </>
