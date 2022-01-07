@@ -28,6 +28,10 @@ module.exports = {
       lineHeight: {
         full: '100%',
       },
+      boxShadow: {
+        'custom-1':
+          '0 -2px 4px rgba(0,0,0,0.02), 0 2px 2px rgba(0,0,0,0.05), 0 4px 4px rgba(0,0,0,0.05), 0 8px 8px rgba(0,0,0,0.05), 0 16px 16px rgba(0,0,0,0.05);',
+      },
       screens: {
         // https://tailwindcss.com/docs/screens
         xxs: '360px',
@@ -45,6 +49,18 @@ module.exports = {
         tallMobile: { raw: '(orientation: portrait) and (max-width: 500px)' },
         tabletTall: { raw: '(orientation: portrait) and (min-width: 501px)' },
         tabletBigLandscape: { raw: '(orientation: landscape) and (min-height: 900px)' },
+      },
+      animation: {
+        shake: 'shake 1.5s infinite',
+      },
+      keyframes: {
+        shake: {
+          '0%': { transform: 'translate(2px, 0) rotate(0deg)' },
+          '25%': { transform: 'translate(-2px, 0) rotate(1deg)' },
+          '50%': { transform: 'translate(2px, 0) rotate(1deg)' },
+          '75%': { transform: 'translate(-2px, 0) rotate(0deg)' },
+          '100%': { transform: 'translate(2px, 0) rotate(0deg)' },
+        },
       },
       outline: {
         green: '2px solid #00cc00',

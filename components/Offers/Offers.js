@@ -1,4 +1,4 @@
-import offersData from 'data/offers';
+import { offersData } from 'data/offers';
 import Offer from 'components/Offers/Offer';
 
 const Offers = () => {

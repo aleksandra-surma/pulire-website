@@ -5,15 +5,22 @@ import { v4 as uuid } from 'uuid';
 
 const iconSize = 40;
 
-const offersData = {
+export const offersData = {
   title: 'Usługi',
   offers: [
     {
       title: 'Sprzątanie obiektów przemysłowych',
       description:
-        'Specjalizujemy się w porządkowaniu przestrzeni przemysłowych i hal magazynowych. Do usług z tego zakresu należą: mycie i odkurzanie hal (podłogi, ściany, słupy i inne konstrukcje przemysłowe), czyszczenie powierzchni szklanych (okna, przeszklenia i powierzchnie wystawowe), czyszczenie infrastruktury przemysłowej (taśmy i linie produkcyjne).',
+        'Specjalizujemy się w porządkowaniu przestrzeni przemysłowych i hal magazynowych. Do usług z tego zakresu należą: mycie i odkurzanie hal, czyszczenie powierzchni szklanych, czyszczenie infrastruktury przemysłowej.',
       shortDescription:
         'Specjalizujemy się w porządkowaniu przestrzeni przemysłowych i hal magazynowych. Do usług z tego zakresu należą...',
+      offerChecklistTitle: 'Do czyszczonych nawierzchni należą mi.:',
+      offerChecklist: [
+        'podłogi i ściany',
+        'słupy i inne konstrukcje przemysłowe',
+        'okna, przeszklenia i powierzchnie wystawowe',
+        'taśmy i linie produkcyjne',
+      ],
       icon: <Icon icon="cil:factory" width={iconSize} height={iconSize} />,
       uuid: uuid(),
     },
@@ -74,34 +81,33 @@ const offersData = {
       uuid: uuid(),
     },
   ],
-  faq: {
-    title: 'Poznaj naszą ofertę',
-    description:
-      'Wiele osób zadaje pytania związane z naszą działalnością, część z nich zebraliśmy w formie krótkiego FAQ',
-    questions: [
-      // todo: rewrite faq section
-      {
-        question: 'Ile kosztują Wasze usługi?',
-        answer:
-          'Wielu czynników wpływa na cenę końcową naszych usług. Dla każdego naszego klienta sporządzamy wycenę w oparciu o informacje na temat warunków pracy, częstotliwości wykonywanych usług, czy też technologii jakie powinny być wykorzystane przy wykonaniu zlecenia.',
-      },
-      {
-        question: 'Czy możliwa jest stała współpraca?',
-        answer:
-          'Tak! Jak najbardziej przewidujemy taką formę współpracy, ze względu na wygodę i oszczędność czasu, a klienci za spokój i pewność, że wszystko będzie wykonane solidnie i na czas.',
-      },
-      {
-        question: 'Co, jeśli zajdzie konieczność wykonania dodatkowego zadania?',
-        answer:
-          'Przewidujemy taką sytuację. W przypadku stałych zleceń pracujemy według ustalonego harmonogramu i zakresu prac, ale jeśli w wyniku nieprzewidzianych okoliczności zajdzie potrzeba wykonania ponadprogramowego zadania, to zawsze jesteśmy do dyspozycji i dla stałych klientów mamy korzystne warunki.',
-      },
-      {
-        question: 'Gdzie można skorzystać z waszych usług?',
-        answer:
-          'Z racji na to, że siedzibę posiadamy w Lublinie to właśnie tam mamy największą liczbę zleceń. Jednak jesteśmy otwarci na współpracę w innych lokalizacjach.',
-      },
-    ],
-  },
 };
 
-export default offersData;
+export const faq = {
+  title: 'Poznaj naszą ofertę',
+  description:
+    'Wiele osób zadaje pytania związane z naszą działalnością, część z nich zebraliśmy w formie krótkiego FAQ.',
+  questions: [
+    // todo: rewrite faq section
+    {
+      question: 'Ile kosztują Wasze usługi?',
+      answer:
+        'Wielu czynników wpływa na cenę końcową naszych usług. Dla każdego naszego klienta sporządzamy wycenę w oparciu o informacje na temat warunków pracy, częstotliwości wykonywanych usług, czy też technologii jakie powinny być wykorzystane przy wykonaniu zlecenia.',
+    },
+    {
+      question: 'Czy możliwa jest stała współpraca?',
+      answer:
+        'Tak! Jak najbardziej przewidujemy taką formę współpracy, ze względu na wygodę i oszczędność czasu, a klienci za spokój i pewność, że wszystko będzie wykonane solidnie i na czas.',
+    },
+    {
+      question: 'Co, jeśli zajdzie konieczność wykonania dodatkowego zadania?',
+      answer:
+        'Przewidujemy taką sytuację. W przypadku stałych zleceń pracujemy według ustalonego harmonogramu i zakresu prac, ale jeśli w wyniku nieprzewidzianych okoliczności zajdzie potrzeba wykonania ponadprogramowego zadania, to zawsze jesteśmy do dyspozycji i dla stałych klientów mamy korzystne warunki.',
+    },
+    {
+      question: 'Gdzie można skorzystać z waszych usług?',
+      answer:
+        'Z racji na to, że siedzibę posiadamy w Lublinie to właśnie tam mamy największą liczbę zleceń. Jednak jesteśmy otwarci na współpracę w innych lokalizacjach.',
+    },
+  ],
+};

@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { PageContext } from 'data/pageContext';
 import { contactData } from 'data/contact';
 import home from 'data/home';
-import offers from 'data/offers';
+import { offersData } from 'data/offers';
 import { v4 as uuid } from 'uuid';
 import { Icon } from '@iconify/react';
 import MoreInfo from 'components/MoreInfo/MoreInfo';
@@ -29,9 +29,9 @@ const Footer = () => {
               {pathnameUrl !== '/' ? <MoreInfo directionPage="/" /> : null}
             </article>
             <article className="footer__offers md:w-3/10 mb-20 md:mb-0">
-              <h2 className="pb-4 text-3xl laptop:text-4xl font-bold font-redHat tracking-logo">{offers.title}</h2>
+              <h2 className="pb-4 text-3xl laptop:text-4xl font-bold font-redHat tracking-logo">{offersData.title}</h2>
               <ul className="">
-                {offers.offers.map(({ title }) => (
+                {offersData.offers.map(({ title }) => (
                   <li key={uuid()} className="flex py-2">
                     <Icon icon="bi:check-lg" width="24" height="24" className="mr-4 text-green-400" />
                     <p className="font-extralight">{title}</p>
