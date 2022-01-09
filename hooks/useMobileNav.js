@@ -24,6 +24,11 @@ const useMobileNav = () => {
     } else if (width < 1024) {
       setIsDesktop(false);
     }
+
+    return () => {
+      setIsHamburger(true);
+      setIsDesktop(false);
+    };
   }, [width]);
 
   let mediaQuery = null;
@@ -37,6 +42,9 @@ const useMobileNav = () => {
     });
 
     return () => {
+      setIsHamburger(true);
+      setIsDesktop(false);
+      setIsMobileMenuActive(false);
       mediaQuery.removeEventListener('change', () => {});
     };
   }, [width]);
