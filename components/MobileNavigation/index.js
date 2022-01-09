@@ -1,4 +1,4 @@
-import NavButtons from 'components/NavButtons/NavButtons';
+import NavButtons from 'components/NavButtons';
 
 const MobileNavigation = () => {
   return (

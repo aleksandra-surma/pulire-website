@@ -1,9 +1,9 @@
-import Header from 'components/Header/Header';
-import ViewWrapper from 'components/ViewWrapper/ViewWrapper';
-import Footer from 'components/Footer/Footer';
-import PageWrapper from 'components/PageWrapper/PageWrapper';
-import ScrollTop from 'components/ScrollTop/ScrollTop';
-import MobileNavigation from 'components/MobileNavigation/MobileNavigation';
+import Header from 'components/Header';
+import ViewWrapper from 'components/ViewWrapper';
+import Footer from 'components/Footer';
+import PageWrapper from 'components/PageWrapper';
+import ScrollTop from 'components/ScrollTop';
+import MobileNavigation from 'components/MobileNavigation';
 import { PageContext } from 'data/pageContext';
 import useMobileNav from 'hooks/useMobileNav';
 import { useEffect, useMemo, useState } from 'react';

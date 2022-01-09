@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import Head from 'next/head';
-import BaseLayout from 'components/BaseLayout/BaseLayout';
+import BaseLayout from 'components/BaseLayout';
 import { contactData } from 'data/contact';
 import navButtonsData from 'data/buttons';
 import addNonBreakableSpaces from 'utils/addNonBreakableSpaces';
 import { Icon } from '@iconify/react';
 import useMobileNav from 'hooks/useMobileNav';
-import ContactForm from 'components/ContactForm/ContactForm';
-import Title from 'components/Title/Title';
+import ContactForm from 'components/ContactForm';
+import Title from 'components/Title';
 
 const initialIsCopiedState = { email: false, phoneNumber: false };
 const initialSetTimeoutIDs = { email: null, phoneNumber: null };

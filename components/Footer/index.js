@@ -5,7 +5,7 @@ import home from 'data/home';
 import { offersData } from 'data/offers';
 import { v4 as uuid } from 'uuid';
 import { Icon } from '@iconify/react';
-import MoreInfo from 'components/MoreInfo/MoreInfo';
+import MoreInfo from 'components/MoreInfo';
 
 const Footer = () => {
   const { currentPage: pathnameUrl } = useContext(PageContext);

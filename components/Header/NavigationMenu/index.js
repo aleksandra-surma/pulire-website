@@ -1,5 +1,5 @@
-import MobileMenu from 'components/MobileMenu/MobileMenu';
-import NavButtons from 'components/NavButtons/NavButtons';
+import MobileMenu from 'components/Header/NavigationMenu/MobileMenu';
+import NavButtons from 'components/NavButtons';
 import { PageContext } from 'data/pageContext';
 import { useContext } from 'react';
 

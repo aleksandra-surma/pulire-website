@@ -1,5 +1,5 @@
-import NavigationMenu from 'components/NavigationMenu/NavigationMenu';
-import Logo from 'components/Logo/Logo';
+import NavigationMenu from 'components/Header/NavigationMenu';
+import Logo from 'components/Header/Logo';
 
 const Header = () => {
   return (

@@ -1,10 +1,10 @@
 import Head from 'next/head';
-import BaseLayout from 'components/BaseLayout/BaseLayout';
+import BaseLayout from 'components/BaseLayout';
 import navButtonsData from 'data/buttons';
 import { v4 as uuid } from 'uuid';
 import aboutData from 'data/about';
 import addNonBreakableSpaces from 'utils/addNonBreakableSpaces';
-import Title from 'components/Title/Title';
+import Title from 'components/Title';
 
 const About = () => {
   const aboutPath = navButtonsData.about.path;

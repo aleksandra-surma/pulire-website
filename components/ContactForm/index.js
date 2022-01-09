@@ -1,6 +1,6 @@
 import { formData } from 'data/contact';
-import ErrorCommunique from 'components/ErrorComunicate/ErrorComunicate';
-import SendConfirmation from 'components/SendConfirmation/SendConfirmation';
+import ErrorCommunique from 'components/ContactForm/ErrorComunicate';
+import SendConfirmation from 'components/ContactForm/SendConfirmation';
 import useFormState from 'hooks/useFormState';
 import { useRef } from 'react';
 import { handleOnChange, handleSubmit } from 'helpers/form';
