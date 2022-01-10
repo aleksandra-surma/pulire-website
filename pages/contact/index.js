@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Head from 'next/head';
 import BaseLayout from 'components/BaseLayout';
 import { contactData } from 'data/contact';
-import navButtonsData from 'data/buttons';
+import { navButtonsData } from 'data/buttons';
 import addNonBreakableSpaces from 'utils/addNonBreakableSpaces';
 import { Icon } from '@iconify/react';
 import useMobileNav from 'hooks/useMobileNav';

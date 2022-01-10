@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { Link } from 'routes';
-import navButtonsData from 'data/buttons';
+import { navButtonsData } from 'data/buttons';
 import { PageContext } from 'data/pageContext';
 import useMobileNav from 'hooks/useMobileNav';
 

@@ -54,13 +54,3 @@ export default function BaseLayout({ children, currentPageUrl = '/' }) {
     </PageContext.Provider>
   );
 }
-
-// return (
-//   <div style={{ height: 4000 }}> {/* just added to make scrollbar available */}
-//     <div style={{ position: "fixed", top: 0 }}>
-//       {scrollY > 100
-//         ? "Scrolled more than 100px"
-//         : "Still somewhere near the top!"}
-//     </div>
-//   </div>
-// );

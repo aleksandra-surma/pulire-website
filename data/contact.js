@@ -9,7 +9,7 @@ export const contactData = {
 };
 
 export const formData = {
-  formFields: ['name', 'email', 'phoneNumber'],
+  formFields: [{ name: 'name' }, { email: 'email' }, { phoneNumber: 'phoneNumber' }],
   errors: {
     name: {
       'string.min': 'W pierwszym polu użyto zbyt krótkiej nazwy.',
@@ -30,4 +30,6 @@ export const formData = {
     email: 'e-mail',
     message: 'treść wiadomości',
   },
+  policyMessage:
+    '* Zgodnie z naszą polityką prywatności Twoje dane nie zostaną przekazane do żadnych podmiotów. Będą przetwarzane tylko w ramach naszej oferty.',
 };

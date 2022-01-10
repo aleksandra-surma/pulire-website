@@ -1,6 +1,4 @@
 import { useEffect, useState } from 'react';
-import useWindowSize from 'hooks/useWindowSize';
-import debounce from 'lodash.debounce';
 import { useMedia } from 'use-media';
 
 const useMobileNav = () => {

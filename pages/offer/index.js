@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import BaseLayout from 'components/BaseLayout';
-import navButtonsData from 'data/buttons';
+import { navButtonsData } from 'data/buttons';
 import { offersData } from 'data/offers';
 import Offers from 'components/Offers/Offers';
 import Title from 'components/Title';
