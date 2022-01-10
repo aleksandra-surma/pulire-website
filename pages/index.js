@@ -1,9 +1,15 @@
-import BaseLayout from 'components/BaseLayout/BaseLayout';
+import BaseLayout from 'components/BaseLayout';
+import pages from 'data/paths';
+import HomeIntro from 'components/HomeIntro';
+import HomeOffer from 'components/HomeOffer';
+import CompanyAdvantages from 'components/CompanyAdvantages';
 
 const Home = () => {
   return (
-    <BaseLayout currentPageUrl="/">
-      <div>Start page - pulire.co</div>
+    <BaseLayout currentPageUrl={pages.home}>
+      <HomeIntro />
+      <HomeOffer />
+      <CompanyAdvantages />
     </BaseLayout>
   );
 };

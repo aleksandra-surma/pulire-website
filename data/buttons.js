@@ -1,20 +1,26 @@
-const navButtonsData = {
+import paths from 'data/paths';
+
+const { home, about, offer, contact } = paths;
+
+export const navButtonsData = {
   home: {
     label: 'HOME',
-    path: '/',
+    path: home,
   },
   about: {
     label: 'O\xa0NAS',
-    path: '/o-nas',
+    path: about,
   },
   offer: {
     label: 'OFERTA',
-    path: '/oferta',
+    path: offer,
   },
   contact: {
     label: 'KONTAKT',
-    path: '/kontakt',
+    path: contact,
   },
 };
 
-export default navButtonsData;
+export const formButtonsData = {
+  submit: 'Wyślij',
+};
