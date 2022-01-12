@@ -1,3 +1,8 @@
+import spongeBlack from 'public/images/sponge-black.jpg';
+// import spongeBlack from 'public/images/sponge-two-black.jpg';
+import windowCleaner from 'public/images/window-cleaner-black.jpg';
+import glovesBlack from 'public/images/gloves-black.jpg';
+
 const home = {
   companyName: 'Pulire',
   homeIntro: {
@@ -24,6 +29,9 @@ const home = {
       'Wyjątkowa energia i kreatywność w tworzeniu coraz lepszej marki cenionej na rynku',
     ],
   },
+  homeUrl: spongeBlack,
+  homeOfferUrl: windowCleaner,
+  homeAdvantagesUrl: glovesBlack,
 };
 
 export default home;

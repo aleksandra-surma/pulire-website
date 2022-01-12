@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { v4 as uuid } from 'uuid';
 import { FaCheck } from 'react-icons/fa';
 import useMobileNav from 'hooks/useMobileNav';
+import Image from 'next/image';
 import ButtonReserve from './ButtonReserve';
 import ButtonMoreOrLess from './ButtonMoreOrLess';
 
@@ -22,7 +23,11 @@ const Offer = ({ offer }) => {
         <div className="mb-8 leading-8 text-justify">
           <p>{isOpened ? offer.description : offer.shortDescription}</p>
         </div>
-        {isOpened && !isDesktop ? <div className="w-full mb-8 h-[200px] bg-green-200">img</div> : null}
+        {isOpened && !isDesktop ? (
+          <div className="py-8 lg:p-8 lg:w-1/2 lg:py-16">
+            <Image src={offer.offerUrl} alt="Serwetki z logiem pulire" />
+          </div>
+        ) : null}
         {isOpened && offer.offerChecklist ? (
           <>
             {offer.offerChecklistTitle ? <h4 className="pb-2">{offer.offerChecklistTitle}</h4> : null}
@@ -39,10 +44,19 @@ const Offer = ({ offer }) => {
           </>
         ) : null}
         <ButtonMoreOrLess isOpened={isOpened} setIsOpened={setIsOpened} />
-
         {isOpened ? <ButtonReserve /> : null}
       </div>
-      {isDesktop ? <div className="w-1/2 min-h-full bg-green-200">img</div> : null}
+      {isDesktop ? (
+        <div className="relative w-1/2 min-h-full bg-blue-100">
+          <Image
+            src={offer.offerUrl}
+            layout="fill"
+            objectFit="cover"
+            objectPosition="center center"
+            alt="Serwetki z logiem pulire"
+          />
+        </div>
+      ) : null}
     </article>
   );
 };

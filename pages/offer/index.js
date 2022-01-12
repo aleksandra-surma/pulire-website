@@ -1,12 +1,16 @@
 import Head from 'next/head';
 import BaseLayout from 'components/BaseLayout';
 import { navButtonsData } from 'data/buttons';
-import { offersData } from 'data/offers';
+import { faq, offersData } from 'data/offers';
 import Offers from 'components/Offers/Offers';
 import Title from 'components/Title';
 import FAQ from 'components/FAQ';
+import Image from 'next/image';
+import useMobileNav from 'hooks/useMobileNav';
 
 const OffersView = () => {
+  const { isDesktop } = useMobileNav();
+
   const offerPath = navButtonsData.offer.path;
 
   return (
@@ -21,7 +25,11 @@ const OffersView = () => {
         </section>
         <section className="offers w-full flex flex-col lg:flex-row mt-10">
           <FAQ />
-          <div className="lg:w-1/2 w-full bg-green-200">img</div>
+          {isDesktop ? (
+            <div className="p-2 py-8 lg:p-8 lg:w-1/2 flex justify-center lg:py-16">
+              <Image src={faq.faqUrl} alt="Serwetki z logiem pulire" />
+            </div>
+          ) : null}
         </section>
       </BaseLayout>
     </>
