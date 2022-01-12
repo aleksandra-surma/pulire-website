@@ -14,7 +14,7 @@ export default function HomeOffer() {
 
   return (
     <section className="relative flex flex-col-reverse mb-20 leading-8 lg:flex-row">
-      <div className="relative lg:sticky top-[150px] flex mx-20 my-20 justify-center w-1/2 h-[calc(100vh-260px)]">
+      <div className="relative lg:sticky lg:top-[150px] flex mx-20 justify-center w-1/2 h-[calc(100vh-260px)]">
         <Image src={home.homeOfferUrl} priority layout="fill" objectFit="contain" alt="pociągnięcie czarną farbą" />
       </div>
       <div className="flex flex-col justify-center lg:p-14 lg:w-3/5 min-h-[calc(100vh-80px)]  tallMobile:min-h-[80vh]">
