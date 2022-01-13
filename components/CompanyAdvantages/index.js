@@ -14,9 +14,9 @@ export default function CompanyAdvantages() {
         <h3 className="pb-8 text-4xl font-semibold text-left">{heading}</h3>
         {highlightsList.map((highlight) => {
           return (
-            <div key={uuid()} className="flex mb-8">
+            <div key={uuid()} data-aos="fade-right" className="flex mb-8">
               <div className="w-12">
-                <BsCheckLg className="my-2 text-green-400" />
+                <BsCheckLg className="my-2 text-xl text-green-500" />
               </div>
               <p className="w-full">{highlight}</p>
             </div>

@@ -21,6 +21,7 @@
   },
   "homepage": "https://www.pulire.co",
   "dependencies": {
+    "aos": "^2.3.4",
     "express": "^4.17.2",
     "joi": "^17.5.0",
     "lodash.debounce": "^4.0.8",
