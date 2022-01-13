@@ -3,7 +3,8 @@ import home from 'data/home';
 import addNonBreakableSpaces from 'utils/addNonBreakableSpaces';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import useMobileNav from '../../hooks/useMobileNav';
+import useMobileNav from 'hooks/useMobileNav';
+// import brushStroke from 'public/images/brush-stroke-home-01.jpeg';
 
 export default function HomeIntro() {
   const [description, setDescription] = useState('');
@@ -41,6 +42,11 @@ export default function HomeIntro() {
           <Image src={home.homeUrl} priority layout="fill" objectFit="contain" alt="czarna gąbka" />
         </div>
       )}
+      {/* {isDesktop ? ( */}
+      {/*  <div className="absolute lg:top-[calc(100vh-180px)] lg:left-[-450px]"> */}
+      {/*    <Image src={brushStroke} /> */}
+      {/*  </div> */}
+      {/* ) : null} */}
     </section>
   );
 }

@@ -1,5 +1,5 @@
 import spongeBlack from 'public/images/sponge-black.jpg';
-import windowCleaner from 'public/images/window-cleaner-black.jpg';
+import windowCleaner from 'public/images/window-cleaner-tool.jpeg';
 import glovesBlack from 'public/images/gloves-black.jpg';
 
 const home = {
