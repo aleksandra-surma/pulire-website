@@ -2,7 +2,7 @@ import { v4 as uuid } from 'uuid';
 import useMobileNav from 'hooks/useMobileNav';
 import { offersData } from 'data/offers';
 import Image from 'next/image';
-import home from '../../data/home';
+import home from 'data/home';
 
 export default function HomeOffer() {
   const { isDesktop } = useMobileNav();
@@ -25,7 +25,7 @@ export default function HomeOffer() {
         <ul>
           {offers.map(({ title, icon, homeOfferDescription }) => {
             return (
-              <li key={uuid()} className="flex mb-12">
+              <li key={uuid()} data-aos="fade-left" className="flex mb-12">
                 {isDesktop ? <div className="mr-4 text-justify">{icon}</div> : null}
                 <div>
                   <h4 className="flex items-center h-[40px] font-semibold text-xl mb-4">{title}</h4>
