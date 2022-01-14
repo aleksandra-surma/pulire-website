@@ -9,7 +9,6 @@ import useMobileNav from 'hooks/useMobileNav';
 import ContactForm from 'components/ContactForm';
 import Title from 'components/Title';
 import Image from 'next/image';
-import productionLineImg from '../../public/images/production-line-cleaning-800x505.jpeg';
 
 const initialIsCopiedState = { email: false, phoneNumber: false };
 const initialSetTimeoutIDs = { email: null, phoneNumber: null };
