@@ -13,8 +13,8 @@ const sendMessageToPulire = async (name, email, description) => {
     host: 'smtp.ethereal.email',
     port: 587,
     auth: {
-      user: 'oliver.hamill67@ethereal.email', // todo: hide -> .env
-      pass: 'HYquw6xNbxGCbEqc49', // todo: hide -> .env
+      user: 'oliver.hamill67@ethereal.email', // todo: hide -> .env.local
+      pass: 'HYquw6xNbxGCbEqc49', // todo: hide -> .env.local
     },
   });
 
@@ -38,8 +38,8 @@ export default sendMessageToPulire;
 //   host: 'ssl0.ovh.net',
 //   port: 465,
 //   auth: {
-//     user: 'form@pulire.co',
-//     pass: 'Lentil123',
+//     user: process.env.REACT_APP_MAIL_USER,
+//     pass: process.env.REACT_APP_MAIL_PASSWORD,
 //   },
 // });
 //
