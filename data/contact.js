@@ -27,6 +27,9 @@ export const formData = {
       'string.min': 'W treści wiadomości użyto zbyt małej ilości znaków.',
       'string.max': 'W treści wiadomości użyto zbyt dużej ilości znaków (max. 2000 znaków)',
     },
+    isRecaptchaValid: {
+      'any.only': `Zaznacz pole "I'm not a robot"`,
+    },
   },
   contactFormPlaceholders: {
     name: 'imię, nazwisko lub nazwa firmy',

@@ -8,13 +8,18 @@ export const handleOnChange = (event, formField, formState) => {
   setFormValues({ ...formValues, [formField]: text });
 };
 
-export const handleSubmit = async (e, { setFormValues, setError, setIsMessageSend }, offerFormRef) => {
+export const handleSubmit = async (e, { setFormValues, setError, setIsMessageSend }, offerFormRef, recaptcharef) => {
   e.preventDefault();
   const payload = await getPayload(offerFormRef.current);
 
+  const captchaToken = await recaptcharef.current.getValue();
+  recaptcharef.current.reset();
+
+  console.log('captchaToken', captchaToken);
+
   const response = await fetch('/api/contact', {
     method: 'POST',
-    body: JSON.stringify(payload),
+    body: JSON.stringify({ payload, captchaToken }),
     headers: {
       'Content-Type': 'application/json',
     },

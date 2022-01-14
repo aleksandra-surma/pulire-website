@@ -1,13 +1,21 @@
 import validate from 'services/contactForm/validate';
 import sendMessageToPulire from 'services/contactForm/sendMessageToPulire';
+import axios from 'axios';
 
 export default async (req, res) => {
   switch (req.method) {
     case 'POST': {
       try {
-        const payload = req.body;
+        console.log(req.body);
+        const { payload, captchaToken } = req.body;
 
-        const { name, email, message } = await validate(payload);
+        const recaptchaResponse = await axios.post(
+          `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.SECRET_KEY}&response=${captchaToken}`,
+        );
+
+        const isRecaptchaValid = recaptchaResponse.data.success;
+
+        const { name, email, message } = await validate({ ...payload, isRecaptchaValid });
 
         await sendMessageToPulire(name, email, message);
 
