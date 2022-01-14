@@ -17,7 +17,7 @@ export default function HomeIntro() {
     },
   } = home;
 
-  const isMobile = useMedia({ maxWidth: 767 });
+  const isMobile = useMedia({ maxWidth: 767 }); // todo: replace by isTablet
 
   useEffect(() => {
     if (isMobile) {
@@ -35,7 +35,7 @@ export default function HomeIntro() {
       </div>
       {isDesktop ? (
         <div className="relative flex mx-20 justify-center w-2/5 h-[40vh] lg:h-[calc(100vh-160px)]">
-          <Image src={home.homeUrl} priority layout="fill" objectFit="contain" alt="pociągnięcie czarną farbą" />
+          <Image src={home.homeUrl} priority layout="fill" objectFit="contain" alt="czarna gąbka" />
         </div>
       ) : (
         <div className="relative flex justify-center w-[90vw] h-[calc(100vh-80px)]">

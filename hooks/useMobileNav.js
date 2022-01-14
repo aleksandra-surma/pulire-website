@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { useMedia } from 'use-media';
 
 const useMobileNav = () => {
-  const [isHamburger, setIsHamburger] = useState(true);
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobileMenuActive, setIsMobileMenuActive] = useState(false);
   const isTablet = useMedia({ minWidth: 768 });
@@ -13,12 +12,6 @@ const useMobileNav = () => {
   };
 
   useEffect(() => {
-    if (isTablet) {
-      setIsHamburger(false);
-    } else if (!isTablet) {
-      setIsHamburger(true);
-    }
-
     if (isLaptop) {
       setIsDesktop(true);
     } else if (!isLaptop) {
@@ -26,7 +19,6 @@ const useMobileNav = () => {
     }
 
     return () => {
-      setIsHamburger(true);
       setIsDesktop(false);
     };
   }, [isTablet, isLaptop]);
@@ -37,19 +29,19 @@ const useMobileNav = () => {
   }
 
   useEffect(() => {
-    mediaQuery.addEventListener('change', () => {
-      setIsHamburger((prevState) => !prevState);
-    });
+    // mediaQuery.addEventListener('change', () => {
+    //   setIsTable((prevState) => !prevState);
+    // });
 
     return () => {
-      setIsHamburger(true);
+      // setIsTable(true);
       setIsDesktop(false);
       setIsMobileMenuActive(false);
       mediaQuery.removeEventListener('change', () => {});
     };
   }, [isTablet, isLaptop]);
 
-  return { isHamburger, isDesktop, isMobileMenuActive, toggleMenuActive };
+  return { isDesktop, isMobileMenuActive, toggleMenuActive, isTablet };
 };
 
 export default useMobileNav;
