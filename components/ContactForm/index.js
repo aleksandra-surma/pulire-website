@@ -2,7 +2,7 @@ import { formData } from 'data/contact';
 import ErrorCommunique from 'components/ContactForm/ErrorComunicate';
 import SendConfirmation from 'components/ContactForm/SendConfirmation';
 import useFormState from 'hooks/useFormState';
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import { handleSubmit } from 'helpers/form';
 import ReCaptchaV2 from 'react-google-recaptcha';
 import ButtonFormSubmit from './ButtonFormSubmit';
@@ -17,23 +17,11 @@ const ContactForm = () => {
 
   const { policyMessage } = formData;
 
-  useEffect(() => {
-    console.log('env:', process.env.SITE_KEY);
-  }, []);
-
-  // function handleOnChange(token) {
-  //   formState.setCaptchaToken(token);
-  // }
-  //
-  // function handleOnExpire() {
-  //   formState.setCaptchaToken(null);
-  // }
-
   return (
     <form onSubmit={(e) => handleSubmit(e, formState, offerFormRef, recaptchaRef)} className="pt-10" ref={offerFormRef}>
-      <InputTextField name="name" type="text" required />
-      <InputTextField name="email" type="email" required />
-      <InputTextArea name="message" required />
+      <InputTextField formState={formState} name="name" type="text" required />
+      <InputTextField formState={formState} name="email" type="email" required />
+      <InputTextArea formState={formState} name="message" required />
 
       {error?.label ? <ErrorCommunique error={error} /> : null}
       {isMessageSend ? <SendConfirmation /> : null}

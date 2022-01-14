@@ -1,8 +1,6 @@
 import { formData } from 'data/contact';
 
 const ErrorCommunique = ({ error }) => {
-  console.log('error', error);
-
   const errorMessage = formData.errors[error.label][error.type];
 
   return (

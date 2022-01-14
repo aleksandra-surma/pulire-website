@@ -28,7 +28,6 @@ export default function CompanyAdvantages() {
           src={home.homeAdvantagesUrl}
           priority
           layout="fill"
-          width={300}
           objectFit="contain"
           alt="pociągnięcie czarną farbą"
         />

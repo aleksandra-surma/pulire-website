@@ -6,7 +6,6 @@ export default async (req, res) => {
   switch (req.method) {
     case 'POST': {
       try {
-        console.log(req.body);
         const { payload, captchaToken } = req.body;
 
         const recaptchaResponse = await axios.post(
@@ -21,7 +20,6 @@ export default async (req, res) => {
 
         res.status(200).json({ status: 'payload_sent' });
       } catch (error) {
-        console.log('error', error);
         if (error.details) {
           const payloadError = {
             label: error.details[0].context.label,

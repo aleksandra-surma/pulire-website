@@ -2,7 +2,7 @@ import getPayload from 'utils/getPayload';
 import { errorInitialState, formValueInitialState } from 'data/initialStates';
 
 export const handleOnChange = (event, formField, formState) => {
-  const { setFormValues, formValues } = formState;
+  const { formValues, setFormValues } = formState;
   const text = event.target.value;
 
   setFormValues({ ...formValues, [formField]: text });
@@ -14,8 +14,6 @@ export const handleSubmit = async (e, { setFormValues, setError, setIsMessageSen
 
   const captchaToken = await recaptcharef.current.getValue();
   recaptcharef.current.reset();
-
-  console.log('captchaToken', captchaToken);
 
   const response = await fetch('/api/contact', {
     method: 'POST',
@@ -34,7 +32,6 @@ export const handleSubmit = async (e, { setFormValues, setError, setIsMessageSen
       clearTimeout(timeoutID);
     }, 8000);
   } else if (!response?.ok) {
-    console.log('response FAILED :(');
     const payloadError = response?.clone().json();
     payloadError?.then((errorFulfilled) => {
       setError((prevState) => {
