@@ -15,12 +15,11 @@ export default async (req, res) => {
         const isRecaptchaValid = recaptchaResponse.data.success;
 
         const { name, email, message } = await validate({ ...payload, isRecaptchaValid });
-
         await sendMessageToPulire(name, email, message);
 
         res.status(200).json({ status: 'payload_sent' });
       } catch (error) {
-        if (error.details) {
+        if (error?.details[0]?.message) {
           const payloadError = {
             label: error.details[0].context.label,
             message: error.details[0].message,
@@ -28,8 +27,9 @@ export default async (req, res) => {
           };
 
           res.status(422).json({ status: 'not_created', payloadError });
+        } else {
+          res.status(422).json({ status: 'not_created', error });
         }
-        res.status(422).json({ status: 'not_created', error });
       }
 
       break;

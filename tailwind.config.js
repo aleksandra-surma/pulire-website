@@ -6,6 +6,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      width: {
+        recaptcha: '304px', // recaptcha width
+      },
       fontFamily: {
         barlow: ["'Barlow', sans-serif", ...defaultTheme.fontFamily.sans],
         redHat: ['Red Hat Display', ...defaultTheme.fontFamily.sans],

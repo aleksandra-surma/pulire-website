@@ -1,5 +1,6 @@
 import getPayload from 'utils/getPayload';
 import { errorInitialState, formValueInitialState } from 'data/initialStates';
+import axios from 'axios';
 
 export const handleOnChange = (event, formField, formState) => {
   const { formValues, setFormValues } = formState;
@@ -15,15 +16,9 @@ export const handleSubmit = async (e, { setFormValues, setError, setIsMessageSen
   const captchaToken = await recaptcharef.current.getValue();
   recaptcharef.current.reset();
 
-  const response = await fetch('/api/contact', {
-    method: 'POST',
-    body: JSON.stringify({ payload, captchaToken }),
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  });
+  const response = await axios.post('/api/contact', { payload, captchaToken }).catch((error) => error.response);
 
-  if (response?.ok) {
+  if (response.status === 200) {
     setError(errorInitialState);
     setFormValues(formValueInitialState);
     setIsMessageSend(true);
@@ -31,17 +26,14 @@ export const handleSubmit = async (e, { setFormValues, setError, setIsMessageSen
       setIsMessageSend(false);
       clearTimeout(timeoutID);
     }, 8000);
-  } else if (!response?.ok) {
-    const payloadError = response?.clone().json();
-    payloadError?.then((errorFulfilled) => {
-      setError((prevState) => {
-        return {
-          ...prevState,
-          label: errorFulfilled?.payloadError?.label,
-          message: errorFulfilled?.payloadError?.message,
-          type: errorFulfilled?.payloadError?.type,
-        };
-      });
+  } else if (response.status === 422) {
+    setError((prevState) => {
+      return {
+        ...prevState,
+        label: response.data.payloadError.label,
+        message: response.data.payloadError.message,
+        type: response.data.payloadError.type,
+      };
     });
   }
 };
