@@ -1,9 +1,7 @@
 import { handleOnChange } from 'helpers/form';
 import { formData } from 'data/contact';
-import useFormState from 'hooks/useFormState';
 
-export const InputTextField = ({ name, type, required }) => {
-  const formState = useFormState();
+export const InputTextField = ({ name, type, required, formState }) => {
   const fieldValue = formState.formValues[name];
 
   const { contactFormPlaceholders } = formData;
@@ -22,8 +20,7 @@ export const InputTextField = ({ name, type, required }) => {
   );
 };
 
-export const InputTextArea = ({ name, required }) => {
-  const formState = useFormState();
+export const InputTextArea = ({ name, required, formState }) => {
   const fieldValue = formState.formValues[name];
 
   const {

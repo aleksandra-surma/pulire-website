@@ -1,6 +1,7 @@
 import { v4 as uuid } from 'uuid';
 import { BsCheckLg } from 'react-icons/bs';
 import home from 'data/home';
+import Image from 'next/image';
 
 export default function CompanyAdvantages() {
   const {
@@ -13,17 +14,23 @@ export default function CompanyAdvantages() {
         <h3 className="pb-8 text-4xl font-semibold text-left">{heading}</h3>
         {highlightsList.map((highlight) => {
           return (
-            <div key={uuid()} className="flex mb-8">
+            <div key={uuid()} data-aos="fade-right" className="flex mb-8">
               <div className="w-12">
-                <BsCheckLg className="my-2 text-green-400" />
+                <BsCheckLg className="my-2 text-xl text-green-500" />
               </div>
               <p className="w-full">{highlight}</p>
             </div>
           );
         })}
       </div>
-      <div className="bg-blue-100 w-full min-h-[400px] lg:w-1/2 lg:ml-10 lg:py-10 lg:h-full">
-        CompanyAdvantages - img
+      <div className="relative flex mx-auto w-4/5 mb-16 lg:w-2/6 h-[30vh] lg:h-[50vh] justify-center w-1/2 lg:h-[calc(100vh-160px)]">
+        <Image
+          src={home.homeAdvantagesUrl}
+          priority
+          layout="fill"
+          objectFit="contain"
+          alt="pociągnięcie czarną farbą"
+        />
       </div>
     </section>
   );

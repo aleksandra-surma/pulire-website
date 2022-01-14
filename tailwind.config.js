@@ -6,6 +6,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      width: {
+        recaptcha: '304px', // recaptcha width
+      },
       fontFamily: {
         barlow: ["'Barlow', sans-serif", ...defaultTheme.fontFamily.sans],
         redHat: ['Red Hat Display', ...defaultTheme.fontFamily.sans],
@@ -43,8 +46,11 @@ module.exports = {
         // => @media (min-width: 1024px) { ... }
 
         desktop: '1280px',
-
         // => @media (min-width: 1280px) { ... }
+
+        desktopLg: '1536px',
+        // => @media (min-width: 1536px) { ... }
+
         tall: { raw: '(min-height: 900px)' },
         tallMobile: { raw: '(orientation: portrait) and (max-width: 500px)' },
         tabletTall: { raw: '(orientation: portrait) and (min-width: 501px)' },

@@ -8,6 +8,7 @@ import { Icon } from '@iconify/react';
 import useMobileNav from 'hooks/useMobileNav';
 import ContactForm from 'components/ContactForm';
 import Title from 'components/Title';
+import Image from 'next/image';
 
 const initialIsCopiedState = { email: false, phoneNumber: false };
 const initialSetTimeoutIDs = { email: null, phoneNumber: null };
@@ -17,7 +18,7 @@ const Contact = () => {
   const [timeoutIDs, setTimeoutIDs] = useState(initialSetTimeoutIDs);
   const { isDesktop } = useMobileNav();
 
-  const { companyName, shortDescription, contactText: rawContactText, phoneNumber, email } = contactData;
+  const { companyName, shortDescription, contactText: rawContactText, phoneNumber, email, offerUrl } = contactData;
   const contactPath = navButtonsData.contact.path;
 
   const contactText = addNonBreakableSpaces(rawContactText);
@@ -88,8 +89,8 @@ const Contact = () => {
             <ContactForm />
           </div>
           {isDesktop ? (
-            <div className="bg-neutral-100 w-full min-h-[400px] lg:w-1/2 lg:ml-10 lg:py-10 lg:h-[90%] text-neutral-100">
-              .
+            <div className="relative flex justify-center w-1/2 h-[calc(100vh-160px)]">
+              <Image src={offerUrl} layout="fill" objectFit="contain" alt="pociągnięcie czarną farbą" />
             </div>
           ) : null}
         </section>

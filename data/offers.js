@@ -2,6 +2,13 @@ import { Icon } from '@iconify/react';
 import { BiBuildingHouse } from 'react-icons/bi';
 import { HiOutlineOfficeBuilding } from 'react-icons/hi';
 import { v4 as uuid } from 'uuid';
+import commercialImg from 'public/images/comertial-cleaining-800-533.jpeg';
+import productionLineImg from 'public/images/production-line-cleaning-800x505.jpeg';
+import postRenovationImg from 'public/images/cleaning-after-renovation-800x532.jpeg';
+import multiFamilyBuildingImg from 'public/images/multi-family-building-800x534.jpeg';
+import officeSpaceImg from 'public/images/office-space-cleaning-800x533.jpeg';
+import hotelCleaningImg from 'public/images/hotel-cleanining-800x533.jpeg';
+import cleaningToolImg from 'public/images/cleaning-tool.jpg';
 
 const iconSize = 40;
 
@@ -28,6 +35,7 @@ export const offersData = {
         'taśmy i linie produkcyjne',
       ],
       icon: <Icon icon="cil:factory" width={iconSize} height={iconSize} />,
+      offerUrl: productionLineImg,
       uuid: uuid(),
     },
     {
@@ -39,6 +47,7 @@ export const offersData = {
       homeOfferDescription:
         'Specjalizujemy się w utrzymywaniu czystości we wszelkiego rodzaju obiektach handlowych i usługowych. Powierzchnie komercyjne wymagają ciągłego utrzymania w porządku w związku z permanentną ekspozycją na klientów.',
       icon: <Icon icon="ant-design:shopping-cart-outlined" width={iconSize} height={iconSize} />,
+      offerUrl: commercialImg,
       uuid: uuid(),
     },
     {
@@ -50,6 +59,7 @@ export const offersData = {
       homeOfferDescription:
         'Specjalizujemy się w sprzątaniu powierzchni biurowych. Porządkowanie tego typu powierzchni to nie tylko utrzymywanie czystości na małej powierzchni wypełnionej infrastrukturą biurową gromadzącą kurz i inne drobinki zanieczyszczeń ale również zwolnienie pracowników z tego fakultatywnego obowiązku.',
       icon: <HiOutlineOfficeBuilding size={iconSize} />,
+      offerUrl: officeSpaceImg,
       uuid: uuid(),
     },
     {
@@ -71,6 +81,7 @@ export const offersData = {
         'porządkowanie wind',
       ],
       icon: <BiBuildingHouse size={iconSize} />,
+      offerUrl: multiFamilyBuildingImg,
       uuid: uuid(),
     },
     {
@@ -82,6 +93,7 @@ export const offersData = {
       homeOfferDescription:
         'Specjalizujemy się w sprzątaniu powierzchni w hotelach i hostelach. Usługi porządkowe obejmują czyszczenie pokoi ale również lobby i wind. W zależności od charakteru pomieszczeń sprzątanie przebiega wg. modelu dostosowanego do ich powierzchni i zróżnicowania.',
       icon: <Icon icon="healthicons:clean-hands-outline" width={iconSize} height={iconSize} />,
+      offerUrl: hotelCleaningImg,
       uuid: uuid(),
     },
     {
@@ -93,6 +105,7 @@ export const offersData = {
       homeOfferDescription:
         'Zapewnimy kompleksowe sprzątanie wszelkich powierzchni poremontowych i pobudowlanych. Znacząco przyspieszamy zakończenie procesu inwestycyjnego. Oferujemy sprzątanie poremontowe i pobudowlane we wszystkich kategoriach obiektów objętych pozostałym zakresem oferty.',
       icon: <Icon icon="carbon:clean" width={iconSize} height={iconSize} />,
+      offerUrl: postRenovationImg,
       uuid: uuid(),
     },
   ],
@@ -125,4 +138,5 @@ export const faq = {
         'Z racji na to, że siedzibę posiadamy w Lublinie to właśnie tam mamy największą liczbę zleceń. Jednak jesteśmy otwarci na współpracę w innych lokalizacjach.',
     },
   ],
+  faqUrl: cleaningToolImg,
 };
