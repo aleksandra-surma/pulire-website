@@ -23,6 +23,9 @@ const HeadContainer = () => {
       />
       <title>Pulire - kompleksowe sprzątanie obiektów</title>
 
+      <meta name="robots" content="noindex" />
+      {/* <meta name="robots" content="all" />todo: switch with noindex */}
+
       {/* <meta name="description" */}
       {/*      content="Zajrzyj i napisz do nas. Oferujemy usługi w zakresie fotowoltaiki, projektowania i wykonawstwa sieci elektroenergetycznych SN i nn, nadzoru inwestorskiego, prowadzenia inwestycji, doradztwa i kierowania robotami budowlanymi w branży elektroenergetycznej...">//todo: description */}
       {/* <meta name="keywords" */}
