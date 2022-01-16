@@ -12,13 +12,13 @@ import PuffLoader from 'react-spinners/PuffLoader';
 import useCurrentY from 'hooks/useCurrentY';
 
 export default function BaseLayout({ children, currentPageUrl = '/' }) {
-  const { isHamburger, isMobileMenuActive, isDesktop, toggleMenuActive } = useMobileNav();
+  const { isTablet, isMobileMenuActive, isDesktop, toggleMenuActive } = useMobileNav();
   const [isLoading, setIsLoading] = useState(false);
   const currentPositionY = useCurrentY();
 
   const providedData = useMemo(
-    () => ({ currentPage: currentPageUrl, isMobileMenuActive, toggleMenuActive, isHamburger }),
-    [currentPageUrl, isMobileMenuActive, toggleMenuActive, isHamburger],
+    () => ({ currentPage: currentPageUrl, isMobileMenuActive, toggleMenuActive, isTablet }),
+    [currentPageUrl, isMobileMenuActive, toggleMenuActive, isTablet],
   );
 
   useEffect(() => {
@@ -46,9 +46,9 @@ export default function BaseLayout({ children, currentPageUrl = '/' }) {
           ) : (
             <ViewWrapper>{children}</ViewWrapper>
           )}
-          {isHamburger && isMobileMenuActive ? <MobileNavigation setIsLoading={setIsLoading} /> : null}
+          {!isTablet && isMobileMenuActive ? <MobileNavigation setIsLoading={setIsLoading} /> : null}
         </div>
-        {isHamburger && isMobileMenuActive ? null : <Footer />}
+        {isTablet && isMobileMenuActive ? null : <Footer />}
         {currentPositionY > 100 ? <ScrollTop /> : null}
       </PageWrapper>
     </PageContext.Provider>
