@@ -11,7 +11,12 @@ const PageWrapper = ({ children }) => {
   }, []);
 
   return (
-    <div className={`text-neutral-900 ${isMobileMenuActive ? 'overflow-hidden max-h-screen' : null}`}>{children}</div>
+    <div
+      className={`text-neutral-900 ${
+        isMobileMenuActive ? 'overflow-hidden max-h-screen' : 'overflow-x-hidden lg:overflow-x-visible'
+      }`}>
+      {children}
+    </div>
   );
 };
 
