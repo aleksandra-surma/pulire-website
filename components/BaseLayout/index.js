@@ -37,7 +37,8 @@ export default function BaseLayout({ children, currentPageUrl = '/' }) {
   return (
     <PageContext.Provider value={providedData}>
       <PageWrapper>
-        <div className="">
+        <div>
+          {/* todo: is this div necessary? check it! */}
           <Header />
           {isLoading && !isDesktop ? (
             <div className="flex fix top-0 left-0 overflow-hidden justify-center items-center w-screen h-screen bg-white">
