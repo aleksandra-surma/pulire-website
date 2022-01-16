@@ -8,7 +8,7 @@ const NavButtons = ({ isMobile = true }) => {
   const { currentPage } = useContext(PageContext);
   const { toggleMenuActive } = useMobileNav();
 
-  const handleClick = (path) => {
+  const handleClick = () => {
     toggleMenuActive();
   };
 
