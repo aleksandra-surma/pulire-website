@@ -4,6 +4,10 @@ import axios from 'axios';
 
 export default async (req, res) => {
   switch (req.method) {
+    case 'GET': {
+      console.log('GET contact');
+      break;
+    }
     case 'POST': {
       try {
         const { payload, captchaToken } = req.body;

@@ -6,15 +6,19 @@ import ScrollTop from 'components/ScrollTop';
 import MobileNavigation from 'components/MobileNavigation';
 import { PageContext } from 'data/pageContext';
 import useMobileNav from 'hooks/useMobileNav';
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { Router } from 'next/router';
 import PuffLoader from 'react-spinners/PuffLoader';
 import useCurrentY from 'hooks/useCurrentY';
+import useOnScreen from 'hooks/useOnScreen';
+import paths from 'data/paths';
 
 export default function BaseLayout({ children, currentPageUrl = '/' }) {
   const { isTablet, isMobileMenuActive, isDesktop, toggleMenuActive } = useMobileNav();
   const [isLoading, setIsLoading] = useState(false);
   const currentPositionY = useCurrentY();
+  const ref = useRef(null);
+  const onScreen = useOnScreen(ref, '-50px');
 
   const providedData = useMemo(
     () => ({ currentPage: currentPageUrl, isMobileMenuActive, toggleMenuActive, isTablet }),
@@ -49,8 +53,8 @@ export default function BaseLayout({ children, currentPageUrl = '/' }) {
           )}
           {!isTablet && isMobileMenuActive ? <MobileNavigation setIsLoading={setIsLoading} /> : null}
         </div>
-        {isTablet && isMobileMenuActive ? null : <Footer />}
-        {currentPositionY > 100 ? <ScrollTop /> : null}
+        {isTablet && isMobileMenuActive ? null : <Footer ref={ref} />}
+        {currentPositionY > 100 && currentPageUrl !== paths.contact ? <ScrollTop white={onScreen} /> : null}
       </PageWrapper>
     </PageContext.Provider>
   );
