@@ -15,7 +15,7 @@ const home = {
   },
   shortDescription: [
     'Cenimy porządek i harmonię. W działalności nieustannie staramy się połączyć ze sobą te dwa wrażenia estetyczne. Bez nich nie powstałoby PULIRE.',
-    'Oferujemy kompleksowe sprzątanie obiektów przemysłowych, handlowo-usługowych, hoteli, biur i mieszkaniowych. W naszej ofercie znajduje się również sprzątanie poremontowe i pobudo wlane.',
+    'Oferujemy kompleksowe sprzątanie obiektów przemysłowych, handlowo-usługowych, hoteli, biur i mieszkaniowych. W naszej ofercie znajduje się również sprzątanie poremontowe i pobudowlane.',
   ],
   companyAdvantages: {
     heading: 'Co nas wyróżnia?',

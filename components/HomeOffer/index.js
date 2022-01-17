@@ -3,14 +3,17 @@ import useMobileNav from 'hooks/useMobileNav';
 import { offersData } from 'data/offers';
 import Image from 'next/image';
 import home from 'data/home';
+import addNonBreakableSpaces from '../../utils/addNonBreakableSpaces';
 
 export default function HomeOffer() {
   const { isDesktop } = useMobileNav();
 
   const {
     offers,
-    homeOffersShort: { heading, description },
+    homeOffersShort: { heading, description: rawDescription },
   } = offersData;
+
+  const description = addNonBreakableSpaces(rawDescription);
 
   return (
     <section className="flex relative flex-col-reverse my-20 leading-8 lg:flex-row">
@@ -29,13 +32,15 @@ export default function HomeOffer() {
           <p className="text-justify">{description}</p>
         </div>
         <ul>
-          {offers.map(({ title, icon, homeOfferDescription }) => {
+          {offers.map(({ title, icon, homeOfferDescription: rawHomeOfferDescription }) => {
+            const homeOfferDescription = addNonBreakableSpaces(rawHomeOfferDescription);
+
             return (
               <li key={uuid()} data-aos="fade-left" className="flex mb-12">
                 {isDesktop ? <div className="mr-4 text-justify">{icon}</div> : null}
                 <div>
                   <h4 className="flex items-center h-[40px] font-semibold text-xl mb-4">{title}</h4>
-                  <p className="text-justify">{homeOfferDescription}</p>
+                  <p className="text-left xxs:text-justify">{homeOfferDescription}</p>
                 </div>
               </li>
             );
