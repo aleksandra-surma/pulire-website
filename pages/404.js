@@ -13,7 +13,7 @@ const FourZeroFour = () => {
         <div className="flex pt-6 flex-col w-full h-full justify-center items-center lg:w-2/5 text-base xs:text-lg tablet:text-xl">
           <Title title="404" />
           <p>Strona przez Ciebie wybrana nie istnieje.</p>
-          <p>Proszę wybierz inny adres.</p>
+          <p>Proszę wybierz odpowiednią stronę z menu.</p>
         </div>
         <div className="p-2 py-8 lg:p-8 lg:w-1/2 lg:py-16">
           <Image priority src={napkinsImg} alt="Serwetki z logiem pulire" />
