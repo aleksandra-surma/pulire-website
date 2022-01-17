@@ -22,7 +22,7 @@ const About = () => {
             <AboutText />
           </div>
           <div className="p-2 py-8 lg:p-8 lg:w-1/2 lg:py-16">
-            <Image src={napkinsImg} alt="Serwetki z logiem pulire" />
+            <Image priority src={napkinsImg} alt="Serwetki z logiem pulire" />
           </div>
         </section>
       </BaseLayout>

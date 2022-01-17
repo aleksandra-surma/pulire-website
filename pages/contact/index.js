@@ -90,7 +90,7 @@ const Contact = () => {
           </div>
           {isDesktop ? (
             <div className="relative flex justify-center w-1/2 h-[calc(100vh-160px)]">
-              <Image src={offerUrl} layout="fill" objectFit="contain" alt="pociągnięcie czarną farbą" />
+              <Image priority src={offerUrl} layout="fill" objectFit="contain" alt="pociągnięcie czarną farbą" />
             </div>
           ) : null}
         </section>
