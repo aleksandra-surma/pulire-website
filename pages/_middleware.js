@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 
-export async function middleware(req, ev) {
+export default async function middleware(req) {
   const { pathname } = req.nextUrl;
 
   switch (pathname) {
