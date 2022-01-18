@@ -16,8 +16,6 @@ export const offersData = {
   title: 'Usługi',
   homeOffersShort: {
     heading: 'Czym się zajmujemy?',
-    description:
-      'W naszej ofercie znajduje się również sprzątanie poremontowe i pobudowlane. Wykonujemy indywidualne wyceny zgodnie z zapotrzebowaniem klienta. Dysponujemy odpowiednim zapleczem sprzętowym i logistycznym. Świadczymy usługi na terenie Lublina oraz całej Polski.',
   },
   offers: [
     {

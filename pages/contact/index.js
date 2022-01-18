@@ -67,7 +67,6 @@ const Contact = () => {
                     <p className="text-sm text-neutral-400">telefon skopiowany</p>
                   </div>
                 ) : null}
-                {/* todo: verify if phone dialling after click works properly */}
               </div>
             </div>
             <div className="flex pb-4">

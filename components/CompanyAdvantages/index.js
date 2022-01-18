@@ -9,7 +9,7 @@ export default function CompanyAdvantages() {
   } = home;
 
   return (
-    <section className="flex flex-col w-full leading-8 text-justify lg:flex-row lg:items-center lg:justify-between font-redHat">
+    <section className="flex flex-col w-full my-4 leading-8 lg:flex-row lg:items-center lg:justify-between font-redHat">
       <div className="flex flex-col justify-center lg:p-14 lg:w-1/2 min-h-[calc(100vh-80px)] tallMobile:min-h-[80vh]">
         <h3 className="pb-8 text-4xl font-semibold text-left">{heading}</h3>
         {highlightsList.map((highlight) => {
