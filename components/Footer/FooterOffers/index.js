@@ -10,7 +10,7 @@ const FooterOffers = () => {
   const { currentPage: pathnameUrl } = useContext(PageContext);
 
   return (
-    <article className="footer__offers md:w-3/10 mb-20 md:mb-0">
+    <article className="footer__offers md:w-3/10 mb-20 md:mb-0 pr-4">
       <h2 className="pb-4 text-3xl laptop:text-4xl font-bold font-redHat tracking-logo">{offersData.title}</h2>
       <ul className="">
         {offersData.offers.map(({ title }) => (

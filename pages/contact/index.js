@@ -85,6 +85,18 @@ const Contact = () => {
                 ) : null}
               </div>
             </div>
+            <div className="flex pb-6">
+              <Icon icon="fa-brands:facebook-square" width="24" height="24" className="mr-4" />
+              <p>
+                <a href={contactData.socialMedia.facebook.address}>{contactData.socialMedia.facebook.label}</a>
+              </p>
+            </div>
+            <div className="flex">
+              <Icon icon="cib:instagram" width="22" height="22" className="mr-4" />
+              <p>
+                <a href={contactData.socialMedia.instagram.address}>{contactData.socialMedia.instagram.label}</a>
+              </p>
+            </div>
             <ContactForm />
           </div>
           {isDesktop ? (
