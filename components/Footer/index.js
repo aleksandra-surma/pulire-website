@@ -6,7 +6,7 @@ import FooterOffers from './FooterOffers';
 import FooterContact from './FooterContact';
 import Copyrights from './Copyrights';
 
-const Footer = forwardRef((props, ref) => {
+const Footer = (props, ref) => {
   const { currentPage: pathnameUrl } = useContext(PageContext);
 
   return (
@@ -25,6 +25,6 @@ const Footer = forwardRef((props, ref) => {
       )}
     </footer>
   );
-});
+};
 
-export default Footer;
+export default forwardRef(Footer);

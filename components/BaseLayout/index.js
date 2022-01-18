@@ -17,7 +17,7 @@ export default function BaseLayout({ children, currentPageUrl = '/' }) {
   const { isTablet, isMobileMenuActive, isDesktop, toggleMenuActive } = useMobileNav();
   const [isLoading, setIsLoading] = useState(false);
   const currentPositionY = useCurrentY();
-  const ref = useRef(null);
+  const ref = useRef();
   const onScreen = useOnScreen(ref, '-50px');
 
   const providedData = useMemo(
