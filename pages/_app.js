@@ -8,7 +8,7 @@ const MyApp = ({ Component, pageProps }) => {
 
   useEffect(() => {
     const handleRouteChange = (url) => {
-      window.gtag('config', process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS, {
+      window.gtag('config', process.env.GA_VERCEL_ID, {
         page_path: url,
       });
     };
