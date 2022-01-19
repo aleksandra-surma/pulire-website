@@ -13,4 +13,27 @@ module.exports = (phase) => {
     MAIL_PASSWORD: process.env.MAIL_PASSWORD,
     IS_PROD: isProd,
   };
+
+  const rewrites = () => {
+    return [
+      {
+        source: '/o-nas',
+        destination: '/about',
+      },
+      {
+        source: '/oferta',
+        destination: '/offer',
+      },
+      {
+        source: '/kontakt',
+        destination: '/contact',
+      },
+    ];
+  };
+
+  return {
+    reactStrictMod,
+    env,
+    rewrites,
+  };
 };

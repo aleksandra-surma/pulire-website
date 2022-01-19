@@ -12,6 +12,8 @@ import PuffLoader from 'react-spinners/PuffLoader';
 import useCurrentY from 'hooks/useCurrentY';
 import useOnScreen from 'hooks/useOnScreen';
 import paths from 'data/paths';
+import useCookie from 'hooks/useCookie';
+import Cookies from 'components/Cookies';
 
 export default function BaseLayout({ children, currentPageUrl = '/' }) {
   const { isTablet, isMobileMenuActive, isDesktop, toggleMenuActive } = useMobileNav();
@@ -19,10 +21,25 @@ export default function BaseLayout({ children, currentPageUrl = '/' }) {
   const currentPositionY = useCurrentY();
   const ref = useRef();
   const onScreen = useOnScreen(ref, '-50px');
+  const { isActiveCookiePopUp, handleCookiesPolicyAgree, handleDismissCookiesPopUp } = useCookie();
 
   const providedData = useMemo(
-    () => ({ currentPage: currentPageUrl, isMobileMenuActive, toggleMenuActive, isTablet }),
-    [currentPageUrl, isMobileMenuActive, toggleMenuActive, isTablet],
+    () => ({
+      currentPage: currentPageUrl,
+      isMobileMenuActive,
+      toggleMenuActive,
+      isTablet,
+      handleCookiesPolicyAgree,
+      handleDismissCookiesPopUp,
+    }),
+    [
+      currentPageUrl,
+      isMobileMenuActive,
+      toggleMenuActive,
+      isTablet,
+      handleCookiesPolicyAgree,
+      handleDismissCookiesPopUp,
+    ],
   );
 
   useEffect(() => {
@@ -41,20 +58,18 @@ export default function BaseLayout({ children, currentPageUrl = '/' }) {
   return (
     <PageContext.Provider value={providedData}>
       <PageWrapper>
-        <div>
-          {/* todo: is this div necessary? check it! */}
-          <Header />
-          {isLoading && !isDesktop ? (
-            <div className="flex fix top-0 left-0 overflow-hidden justify-center items-center w-screen h-screen bg-white">
-              <PuffLoader size={120} />
-            </div>
-          ) : (
-            <ViewWrapper>{children}</ViewWrapper>
-          )}
-          {!isTablet && isMobileMenuActive ? <MobileNavigation setIsLoading={setIsLoading} /> : null}
-        </div>
+        <Header />
+        {isLoading && !isDesktop ? (
+          <div className="flex fix top-0 left-0 overflow-hidden justify-center items-center w-screen h-screen bg-white">
+            <PuffLoader size={120} />
+          </div>
+        ) : (
+          <ViewWrapper>{children}</ViewWrapper>
+        )}
+        {!isTablet && isMobileMenuActive ? <MobileNavigation setIsLoading={setIsLoading} /> : null}
         {isTablet && isMobileMenuActive ? null : <Footer ref={ref} />}
         {currentPositionY > 100 && currentPageUrl !== paths.contact ? <ScrollTop white={onScreen} /> : null}
+        {isActiveCookiePopUp ? <Cookies /> : null}
       </PageWrapper>
     </PageContext.Provider>
   );

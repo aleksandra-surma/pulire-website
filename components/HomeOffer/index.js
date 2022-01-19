@@ -10,7 +10,7 @@ export default function HomeOffer() {
 
   const {
     offers,
-    homeOffersShort: { heading, description: rawDescription },
+    homeOffersShort: { heading },
   } = offersData;
 
   return (
