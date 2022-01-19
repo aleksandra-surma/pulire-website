@@ -22,8 +22,21 @@ const HeadContainer = () => {
         rel="stylesheet"
       />
       <title>Pulire - kompleksowe sprzątanie obiektów</title>
+      <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_MEASUREMENT_VERCEL_ID}`} />
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.GA_MEASUREMENT_VERCEL_ID}', {
+              page_path: window.location.pathname,
+            });
+          `,
+        }}
+      />
       <meta name="robots" content="noindex" />
-      <meta name="robots" content="all" />
+      {/* <meta name="robots" content="all" /> */}
       {/* todo: switch with noindex */}
       {/* <meta name="description" */}
       {/*      content="Zajrzyj i napisz do nas. Oferujemy usługi w zakresie fotowoltaiki, projektowania i wykonawstwa sieci elektroenergetycznych SN i nn, nadzoru inwestorskiego, prowadzenia inwestycji, doradztwa i kierowania robotami budowlanymi w branży elektroenergetycznej...">//todo: description */}
