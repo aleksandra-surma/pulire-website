@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 
 const useCookie = () => {
-  const [isActiveCookiePopUp, setIsActiveCookiePopUp] = useState(null);
+  const [isActiveCookiePopUp, setIsActiveCookiePopUp] = useState(false);
 
   useEffect(() => {
     setIsActiveCookiePopUp(localStorage.getItem('cookie-notice-accept') !== 'accepted');
-  }, [isActiveCookiePopUp]);
+  }, []);
 
   const handleDismissCookiesPopUp = () => setIsActiveCookiePopUp(false);
 

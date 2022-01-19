@@ -12,6 +12,8 @@ module.exports = (phase) => {
     MAIL_USER: process.env.MAIL_USER,
     MAIL_PASSWORD: process.env.MAIL_PASSWORD,
     IS_PROD: isProd,
+    GA_MEASUREMENT_ID: process.env.GA_MEASUREMENT_ID,
+    GA_MEASUREMENT_VERCEL_ID: process.env.GA_MEASUREMENT_VERCEL_ID,
   };
 
   const rewrites = () => {

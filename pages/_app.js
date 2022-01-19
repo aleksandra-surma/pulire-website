@@ -1,8 +1,23 @@
 import 'styles/globals.css';
-import { StrictMode } from 'react';
+import { StrictMode, useEffect } from 'react';
 import HeadContainer from 'components/Head/Head';
+import { useRouter } from 'next/router';
 
 const MyApp = ({ Component, pageProps }) => {
+  const router = useRouter();
+
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      window.gtag('config', process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS, {
+        page_path: url,
+      });
+    };
+    router.events.on('routeChangeComplete', handleRouteChange);
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange);
+    };
+  }, [router.events]);
+
   return (
     <StrictMode>
       <HeadContainer />
