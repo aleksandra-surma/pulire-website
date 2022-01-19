@@ -37,8 +37,8 @@ export default function HomeIntro() {
           <Image src={home.homeUrl} priority layout="fill" objectFit="contain" alt="czarna gąbka" />
         </div>
       ) : (
-        <div className="homeIntro__image-wrapper min-h-[100vh] w-full">
-          <div className="relative flex justify-center w-[90vw] h-[calc(100vh-180px)]">
+        <div className="homeIntro__image-wrapper flex justify-center min-h-[100vh] w-full">
+          <div className="relative flex justify-center w-[90vw] h-[calc(100vh-180px)] tabletTall:w-[80vw]">
             <Image src={home.homeUrl} priority layout="fill" objectFit="contain" alt="czarna gąbka" />
           </div>
         </div>
