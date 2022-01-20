@@ -1,10 +1,9 @@
 import 'styles/globals.css';
 import { StrictMode, useEffect } from 'react';
-import HeadContainer from 'components/Head/Head';
 import { useRouter } from 'next/router';
 
 const MyApp = ({ Component, pageProps }) => {
-  const router = useRouter();
+  const router = useRouter(); // todo: useGA
 
   useEffect(() => {
     const handleRouteChange = (url) => {
@@ -20,7 +19,6 @@ const MyApp = ({ Component, pageProps }) => {
 
   return (
     <StrictMode>
-      <HeadContainer />
       <Component {...pageProps} />
     </StrictMode>
   );
