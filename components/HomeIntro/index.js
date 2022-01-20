@@ -16,7 +16,7 @@ export default function HomeIntro() {
     },
   } = home;
 
-  const isMobile = useMedia({ maxWidth: 767 }); // todo: replace by isTablet
+  const isMobile = useMedia({ maxWidth: 767 });
 
   useEffect(() => {
     if (isMobile) {
@@ -32,17 +32,15 @@ export default function HomeIntro() {
         <h2 className="pb-8 text-3xl text-left font-semibold">{title}</h2>
         <p className="text-left xxs:text-justify">{description}</p>
       </div>
-      {isDesktop ? (
-        <div className="relative flex mx-20 justify-center w-2/5 h-[40vh] lg:h-[calc(100vh-160px)]">
-          <Image src={home.homeUrl} priority layout="fill" objectFit="contain" alt="czarna gąbka" />
-        </div>
-      ) : (
-        <div className="homeIntro__image-wrapper flex justify-center min-h-[100vh] w-full">
-          <div className="relative flex justify-center w-[90vw] h-[calc(100vh-180px)] tabletTall:w-[80vw]">
-            <Image src={home.homeUrl} priority layout="fill" objectFit="contain" alt="czarna gąbka" />
-          </div>
-        </div>
-      )}
+      <div className="min-h-[calc(100vh-80px)] relative flex justify-center w-[90vw] h-[calc(100vh-180px)] lg:mx-20 justify-center lg:w-2/5 lg:max-w-[700px]">
+        <Image
+          src={isDesktop ? home.homeUrlDesktop : home.homeUrl}
+          priority
+          layout="fill"
+          objectFit="contain"
+          alt="czarna gąbka"
+        />
+      </div>
     </section>
   );
 }

@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import BaseLayout from 'components/BaseLayout';
 import aboutData from 'data/about';
 import Title from 'components/Title';
@@ -6,15 +5,15 @@ import { navButtonsData } from 'data/buttons';
 import AboutText from 'components/AboutText';
 import Image from 'next/image';
 import napkinsImg from 'public/images/napkins-pulire.jpeg';
+import HeadSection from 'components/HeadSection';
+import head from 'data/head';
 
 const About = () => {
   const aboutPath = navButtonsData.about.path;
 
   return (
     <>
-      <Head>
-        <title>Pulire - o nas</title>
-      </Head>
+      <HeadSection title={head.about.title} description={head.about.description} />
       <BaseLayout currentPageUrl={aboutPath}>
         <section className="flex flex-col lg:flex-row lg:items-center lg:justify-between text-justify w-full min-h-pageView tall:min-h-[70vh] tallMobile:min-h-[calc(100vh-100px)] font-redHat">
           <div className="about__textContentWrapper lg:w-2/5">

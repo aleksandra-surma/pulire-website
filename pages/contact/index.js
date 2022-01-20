@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import Head from 'next/head';
 import BaseLayout from 'components/BaseLayout';
 import { contactData } from 'data/contact';
 import { navButtonsData } from 'data/buttons';
@@ -9,6 +8,8 @@ import useMobileNav from 'hooks/useMobileNav';
 import ContactForm from 'components/ContactForm';
 import Title from 'components/Title';
 import Image from 'next/image';
+import head from 'data/head';
+import HeadSection from 'components/HeadSection';
 
 const initialIsCopiedState = { email: false, phoneNumber: false };
 const initialSetTimeoutIDs = { email: null, phoneNumber: null };
@@ -44,9 +45,7 @@ const Contact = () => {
 
   return (
     <>
-      <Head>
-        <title>Pulire - kontakt</title>
-      </Head>
+      <HeadSection title={head.contact.title} description={head.contact.description} />
       <BaseLayout currentPageUrl={contactPath}>
         <section className="flex flex-col lg:flex-row lg:justify-between text-justify w-full min-h-pageView tall:min-h-[70vh] tallMobile:min-h-[calc(100vh-100px)] font-redHat">
           <div className="lg:w-2/5">

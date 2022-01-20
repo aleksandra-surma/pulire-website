@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-const HeadContainer = () => {
+const HeadMeta = () => {
   return (
     <Head>
       <meta charSet="UTF-8" />
@@ -21,18 +21,30 @@ const HeadContainer = () => {
         href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Red+Hat+Display:wght@400;600;700&display=swap"
         rel="stylesheet"
       />
-      <title>Pulire - kompleksowe sprzątanie obiektów</title>
-
+      <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_VERCEL_ID}`} />
+      <meta
+        name="keywords"
+        content="pulire, pulire lublin, sprzątanie lublin, sprzątanie hoteli Lublin, sprzątanie obiektów komercyjnych Lublin, firma sprzątająca Lublin, firma sprzątająca, sprzątanie obiektów przemysłowych, sprzątanie obiektów handlowo-usługowych, sprzątanie biur, sprzątanie hoteli, sprzątanie budowlane, sprzątanie poremontowe lublin, sprzątanie poremontowe, sprzątanie pobudowlane, nowoczesne sprzątanie"
+      />
+      <script
+        defer
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.NEXT_PUBLIC_GA_VERCEL_ID}', {
+              page_path: window.location.pathname,
+            });
+          `,
+        }}
+      />
       <meta name="robots" content="noindex" />
-      {/* <meta name="robots" content="all" />todo: switch with noindex */}
-
-      {/* <meta name="description" */}
-      {/*      content="Zajrzyj i napisz do nas. Oferujemy usługi w zakresie fotowoltaiki, projektowania i wykonawstwa sieci elektroenergetycznych SN i nn, nadzoru inwestorskiego, prowadzenia inwestycji, doradztwa i kierowania robotami budowlanymi w branży elektroenergetycznej...">//todo: description */}
-      {/* <meta name="keywords" */}
-      {/*      content="elsystem, el system, el-system, elsystem lublin, sieci elektroenergetyczne, branża elektroenergetyczna lublin, projekty instalacji elektrycznych, fotowoltaika lublin">//todo: keywords */}
+      <title>Pulire - kompleksowe sprzątanie obiektów</title>
+      {/* <meta name="robots" content="all" /> */}
       {/* <meta name="robots" content="all" />//todo: robots */}
     </Head>
   );
 };
 
-export default HeadContainer;
+export default HeadMeta;

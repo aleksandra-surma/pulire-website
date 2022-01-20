@@ -41,7 +41,7 @@ const useMobileNav = () => {
     };
   }, [isTablet, isLaptop]);
 
-  return { isDesktop, isMobileMenuActive, toggleMenuActive, isTablet };
+  return { isDesktop, isMobileMenuActive, toggleMenuActive, isTablet, isLaptop };
 };
 
 export default useMobileNav;

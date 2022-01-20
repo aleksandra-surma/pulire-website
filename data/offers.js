@@ -114,7 +114,7 @@ export const faq = {
   description:
     'Wiele osób zadaje pytania związane z naszą działalnością, część z nich zebraliśmy w formie krótkiego FAQ.',
   questions: [
-    // todo: rewrite faq section
+    // todo: rewrite faq section - wait for mail
     {
       question: 'Ile kosztują Wasze usługi?',
       answer:
