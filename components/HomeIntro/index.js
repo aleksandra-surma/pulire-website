@@ -33,7 +33,7 @@ export default function HomeIntro() {
         <p className="text-left xxs:text-justify">{description}</p>
       </div>
       {isDesktop ? (
-        <div className="relative flex mx-20 justify-center w-2/5 h-[40vh] lg:h-[calc(100vh-160px)]">
+        <div className="relative flex mx-20 justify-center w-2/5 max-w-[700px] lg:h-[calc(100vh-160px)]">
           <Image src={home.homeUrl} priority layout="fill" objectFit="contain" alt="czarna gąbka" />
         </div>
       ) : (
