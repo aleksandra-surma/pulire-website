@@ -1,6 +1,7 @@
 import 'styles/globals.css';
 import { StrictMode, useEffect } from 'react';
 import { useRouter } from 'next/router';
+import HeadMeta from 'components/HeadMeta';
 
 const MyApp = ({ Component, pageProps }) => {
   const router = useRouter();
@@ -19,6 +20,7 @@ const MyApp = ({ Component, pageProps }) => {
 
   return (
     <StrictMode>
+      <HeadMeta />
       <Component {...pageProps} />
     </StrictMode>
   );
