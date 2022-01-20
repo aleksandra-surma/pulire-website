@@ -8,19 +8,28 @@ Email podany w formularzu: ${email}
 Treść wiadomości:${description}`;
 };
 
+const transporterDev = {
+  host: 'smtp.ethereal.email',
+  port: 587,
+  auth: {
+    user: 'oliver.hamill67@ethereal.email',
+    pass: 'HYquw6xNbxGCbEqc49',
+  },
+};
+
+const transporterProd = {
+  host: 'ssl0.ovh.net',
+  port: 465,
+  auth: {
+    user: process.env.MAIL_USER,
+    pass: process.env.MAIL_PASSWORD,
+  },
+};
+
+const transporterSelected = process.env.IS_PROD ? transporterProd : transporterDev;
+
 const sendMessageToPulire = async (name, email, description) => {
-  // PRODUCTION MAIL TRANSPORT
-
-  // if (process.env.NODE_ENV === 'production') {
-
-  const transporter = nodemailer.createTransport({
-    host: 'ssl0.ovh.net',
-    port: 465,
-    auth: {
-      user: process.env.MAIL_USER,
-      pass: process.env.MAIL_PASSWORD,
-    },
-  });
+  const transporter = nodemailer.createTransport(transporterSelected);
 
   await transporter.sendMail({
     from: 'Pulire <form@pulire.co>',
@@ -30,31 +39,5 @@ const sendMessageToPulire = async (name, email, description) => {
     text: plainVersionText(name, email, description),
     html: renderToString(<EmailTemplate name={name} email={email} description={description} />),
   });
-
-  // console.log(`E-mail sent, Preview URL: ${nodemailer.getTestMessageUrl(response)}`);
-
-  // DEVELOPMENT MAIL TRANSPORT
-  // else if (process.env.NODE_ENV === 'development') {
-  //   console.log('DEV');
-  //   const transporter = nodemailer.createTransport({
-  //     host: 'smtp.ethereal.email',
-  //     port: 587,
-  //     auth: {
-  //       user: 'oliver.hamill67@ethereal.email', // todo: hide -> .env.local
-  //       pass: 'HYquw6xNbxGCbEqc49', // todo: hide -> .env.local
-  //     },
-  //   });
-  //
-  //   const response = await transporter.sendMail({
-  //     from: 'Pulire <form@pulire.co>',
-  //     to: 'Pulire <info@pulire.co>',
-  //     replyTo: `${email}`,
-  //     subject: `✔ pulire.co - wiadomość z formularza kontaktowego od "${name}"`,
-  //     text: plainVersionText(name, email, description),
-  //     html: renderToString(<EmailTemplate name={name} email={email} description={description} />),
-  //   });
-  //
-  //   console.log(`E-mail sent, Preview URL: ${nodemailer.getTestMessageUrl(response)}`);
-  // }
 };
 export default sendMessageToPulire;

@@ -3,6 +3,7 @@ import { v4 as uuid } from 'uuid';
 import { FaCheck } from 'react-icons/fa';
 import useMobileNav from 'hooks/useMobileNav';
 import Image from 'next/image';
+import addNonBreakableSpaces from 'utils/addNonBreakableSpaces';
 import ButtonReserve from './ButtonReserve';
 import ButtonMoreOrLess from './ButtonMoreOrLess';
 
@@ -10,6 +11,11 @@ const Offer = ({ offer }) => {
   const [isOpened, setIsOpened] = useState(false);
 
   const { isDesktop } = useMobileNav();
+
+  const { description: rawDescription, shortDescription: rawShortDescription } = offer;
+
+  const description = addNonBreakableSpaces(rawDescription);
+  const shortDescription = addNonBreakableSpaces(rawShortDescription);
 
   return (
     <article
@@ -20,8 +26,8 @@ const Offer = ({ offer }) => {
           <div className="m-3 animate-none hover:animate-shake">{offer.icon}</div>
           <h3 className="ml-4 text-base font-semibold text-left">{offer.title}</h3>
         </div>
-        <div className="mb-8 leading-8 text-justify">
-          <p>{isOpened ? offer.description : offer.shortDescription}</p>
+        <div className="mb-8 leading-8 text-left xxs:text-justify">
+          <p>{isOpened ? description : shortDescription}</p>
         </div>
         {isOpened && !isDesktop ? (
           <div className="py-8 lg:p-8 lg:w-1/2 lg:py-16">

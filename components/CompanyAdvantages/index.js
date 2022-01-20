@@ -9,8 +9,8 @@ export default function CompanyAdvantages() {
   } = home;
 
   return (
-    <section className="flex flex-col w-full leading-8 text-justify lg:flex-row lg:items-center lg:justify-between font-redHat">
-      <div className="flex flex-col justify-center lg:p-14 lg:w-1/2 min-h-[calc(100vh-80px)] tallMobile:min-h-[80vh]">
+    <section className="flex flex-col w-full my-4 leading-8 lg:flex-row lg:items-center lg:justify-between font-redHat">
+      <div className="flex flex-col justify-center lg:p-14 lg:w-1/2 min-h-[calc(100vh-80px)] tallMobile:min-h-[80vh] tabletTall:min-h-[40vh] tabletTall:my-4">
         <h3 className="pb-8 text-4xl font-semibold text-left">{heading}</h3>
         {highlightsList.map((highlight) => {
           return (
@@ -24,13 +24,7 @@ export default function CompanyAdvantages() {
         })}
       </div>
       <div className="relative flex mx-auto w-4/5 mb-16 lg:w-2/6 h-[30vh] lg:h-[50vh] justify-center w-1/2 lg:h-[calc(100vh-160px)]">
-        <Image
-          src={home.homeAdvantagesUrl}
-          priority
-          layout="fill"
-          objectFit="contain"
-          alt="pociągnięcie czarną farbą"
-        />
+        <Image src={home.homeAdvantagesUrl} layout="fill" objectFit="contain" alt="czarne rękawiczki do sprzątania" />
       </div>
     </section>
   );

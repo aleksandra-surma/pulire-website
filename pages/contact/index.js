@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import Head from 'next/head';
 import BaseLayout from 'components/BaseLayout';
 import { contactData } from 'data/contact';
 import { navButtonsData } from 'data/buttons';
@@ -9,6 +8,8 @@ import useMobileNav from 'hooks/useMobileNav';
 import ContactForm from 'components/ContactForm';
 import Title from 'components/Title';
 import Image from 'next/image';
+import head from 'data/head';
+import HeadSection from 'components/HeadSection';
 
 const initialIsCopiedState = { email: false, phoneNumber: false };
 const initialSetTimeoutIDs = { email: null, phoneNumber: null };
@@ -44,9 +45,7 @@ const Contact = () => {
 
   return (
     <>
-      <Head>
-        <title>Pulire - kontakt</title>
-      </Head>
+      <HeadSection title={head.contact.title} description={head.contact.description} />
       <BaseLayout currentPageUrl={contactPath}>
         <section className="flex flex-col lg:flex-row lg:justify-between text-justify w-full min-h-pageView tall:min-h-[70vh] tallMobile:min-h-[calc(100vh-100px)] font-redHat">
           <div className="lg:w-2/5">
@@ -67,7 +66,6 @@ const Contact = () => {
                     <p className="text-sm text-neutral-400">telefon skopiowany</p>
                   </div>
                 ) : null}
-                {/* todo: verify if phone dialling after click works properly */}
               </div>
             </div>
             <div className="flex pb-4">
@@ -86,11 +84,23 @@ const Contact = () => {
                 ) : null}
               </div>
             </div>
+            <div className="flex pb-6">
+              <Icon icon="fa-brands:facebook-square" width="24" height="24" className="mr-4" />
+              <p>
+                <a href={contactData.socialMedia.facebook.address}>{contactData.socialMedia.facebook.label}</a>
+              </p>
+            </div>
+            <div className="flex">
+              <Icon icon="cib:instagram" width="22" height="22" className="mr-4" />
+              <p>
+                <a href={contactData.socialMedia.instagram.address}>{contactData.socialMedia.instagram.label}</a>
+              </p>
+            </div>
             <ContactForm />
           </div>
           {isDesktop ? (
             <div className="relative flex justify-center w-1/2 h-[calc(100vh-160px)]">
-              <Image src={offerUrl} layout="fill" objectFit="contain" alt="pociągnięcie czarną farbą" />
+              <Image priority src={offerUrl} layout="fill" objectFit="contain" alt="pociągnięcie czarną farbą" />
             </div>
           ) : null}
         </section>

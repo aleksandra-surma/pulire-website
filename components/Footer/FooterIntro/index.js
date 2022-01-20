@@ -10,13 +10,13 @@ const FooterIntro = () => {
   const { currentPage: pathnameUrl } = useContext(PageContext);
 
   return (
-    <article className="footer__intro md:w-1/3 xl:w-1/4 mb-20 md:mb-0">
+    <article className="footer__intro sm:w-1/3 md:w-1/3 xl:w-1/4 mb-20 md:mb-0 pr-4">
       <h2 className="pb-4 text-3xl laptop:text-4xl font-bold font-redHat tracking-logo">
         {contactData.companyName.toUpperCase()}
       </h2>
       <div className="">
         {home.shortDescription.map((paragraph) => (
-          <p key={uuid()} className="py-2 text-justify font-extralight">
+          <p key={uuid()} className="py-2 text-justify xs:text-left lg:text-justify font-extralight">
             {paragraph}
           </p>
         ))}
