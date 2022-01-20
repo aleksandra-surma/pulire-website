@@ -3,7 +3,7 @@ import { StrictMode, useEffect } from 'react';
 import { useRouter } from 'next/router';
 
 const MyApp = ({ Component, pageProps }) => {
-  const router = useRouter(); // todo: useGA
+  const router = useRouter();
 
   useEffect(() => {
     const handleRouteChange = (url) => {

@@ -16,7 +16,7 @@ export default function HomeIntro() {
     },
   } = home;
 
-  const isMobile = useMedia({ maxWidth: 767 }); // todo: replace by isTablet
+  const isMobile = useMedia({ maxWidth: 767 });
 
   useEffect(() => {
     if (isMobile) {
