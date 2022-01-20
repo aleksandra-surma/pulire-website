@@ -34,7 +34,7 @@ export default function HomeIntro() {
       </div>
       {isDesktop ? (
         <div className="relative flex mx-20 justify-center w-2/5 max-w-[700px] lg:h-[calc(100vh-160px)]">
-          <Image src={home.homeUrl} priority layout="fill" objectFit="contain" alt="czarna gąbka" />
+          <Image src={home.homeUrlDesktop} priority layout="fill" objectFit="contain" alt="czarna gąbka" />
         </div>
       ) : (
         <div className="homeIntro__image-wrapper min-h-[100vh] w-full">

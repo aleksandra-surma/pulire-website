@@ -1,4 +1,5 @@
-import spongeBlack from 'public/images/sponge-black.jpg';
+import spongeBlackMobile from 'public/images/sponge-black.jpg';
+import spongeBlackDesktop from 'public/images/sponge-black-500x487.jpg';
 import windowCleaner from 'public/images/window-cleaner-tool.jpeg';
 import glovesBlack from 'public/images/gloves-black.jpg';
 
@@ -28,7 +29,8 @@ const home = {
       'Wyjątkowa energia i kreatywność w tworzeniu coraz lepszej marki cenionej na rynku',
     ],
   },
-  homeUrl: spongeBlack,
+  homeUrl: spongeBlackMobile,
+  homeUrlDesktop: spongeBlackDesktop,
   homeOfferUrl: windowCleaner,
   homeAdvantagesUrl: glovesBlack,
 };
