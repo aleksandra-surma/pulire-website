@@ -27,6 +27,7 @@ const HeadMeta = () => {
         content="pulire, pulire lublin, sprzątanie lublin, sprzątanie hoteli Lublin, sprzątanie obiektów komercyjnych Lublin, firma sprzątająca Lublin, firma sprzątająca, sprzątanie obiektów przemysłowych, sprzątanie obiektów handlowo-usługowych, sprzątanie biur, sprzątanie hoteli, sprzątanie budowlane, sprzątanie poremontowe lublin, sprzątanie poremontowe, sprzątanie pobudowlane, nowoczesne sprzątanie"
       />
       <meta property="og:locale" content="pl_PL" />
+      {/* <meta property="fb:app_id" content="ХХХХХХХХХХХХХХХ" /> todo: add app_id - https://developers.facebook.com/docs/sharing/webmasters#markup  */}
       <script
         defer
         dangerouslySetInnerHTML={{
