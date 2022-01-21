@@ -45,7 +45,7 @@ const Contact = () => {
 
   return (
     <>
-      <HeadSection title={head.contact.title} description={head.contact.description} />
+      <HeadSection title={head.contact.title} description={head.contact.description} ogData={contactData.ogData} />
       <BaseLayout currentPageUrl={contactPath}>
         <section className="flex flex-col lg:flex-row lg:justify-between text-justify w-full min-h-pageView tall:min-h-[70vh] tallMobile:min-h-[calc(100vh-100px)] font-redHat">
           <div className="lg:w-2/5">

@@ -16,7 +16,7 @@ const OffersView = () => {
 
   return (
     <>
-      <HeadSection title={head.offer.title} description={head.offer.description} />
+      <HeadSection title={head.offer.title} description={head.offer.description} ogData={offersData.ogData} />
       <BaseLayout currentPageUrl={offerPath}>
         <section className="offers_offers flex flex-col lg:justify-center text-justify w-full min-h-pageView tall:min-h-[70vh] tallMobile:min-h-[calc(100vh-100px)] font-redHat">
           <Title title={offersData.title} />

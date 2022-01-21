@@ -1,3 +1,5 @@
+import napkinsImg from 'public/images/napkins-pulire.jpeg';
+
 const aboutData = {
   title: 'O\xa0nas',
   description: [
@@ -11,6 +13,7 @@ const aboutData = {
     description:
       'Zajrzyj i napisz do nas. Oferujemy usługi w zakresie sprzątania przemysłowych, handlowo-usługowych, hoteli, biur i mieszkaniowych. W naszej ofercie znajduje się również sprzątanie poremontowe i pobudowlane. Wykonujemy indywidualne wyceny zgodnie z zapotrzebowaniem klienta.',
     url: 'www.pulire.co/o-nas',
+    image: napkinsImg,
   },
 };
 
