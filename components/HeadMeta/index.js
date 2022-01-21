@@ -26,6 +26,7 @@ const HeadMeta = () => {
         name="keywords"
         content="pulire, pulire lublin, sprzątanie lublin, sprzątanie hoteli Lublin, sprzątanie obiektów komercyjnych Lublin, firma sprzątająca Lublin, firma sprzątająca, sprzątanie obiektów przemysłowych, sprzątanie obiektów handlowo-usługowych, sprzątanie biur, sprzątanie hoteli, sprzątanie budowlane, sprzątanie poremontowe lublin, sprzątanie poremontowe, sprzątanie pobudowlane, nowoczesne sprzątanie"
       />
+      <meta property="og:locale" content="pl_PL" />
       <script
         defer
         dangerouslySetInnerHTML={{

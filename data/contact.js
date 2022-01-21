@@ -13,6 +13,12 @@ export const contactData = {
     facebook: { label: 'facebook', address: 'https://www.facebook.com' },
     instagram: { label: 'instagram', address: 'https://www.instagram.com' },
   },
+  ogData: {
+    title: 'Pulire - kontakt',
+    description:
+      'Zajrzyj i napisz do nas. Oferujemy usługi w zakresie sprzątania przemysłowych, handlowo-usługowych, hoteli, biur i mieszkaniowych. W naszej ofercie znajduje się również sprzątanie poremontowe i pobudowlane. Wykonujemy indywidualne wyceny zgodnie z zapotrzebowaniem klienta.',
+    url: 'www.pulire.co/kontakt',
+  },
 };
 
 export const formData = {

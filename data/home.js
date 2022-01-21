@@ -29,6 +29,12 @@ const home = {
       'Wyjątkowa energia i kreatywność w tworzeniu coraz lepszej marki cenionej na rynku',
     ],
   },
+  ogData: {
+    title: 'Pulire - kompleksowe sprzątanie obiektów',
+    description:
+      'Zajrzyj i napisz do nas. Oferujemy usługi w zakresie sprzątania przemysłowych, handlowo-usługowych, hoteli, biur i mieszkaniowych. W naszej ofercie znajduje się również sprzątanie poremontowe i pobudowlane. Wykonujemy indywidualne wyceny zgodnie z zapotrzebowaniem klienta.',
+    url: 'www.pulire.co',
+  },
   homeUrl: spongeBlackMobile,
   homeUrlDesktop: spongeBlackDesktop,
   homeOfferUrl: windowCleaner,
