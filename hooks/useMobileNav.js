@@ -3,13 +3,16 @@ import { useMedia } from 'use-media';
 
 const useMobileNav = () => {
   const [isDesktop, setIsDesktop] = useState(false);
-  const [isMobileMenuActive, setIsMobileMenuActive] = useState(false);
+  const [isMobileMenuActive, setIsMobileMenuActive] = useState(null);
   const isTablet = useMedia({ minWidth: 768 });
   const isLaptop = useMedia({ minWidth: 1024 });
 
-  const toggleMenuActive = () => {
-    setIsMobileMenuActive((prevState) => !prevState);
-  };
+  const toggleMenuActive = () => setIsMobileMenuActive((prevState) => !prevState);
+
+  let mediaQuery = null;
+  if (typeof window !== 'undefined') {
+    mediaQuery = window.matchMedia(`(min-width: 768px)`);
+  }
 
   useEffect(() => {
     if (isLaptop) {
@@ -19,22 +22,6 @@ const useMobileNav = () => {
     }
 
     return () => {
-      setIsDesktop(false);
-    };
-  }, [isTablet, isLaptop]);
-
-  let mediaQuery = null;
-  if (typeof window !== 'undefined') {
-    mediaQuery = window.matchMedia(`(min-width: 768px)`);
-  }
-
-  useEffect(() => {
-    // mediaQuery.addEventListener('change', () => {
-    //   setIsTable((prevState) => !prevState);
-    // });
-
-    return () => {
-      // setIsTable(true);
       setIsDesktop(false);
       setIsMobileMenuActive(false);
       mediaQuery.removeEventListener('change', () => {});
