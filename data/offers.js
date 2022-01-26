@@ -5,8 +5,11 @@ import { v4 as uuid } from 'uuid';
 import commercialImg from 'public/images/comertial-cleaining-800-533.jpeg';
 import productionLineImg from 'public/images/production-line-cleaning-800x505.jpeg';
 import postRenovationImg from 'public/images/cleaning-after-renovation-800x532.jpeg';
-import multiFamilyBuildingImg from 'public/images/multi-family-building-800x534.jpeg';
-import officeSpaceImg from 'public/images/office-space-cleaning-800x533.jpeg';
+// import multiFamilyBuildingImg from 'public/images/staicase-housing-cleaning-700-933.jpeg';
+import multiFamilyBuildingImg from 'public/images/multi-family-building-1000x563.jpg';
+// import multiFamilyBuildingImg from 'public/images/multi-family-building-800x534.jpeg';
+import officeSpaceImg from 'public/images/offices-space-cleaning-800-533.jpeg';
+// import officeSpaceImg from 'public/images/office-space-cleaning-800x533.jpeg';
 import hotelCleaningImg from 'public/images/hotel-cleanining-800x533.jpeg';
 import cleaningToolImg from 'public/images/cleaning-tool.jpg';
 
@@ -40,6 +43,7 @@ export const offersData = {
       ],
       icon: <Icon icon="cil:factory" width={iconSize} height={iconSize} />,
       offerUrl: productionLineImg,
+      offerImageAlt: 'linia produkcyjna',
       uuid: uuid(),
     },
     {
@@ -52,6 +56,7 @@ export const offersData = {
         'Specjalizujemy się w utrzymywaniu czystości we wszelkiego rodzaju obiektach handlowych i usługowych. Powierzchnie komercyjne wymagają ciągłego utrzymania w porządku w związku z permanentną ekspozycją na klientów.',
       icon: <Icon icon="ant-design:shopping-cart-outlined" width={iconSize} height={iconSize} />,
       offerUrl: commercialImg,
+      offerImageAlt: 'pracownik sprząta w obiekcie komercyjnym',
       uuid: uuid(),
     },
     {
@@ -64,6 +69,7 @@ export const offersData = {
         'Specjalizujemy się w sprzątaniu powierzchni biurowych. Porządkowanie tego typu powierzchni to nie tylko utrzymywanie czystości na małej powierzchni wypełnionej infrastrukturą biurową gromadzącą kurz i inne drobinki zanieczyszczeń ale również zwolnienie pracowników z tego fakultatywnego obowiązku.',
       icon: <HiOutlineOfficeBuilding size={iconSize} />,
       offerUrl: officeSpaceImg,
+      offerImageAlt: 'sala konferencyjna w dużej firmie',
       uuid: uuid(),
     },
     {
@@ -86,6 +92,7 @@ export const offersData = {
       ],
       icon: <BiBuildingHouse size={iconSize} />,
       offerUrl: multiFamilyBuildingImg,
+      offerImageAlt: 'widok drzwi wind na klatce schodowej',
       uuid: uuid(),
     },
     {
@@ -98,6 +105,7 @@ export const offersData = {
         'Specjalizujemy się w sprzątaniu powierzchni w hotelach i hostelach. Usługi porządkowe obejmują czyszczenie pokoi ale również lobby i wind. W zależności od charakteru pomieszczeń sprzątanie przebiega wg. modelu dostosowanego do ich powierzchni i zróżnicowania.',
       icon: <Icon icon="healthicons:clean-hands-outline" width={iconSize} height={iconSize} />,
       offerUrl: hotelCleaningImg,
+      offerImageAlt: 'łóżko wraz z lampką w pokoju hotelowym',
       uuid: uuid(),
     },
     {
@@ -110,6 +118,7 @@ export const offersData = {
         'Zapewnimy kompleksowe sprzątanie wszelkich powierzchni poremontowych i pobudowlanych. Znacząco przyspieszamy zakończenie procesu inwestycyjnego. Oferujemy sprzątanie poremontowe i pobudowlane we wszystkich kategoriach obiektów objętych pozostałym zakresem oferty.',
       icon: <Icon icon="carbon:clean" width={iconSize} height={iconSize} />,
       offerUrl: postRenovationImg,
+      offerImageAlt: 'wnętrze w trakcie remontu',
       uuid: uuid(),
     },
   ],
