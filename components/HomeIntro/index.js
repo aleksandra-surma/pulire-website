@@ -32,13 +32,15 @@ export default function HomeIntro() {
         <h2 className="pb-8 text-3xl text-left font-semibold">{title}</h2>
         <p className="text-left xxs:text-justify">{description}</p>
       </div>
-      <div className="min-h-[calc(100vh-80px)] relative flex justify-center w-[90vw] h-[calc(100vh-180px)] lg:mx-20 justify-center lg:w-2/5 lg:max-w-[700px]">
+      <div className="min-h-[calc(100vh-160px)] mb-[80px] relative flex justify-center w-[90vw] h-[calc(100vh-180px)] lg:mx-20 justify-center lg:w-2/5 lg:max-w-[700px]">
         <Image
           src={isDesktop ? home.homeUrlDesktop : home.homeUrl}
           priority
           layout="fill"
           objectFit="contain"
+          quality={70}
           alt="czarna gąbka"
+          sizes="(min-width: 1200px) 50vw, (min-width: 768px) 100vh, (min-width: 0px) 50vw"
         />
       </div>
     </section>

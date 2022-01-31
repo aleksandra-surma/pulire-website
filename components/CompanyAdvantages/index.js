@@ -24,7 +24,7 @@ export default function CompanyAdvantages() {
         })}
       </div>
       <div className="relative flex mx-auto w-4/5 mb-16 lg:w-2/6 h-[30vh] lg:h-[50vh] justify-center w-1/2 lg:h-[calc(100vh-160px)]">
-        <Image src={home.homeAdvantagesUrl} layout="fill" objectFit="contain" alt="czarne rękawiczki do sprzątania" />
+        <Image src={home.homeAdvantagesUrl} layout="fill" objectFit="contain" alt="szary pył rzucający cień" />
       </div>
     </section>
   );
