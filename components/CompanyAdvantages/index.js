@@ -24,7 +24,14 @@ export default function CompanyAdvantages() {
         })}
       </div>
       <div className="relative flex mx-auto w-4/5 mb-16 lg:w-2/6 h-[30vh] lg:h-[50vh] justify-center w-1/2 lg:h-[calc(100vh-160px)]">
-        <Image src={home.homeAdvantagesUrl} layout="fill" objectFit="contain" alt="szary pył rzucający cień" />
+        <Image
+          src={home.homeAdvantagesUrl}
+          layout="fill"
+          objectFit="contain"
+          quality={70}
+          sizes="(min-width: 1200px) 50vw, (min-width: 768px) 100vh, (min-width: 0px) 50vw"
+          alt="szary pył rzucający cień"
+        />
       </div>
     </section>
   );

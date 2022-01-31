@@ -21,7 +21,7 @@ const HeadMeta = () => {
         href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Red+Hat+Display:wght@400;600;700&display=swap"
         rel="stylesheet"
       />
-      <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_VERCEL_ID}`} />
+      <script defer src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_VERCEL_ID}`} />
       <meta
         name="keywords"
         content="pulire, pulire lublin, sprzątanie lublin, sprzątanie hoteli Lublin, sprzątanie obiektów komercyjnych Lublin, firma sprzątająca Lublin, firma sprzątająca, sprzątanie obiektów przemysłowych, sprzątanie obiektów handlowo-usługowych, sprzątanie biur, sprzątanie hoteli, sprzątanie budowlane, sprzątanie poremontowe lublin, sprzątanie poremontowe, sprzątanie pobudowlane, nowoczesne sprzątanie"
