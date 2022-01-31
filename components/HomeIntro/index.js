@@ -38,7 +38,7 @@ export default function HomeIntro() {
           priority
           layout="fill"
           objectFit="contain"
-          quality={80}
+          quality={70}
           alt="czarna gąbka"
           sizes="(min-width: 1200px) 50vw, (min-width: 768px) 100vh, (min-width: 0px) 50vw"
         />
