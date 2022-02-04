@@ -26,8 +26,12 @@ export default function HomeOffer() {
         />
       </div>
       <div className="flex flex-col justify-center lg:p-14 lg:w-3/5 min-h-[calc(100vh-80px)] tallMobile:min-h-[80vh]">
-        <div className="mb-4">
-          <h3 className="pb-8 text-3xl font-semibold text-left">{heading}</h3>
+        <div className="mb-8">
+          <h3 className="pb-6 text-3xl font-semibold text-left">{heading}</h3>
+          <p className="text-justify">
+            Naszą ofertę kierujemy do właścicieli obiektów komercyjnych jak i prywatnych. Posiadamy szerokie spektrum
+            działań. Poniżej wymieniamy specjalności w których szczególnie dobrze się odnajdujemy:
+          </p>
         </div>
         <ul>
           {offers.map(({ title, icon, homeOfferDescription: rawHomeOfferDescription }) => {
