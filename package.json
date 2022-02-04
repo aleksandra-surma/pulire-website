@@ -26,6 +26,7 @@
     "express": "^4.17.2",
     "joi": "^17.5.0",
     "lodash.debounce": "^4.0.8",
+    "lodash.isempty": "^4.4.0",
     "next": "latest",
     "next-routes": "^1.4.2",
     "nodemailer": "^6.7.2",

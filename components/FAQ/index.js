@@ -8,7 +8,7 @@ const FAQ = () => {
       <h2 className="my-4 text-2xl font-bold tracking-wider lg:text-4xl">{faq.title}</h2>
       <p className="text-justify">{faq.description}</p>
       <ul>
-        {faq.questions.map(({ question, answer, additionalList }) => (
+        {faq.questions.map(({ question, answer, additionalList = {} }) => (
           <Question key={uuid()} question={question} answer={answer} additionalList={additionalList} />
         ))}
       </ul>
