@@ -45,3 +45,23 @@ const home = {
 };
 
 export default home;
+
+//
+// KOMPLEKSOWE SPRZĄTANIE OBIEKTÓW
+// Oferujemy kompleksowe sprzątanie obiektów przemysłowych, handlowo-usługowych, hoteli, biur i mieszkaniowych. W naszej ofercie znajduje się również sprzątanie poremontowe i pobudowlane. Wykonujemy indywidualne wyceny zgodnie z zapotrzebowaniem klienta. Dysponujemy odpowiednim zapleczem sprzętowym i logistycznym. Świadczymy usługi na terenie Lublina oraz całej Polski. Działamy zgodnie z filozofią efektywnego sprzątania. Wyznaczamy nową jakość na ciągle wzrastającym rynku usług sprzątania. PULIRE to MY czyli młoda krew, świeżość i nowoczesne podejście do tradycyjnego tematu.
+//
+//   CZYM SIĘ ZAJMUJEMY?
+//   Sprzątanie obiektów przemysłowych
+// Sprzątanie obiektów handlowo-usługowych
+// Sprzątanie biur
+// Sprzątanie obiektów mieszkaniowych
+// Sprzątanie hoteli
+// Sprzątanie poremontowe i pobudowlane
+//
+// CO NAS WYRÓŻNIA?
+//   Nowoczesna odsłona tradycyjnej usługi
+// Szybki i rzeczowy kontakt na każdym etapie współpracy
+// Szczegółowy wywiad do sporządzenia wyceny
+// Minimalizacja czasu pracy przy jej efektywności
+// Profesjonalizm usługi począwszy od kontaktu, przez wycenę po realizację
+// Wyjątkowa energia i kreatywność w tworzeniu coraz lepszej marki cenionej na rynku
