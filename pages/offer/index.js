@@ -25,7 +25,7 @@ const OffersView = () => {
         <section className="offers w-full flex flex-col lg:flex-row mt-10">
           <FAQ />
           {isDesktop ? (
-            <div className="p-2 py-8 lg:p-8 lg:w-1/2 flex justify-center lg:py-16">
+            <div className="p-2 py-8 lg:p-8 lg:w-2/5 flex justify-center lg:py-16">
               <Image src={faq.faqUrl} alt="Serwetki z logiem pulire" />
             </div>
           ) : null}

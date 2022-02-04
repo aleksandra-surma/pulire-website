@@ -10,8 +10,8 @@ const HeadSection = ({ title, description, ogData, index = true }) => {
       <meta property="og:url" content={ogData.url} />
       <meta property="og:type" content="website" />
       <title>{title}</title>
-      {index ? <meta name="robots" content="noindex" /> : <meta name="robots" content="noindex" />}
-      {/*  //todo: change in production to: <meta name="robots" content="all" /> */}
+      {index ? <meta name="robots" content="none" /> : <meta name="robots" content="none" />}
+      {/* //todo: change in production to: {index ? <meta name="robots" content="all" /> : <meta name="robots" content="none" />} */}
     </Head>
   );
 };

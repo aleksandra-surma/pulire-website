@@ -5,11 +5,8 @@ import { v4 as uuid } from 'uuid';
 import commercialImg from 'public/images/comertial-cleaining-800-533.jpeg';
 import productionLineImg from 'public/images/production-line-cleaning-800x505.jpeg';
 import postRenovationImg from 'public/images/cleaning-after-renovation-800x532.jpeg';
-// import multiFamilyBuildingImg from 'public/images/staicase-housing-cleaning-700-933.jpeg';
 import multiFamilyBuildingImg from 'public/images/multi-family-building-1000x563.jpg';
-// import multiFamilyBuildingImg from 'public/images/multi-family-building-800x534.jpeg';
 import officeSpaceImg from 'public/images/offices-space-cleaning-800-533.jpeg';
-// import officeSpaceImg from 'public/images/office-space-cleaning-800x533.jpeg';
 import hotelCleaningImg from 'public/images/hotel-cleanining-800x533.jpeg';
 import cleaningToolImg from 'public/images/cleaning-tool.jpg';
 
@@ -129,21 +126,28 @@ export const faq = {
   description:
     'Wiele osób zadaje pytania związane z naszą działalnością, część z nich zebraliśmy w formie krótkiego FAQ.',
   questions: [
-    // todo: rewrite faq section - wait for mail
     {
-      question: 'Ile kosztują Wasze usługi?',
+      question: 'Jakie informacje są potrzebne do uzyskania wyceny?',
       answer:
-        'Wiele czynników wpływa na cenę końcową naszych usług. Dla każdego naszego klienta sporządzamy wycenę w oparciu o informacje na temat warunków pracy, częstotliwości wykonywanych usług, czy też technologii jakie powinny być wykorzystane przy wykonaniu zlecenia.',
+        'Specyfika usług sprzątania znajdujących się w naszej ofercie obejmująca różne kategorie obiektów nieodłącznie wiąże się z koniecznością określenia szczegółowych kryteriów do wyceny. Pozwala to w profesjonalny sposób podejść do każdego indywidualnego zlecenia. Ten etap wymaga by firma sprzątająca odpowiednio określiła narzędzia, środki, zasoby osobowe i czas wykonania. Wykonujemy wyceny bezpłatnie. Wycena uwzględnia koszty użytych środków oraz koszt użycia maszyn i urządzeń.',
+      additionalList: {
+        listTitle: 'Dla sporządzenia wyceny uwzględniającej potrzeby klienta potrzebujemy:',
+        listConditions: [
+          'Rodzaj obiektu;',
+          'Całkowita powierzchnia podlegająca sprzątaniu, z podziałem na podłogi, witryny szklane, ściany itd.',
+          'Ilość pomieszczeń oddzielnych (np. sanitariaty, pomieszczenia socjalne);',
+          'Częstotliwość sprzątania przy sprzątaniu cyklicznym (biura, lokale usługowe itp.);',
+          'Zakres do czynności do wykonania;',
+          'Występowanie szklanych drzwi, okien, ścian i witryn;',
+          'Lokalizacja obiektu;',
+          'Określenie pilności zlecenia oraz szacowanego terminu na wykonanie.',
+        ],
+      },
     },
     {
       question: 'Czy możliwa jest stała współpraca?',
       answer:
         'Tak! Jak najbardziej przewidujemy taką formę współpracy, ze względu na wygodę i oszczędność czasu, a klienci za spokój i pewność, że wszystko będzie wykonane solidnie i na czas.',
-    },
-    {
-      question: 'Co, jeśli zajdzie konieczność wykonania dodatkowego zadania?',
-      answer:
-        'Przewidujemy taką sytuację. W przypadku stałych zleceń pracujemy według ustalonego harmonogramu i zakresu prac, ale jeśli w wyniku nieprzewidzianych okoliczności zajdzie potrzeba wykonania ponadprogramowego zadania, to zawsze jesteśmy do dyspozycji i dla stałych klientów mamy korzystne warunki.',
     },
     {
       question: 'Gdzie można skorzystać z waszych usług?',

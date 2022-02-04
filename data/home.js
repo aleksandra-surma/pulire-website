@@ -2,8 +2,6 @@ import spongeBlackMobile from 'public/images/sponge-black.jpg';
 import spongeBlackDesktop from 'public/images/sponge-black-500x487.jpg';
 import windowCleaner from 'public/images/window-cleaner-tool.jpeg';
 import dustDirt from 'public/images/dust-dirt-black-and-white-900x825.jpg';
-// import dustDirt from 'public/images/dirt-pile-640x296.jpg';
-// import glovesBlack from 'public/images/gloves-black.jpg';
 
 const home = {
   companyName: 'Pulire',
