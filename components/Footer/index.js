@@ -18,10 +18,34 @@ const Footer = (props, ref) => {
             <FooterOffers />
             <FooterContact />
           </section>
-          <Copyrights />
+          <aside className="flex flex-col">
+            <Copyrights />
+            <div className="flex flex-col px-4 pt-2 w-full h-full bg-neutral-800 xs:flex-row items-left justify-left xxs:px-6 tablet:px-8 tablet:pt-0 tablet:pb-8">
+              <a
+                className="text-xs font-extralight text-neutral-400"
+                href="http://www.ioten.io"
+                target="_blank"
+                title="autor strony"
+                rel="noreferrer">
+                ioten.io
+              </a>
+            </div>
+          </aside>
         </>
       ) : (
-        <Copyrights white />
+        <aside>
+          <Copyrights white />
+          <div className="flex flex-col px-4 pt-2 w-full h-full bg-white xs:flex-row items-left justify-left xxs:px-6 tablet:px-8 tablet:pt-0 tablet:pb-8">
+            <a
+              className="text-xs font-extralight text-neutral-800"
+              href="http://www.ioten.io"
+              target="_blank"
+              title="autor strony"
+              rel="noreferrer">
+              ioten.io
+            </a>
+          </div>
+        </aside>
       )}
     </footer>
   );
