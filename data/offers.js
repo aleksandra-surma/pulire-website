@@ -20,7 +20,7 @@ export const offersData = {
   ogData: {
     title: 'Pulire - oferta',
     description:
-      'Zajrzyj i napisz do nas. Oferujemy usługi w zakresie sprzątania przemysłowych, handlowo-usługowych, hoteli, biur i mieszkaniowych. W naszej ofercie znajduje się również sprzątanie poremontowe i pobudowlane. Wykonujemy indywidualne wyceny zgodnie z zapotrzebowaniem klienta.',
+      'Zajrzyj i napisz do nas. Oferujemy usługi w zakresie sprzątania w obiektach komercyjnych i użyteczności publicznej oraz sprzątanie poremontowe i pobudowlane.',
     url: 'www.pulire.co/oferta',
   },
   offers: [
@@ -31,7 +31,7 @@ export const offersData = {
       shortDescription:
         'Specjalizujemy się w porządkowaniu przestrzeni przemysłowych i hal magazynowych. Do usług z tego zakresu należą...',
       homeOfferDescription: 'Specjalizujemy się w porządkowaniu przestrzeni przemysłowych i hal magazynowych.',
-      offerChecklistTitle: 'Do czyszczonych nawierzchni należą mi.:',
+      offerChecklistTitle: 'Do czyszczonych nawierzchni należą m.in.:',
       offerChecklist: [
         'podłogi i ściany',
         'słupy i inne konstrukcje przemysłowe',
@@ -72,12 +72,12 @@ export const offersData = {
     {
       title: 'Sprzątanie obiektów mieszkaniowych',
       description:
-        'Specjalizujemy się w utrzymywaniu porządku w budynkach wielorodzinnych administrowanych przez Wspólnoty Mieszkaniowe i Spółdzielnie. Jesteśmy świadomi jak ważną kwestią są dla mieszkańców tych budynków są czyste powierzchnie wspólne tj. klatki schodowe i przedsionki. Myjemy podłogi i ściany. Czyścimy i dezynfekujemy poręcze i klamki. Czyścimy wejścia do klatek, przeszklenia i szyby. Myjemy okna. Czyścimy parapety. Porządkujemy windy.',
+        'Specjalizujemy się w utrzymywaniu porządku w budynkach wielorodzinnych administrowanych przez Wspólnoty Mieszkaniowe i Spółdzielnie. Jesteśmy świadomi jak ważną kwestią dla mieszkańców tych budynków są czyste powierzchnie wspólne.',
       shortDescription:
         'Specjalizujemy się w utrzymywaniu porządku w budynkach wielorodzinnych administrowanych przez Wspólnoty Mieszkaniowe i Spółdzielnie...',
       homeOfferDescription:
-        'Specjalizujemy się w utrzymywaniu porządku w budynkach wielorodzinnych administrowanych przez Wspólnoty Mieszkaniowe i Spółdzielnie. Jesteśmy świadomi jak ważną kwestią są dla mieszkańców tych budynków są czyste powierzchnie wspólne.',
-      offerChecklistTitle: 'Oferta zawiera mi.:',
+        'Specjalizujemy się w utrzymywaniu porządku w budynkach wielorodzinnych administrowanych przez Wspólnoty Mieszkaniowe i Spółdzielnie. Jesteśmy świadomi jak ważną kwestią dla mieszkańców tych budynków są czyste powierzchnie wspólne.',
+      offerChecklistTitle: 'Oferta zawiera m.in.:',
       offerChecklist: [
         'mycie klatek schodowych i przedsionków',
         'mycie ścian i podłóg',
@@ -95,11 +95,10 @@ export const offersData = {
     {
       title: 'Sprzątanie hoteli',
       description:
-        'Specjalizujemy się w sprzątaniu powierzchni w hotelach i hostelach. Usługi porządkowe obejmują czyszczenie pokoi ale również lobby i wind. W zależności od charakteru pomieszczeń sprzątanie przebiega wg. modelu dostosowanego do ich powierzchni i zróżnicowania. Pozwala to na sprawne przygotowanie pomieszczeń dla gości hotelowych i szybsze ich oddanie.',
-      shortDescription:
-        'Specjalizujemy się w sprzątaniu powierzchni w hotelach i hostelach. Usługi porządkowe obejmują czyszczenie...',
+        'Specjalizujemy się w sprzątaniu hoteli i hosteli. Usługi porządkowe obejmują czyszczenie pokoi ale również lobby i wind. W zależności od charakteru pomieszczeń sprzątanie przebiega wg. modelu dostosowanego do ich powierzchni i zróżnicowania. Pozwala to na sprawne przygotowanie pomieszczeń dla gości hotelowych i szybsze ich oddanie.',
+      shortDescription: 'Specjalizujemy się w sprzątaniu hoteli i hosteli. Usługi porządkowe obejmują czyszczenie...',
       homeOfferDescription:
-        'Specjalizujemy się w sprzątaniu powierzchni w hotelach i hostelach. Usługi porządkowe obejmują czyszczenie pokoi ale również lobby i wind. W zależności od charakteru pomieszczeń sprzątanie przebiega wg. modelu dostosowanego do ich powierzchni i zróżnicowania.',
+        'Specjalizujemy się w sprzątaniu hoteli i hosteli. Usługi porządkowe obejmują czyszczenie pokoi ale również lobby i wind. W zależności od charakteru pomieszczeń sprzątanie przebiega wg. modelu dostosowanego do ich powierzchni i zróżnicowania.',
       icon: <Icon icon="healthicons:clean-hands-outline" width={iconSize} height={iconSize} />,
       offerUrl: hotelCleaningImg,
       offerImageAlt: 'łóżko wraz z lampką w pokoju hotelowym',
