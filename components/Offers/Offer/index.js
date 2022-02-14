@@ -20,7 +20,7 @@ const Offer = ({ offer }) => {
   return (
     <article
       key={offer.uuid}
-      className="flex p-6 my-8 w-full rounded-lg text-sm lg:text-base bg-white shadow-lg hover:shadow-custom-1 lg:hover:scale-[1.004]">
+      className="flex p-6 my-8 w-full rounded-lg text-sm lg:text-base lg:min-h-[300px] bg-white shadow-lg hover:shadow-custom-1 lg:hover:scale-[1.004]">
       <div className="lg:w-1/2 lg:mr-10">
         <div className="flex items-center mb-5">
           <div className="m-3 animate-none hover:animate-shake">{offer.icon}</div>
@@ -59,7 +59,7 @@ const Offer = ({ offer }) => {
             layout="fill"
             objectFit="cover"
             objectPosition="center center"
-            alt="Serwetki z logiem pulire"
+            alt={offer.offerImageAlt}
           />
         </div>
       ) : null}

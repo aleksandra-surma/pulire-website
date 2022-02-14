@@ -1,4 +1,5 @@
 import stainPaintImg from 'public/images/stain-paint.jpg';
+import napkinsImg from 'public/images/napkins-pulire.jpeg';
 
 export const contactData = {
   companyName: 'Pulire',
@@ -10,8 +11,15 @@ export const contactData = {
   email: 'info@pulire.co',
   offerUrl: stainPaintImg,
   socialMedia: {
-    facebook: { label: 'facebook', address: 'https://www.facebook.com' },
-    instagram: { label: 'instagram', address: 'https://www.instagram.com' },
+    facebook: { label: 'facebook', address: 'https://www.facebook.com/Pulire-101147819163495/' },
+    instagram: { label: 'instagram', address: 'https://www.instagram.com/pulire.cleaning/' },
+  },
+  ogData: {
+    title: 'Pulire - kontakt',
+    description:
+      'Zajrzyj i napisz do nas. Oferujemy usługi w zakresie sprzątania przemysłowych, handlowo-usługowych, hoteli, biur i mieszkaniowych. W naszej ofercie znajduje się również sprzątanie poremontowe i pobudowlane. Wykonujemy indywidualne wyceny zgodnie z zapotrzebowaniem klienta.',
+    url: 'www.pulire.co/kontakt',
+    image: napkinsImg,
   },
 };
 

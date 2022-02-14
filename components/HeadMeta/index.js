@@ -14,18 +14,19 @@ const HeadMeta = () => {
       <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />
       <link rel="manifest" href="/site.webmanifest" />
       <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#5bbad5" />
-      <link rel="icon" href="/icons/favicon.ico" />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
       <link
         href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Red+Hat+Display:wght@400;600;700&display=swap"
         rel="stylesheet"
       />
-      <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_VERCEL_ID}`} />
+      <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`} />
       <meta
         name="keywords"
-        content="pulire, pulire lublin, sprzątanie lublin, sprzątanie hoteli Lublin, sprzątanie obiektów komercyjnych Lublin, firma sprzątająca Lublin, firma sprzątająca, sprzątanie obiektów przemysłowych, sprzątanie obiektów handlowo-usługowych, sprzątanie biur, sprzątanie hoteli, sprzątanie budowlane, sprzątanie poremontowe lublin, sprzątanie poremontowe, sprzątanie pobudowlane, nowoczesne sprzątanie"
+        content="pulire, sprzątanie lublin, sprzątanie hoteli Lublin, sprzątanie obiektów komercyjnych Lublin, firma sprzątająca Lublin, sprzątanie obiektów handlowo-usługowych, sprzątanie biur, sprzątanie poremontowe lublin"
       />
+      <meta property="og:locale" content="pl_PL" />
+      {/* <meta property="fb:app_id" content="ХХХХХХХХХХХХХХХ" /> todo: add app_id - https://developers.facebook.com/docs/sharing/webmasters#markup  */}
       <script
         defer
         dangerouslySetInnerHTML={{
@@ -33,15 +34,15 @@ const HeadMeta = () => {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', '${process.env.NEXT_PUBLIC_GA_VERCEL_ID}', {
+            gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}', {
               page_path: window.location.pathname,
             });
           `,
         }}
       />
-      <meta name="robots" content="noindex" />
+      {/* <meta name="robots" content="noindex" /> */}
       <title>Pulire - kompleksowe sprzątanie obiektów</title>
-      {/* <meta name="robots" content="all" /> */}
+      <meta name="robots" content="all" />
       {/* <meta name="robots" content="all" />//todo: robots */}
     </Head>
   );

@@ -8,7 +8,7 @@ const MyApp = ({ Component, pageProps }) => {
 
   useEffect(() => {
     const handleRouteChange = (url) => {
-      window.gtag('config', process.env.NEXT_PUBLIC_GA_VERCEL_ID, {
+      window.gtag('config', process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID, {
         page_path: url,
       });
     };

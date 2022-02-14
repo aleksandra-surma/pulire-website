@@ -59,6 +59,7 @@ module.exports = {
       },
       animation: {
         shake: 'shake 1.5s infinite',
+        menuAppear: 'appear 0.2s 1 ease-in-out forwards',
       },
       keyframes: {
         shake: {
@@ -67,6 +68,10 @@ module.exports = {
           '50%': { transform: 'translate(2px, 0) rotate(1deg)' },
           '75%': { transform: 'translate(-2px, 0) rotate(0deg)' },
           '100%': { transform: 'translate(2px, 0) rotate(0deg)' },
+        },
+        appear: {
+          from: { opacity: 0 },
+          to: { opacity: 1 },
         },
       },
       outline: {
@@ -79,13 +84,3 @@ module.exports = {
   },
   plugins: [],
 };
-
-// @layer base {
-//   body {
-//     font-family: 'Red Hat Display', sans-serif;
-//     font-weight: 400;
-//   }
-//   nav {
-//     font-family: 'Barlow', sans-serif;
-//   }
-// }
