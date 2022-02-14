@@ -40,9 +40,9 @@ const HeadMeta = () => {
           `,
         }}
       />
-      <meta name="robots" content="noindex" />
+      {/* <meta name="robots" content="noindex" /> */}
       <title>Pulire - kompleksowe sprzątanie obiektów</title>
-      {/* <meta name="robots" content="all" /> */}
+      <meta name="robots" content="all" />
       {/* <meta name="robots" content="all" />//todo: robots */}
     </Head>
   );
