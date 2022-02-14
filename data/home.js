@@ -1,7 +1,8 @@
 import spongeBlackMobile from 'public/images/sponge-black.jpg';
 import spongeBlackDesktop from 'public/images/sponge-black-500x487.jpg';
 import windowCleaner from 'public/images/window-cleaner-tool.jpeg';
-import dustDirt from 'public/images/dust-dirt-black-and-white-900x825.jpg';
+import brushStroke from 'public/images/brush-stroke-home-02.jpeg';
+// import dustDirt from 'public/images/dust-dirt-black-and-white-900x825.jpg';
 
 const home = {
   companyName: 'Pulire',
@@ -39,7 +40,7 @@ const home = {
   homeUrl: spongeBlackMobile,
   homeUrlDesktop: spongeBlackDesktop,
   homeOfferUrl: windowCleaner,
-  homeAdvantagesUrl: dustDirt,
+  homeAdvantagesUrl: brushStroke,
 };
 
 export default home;

@@ -8,7 +8,7 @@ import postRenovationImg from 'public/images/cleaning-after-renovation-800x532.j
 import multiFamilyBuildingImg from 'public/images/multi-family-building-1000x563.jpg';
 import officeSpaceImg from 'public/images/offices-space-cleaning-800-533.jpeg';
 import hotelCleaningImg from 'public/images/hotel-cleanining-800x533.jpeg';
-import cleaningToolImg from 'public/images/cleaning-tool.jpg';
+import cleaningToolImg from 'public/images/cleaning-tool-filtered.jpeg';
 
 const iconSize = 40;
 

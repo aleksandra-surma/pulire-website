@@ -22,11 +22,16 @@ const OffersView = () => {
           <Title title={offersData.title} />
           <Offers />
         </section>
-        <section className="offers w-full flex flex-col lg:flex-row mt-10">
+        <section className="offers w-full flex flex-col lg:flex-row lg:justify-between mt-10">
           <FAQ />
           {isDesktop ? (
-            <div className="p-2 py-8 lg:p-8 lg:w-2/5 flex justify-center lg:py-16">
-              <Image src={faq.faqUrl} alt="Serwetki z logiem pulire" />
+            <div className="relative p-2 py-12 lg:p-8 lg:w-[36%] flex justify-center">
+              <Image
+                src={faq.faqUrl}
+                layout="fill"
+                objectFit="contain"
+                alt="czarna szczotka, narzędzie do sprzątania"
+              />
             </div>
           ) : null}
         </section>

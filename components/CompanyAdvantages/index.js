@@ -23,7 +23,7 @@ export default function CompanyAdvantages() {
           );
         })}
       </div>
-      <div className="relative flex mx-auto w-4/5 mb-16 lg:w-2/6 h-[30vh] lg:h-[50vh] justify-center w-1/2 lg:h-[calc(100vh-160px)]">
+      <div className="relative flex mx-auto w-4/5 mb-16 lg:w-1/2 h-[30vh] lg:h-[50vh] justify-center w-1/2 lg:h-[calc(100vh-160px)]">
         <Image
           src={home.homeAdvantagesUrl}
           layout="fill"

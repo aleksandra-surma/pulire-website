@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-const HeadSection = ({ title, description, ogData, index = true }) => {
+const HeadSection = ({ title, description, ogData, indexing = true }) => {
   return (
     <Head>
       <meta name="description" content={description} />
@@ -10,7 +10,7 @@ const HeadSection = ({ title, description, ogData, index = true }) => {
       <meta property="og:url" content={ogData.url} />
       <meta property="og:type" content="website" />
       <title>{title}</title>
-      {index ? <meta name="robots" content="none" /> : <meta name="robots" content="none" />}
+      {indexing ? <meta name="robots" content="all" /> : <meta name="robots" content="none" />}
       {/* //todo: change in production to: {index ? <meta name="robots" content="all" /> : <meta name="robots" content="none" />} */}
     </Head>
   );

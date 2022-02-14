@@ -15,7 +15,7 @@ const FourZeroFour = () => {
       <HeadSection
         title={head.fourZeroFour.title}
         description={head.fourZeroFour.description}
-        index={false}
+        indexing={false}
         ogData={home.ogData}
       />
       <BaseLayout currentPageUrl={router.pathname}>
