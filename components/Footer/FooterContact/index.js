@@ -26,13 +26,17 @@ const FooterContact = () => {
       <div className="flex pt-6">
         <Icon icon="fa-brands:facebook-square" width="24" height="24" className="mr-4" />
         <p>
-          <a href={contactData.socialMedia.facebook.address}>{contactData.socialMedia.facebook.label}</a>
+          <a href={contactData.socialMedia.facebook.address} target="_blank" rel="noreferrer">
+            {contactData.socialMedia.facebook.label}
+          </a>
         </p>
       </div>
       <div className="flex py-6">
         <Icon icon="cib:instagram" width="24" height="24" className="mr-4" />
         <p>
-          <a href={contactData.socialMedia.instagram.address}>{contactData.socialMedia.instagram.label}</a>
+          <a href={contactData.socialMedia.instagram.address} target="_blank" rel="noreferrer">
+            {contactData.socialMedia.instagram.label}
+          </a>
         </p>
       </div>
 

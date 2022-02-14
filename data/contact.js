@@ -11,8 +11,8 @@ export const contactData = {
   email: 'info@pulire.co',
   offerUrl: stainPaintImg,
   socialMedia: {
-    facebook: { label: 'facebook', address: 'https://www.facebook.com' },
-    instagram: { label: 'instagram', address: 'https://www.instagram.com' },
+    facebook: { label: 'facebook', address: 'https://www.facebook.com/Pulire-101147819163495/' },
+    instagram: { label: 'instagram', address: 'https://www.instagram.com/pulire.cleaning/' },
   },
   ogData: {
     title: 'Pulire - kontakt',

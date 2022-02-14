@@ -56,7 +56,9 @@ const Contact = () => {
               <Icon icon="bx:bxs-phone-call" width="24" height="24" className="mr-4" />
               <div className="flex relative justify-between items-center w-32 lg:w-48">
                 <p>
-                  <a href={`tel:${phoneNumber}`}>{phoneNumber}</a>
+                  <a href={`tel:${phoneNumber}`} title="numer telefonu">
+                    {phoneNumber}
+                  </a>
                 </p>
                 <button onClick={() => handleCopyContent(phoneNumber, 'phoneNumber')} type="button">
                   <Icon className="text-neutral-400" icon="ant-design:copy-outlined" hFlip vFlip />
@@ -72,7 +74,9 @@ const Contact = () => {
               <Icon icon="bx:bx-mail-send" width="24" height="24" className="mr-4" />
               <div className="flex relative justify-between items-center w-32 lg:w-48">
                 <p>
-                  <a href={`mailto:${email}`}>{email}</a>
+                  <a href={`mailto:${email}`} title="e-mail">
+                    {email}
+                  </a>
                 </p>
                 <button onClick={() => handleCopyContent(email, 'email')} type="button">
                   <Icon className="text-neutral-400" icon="ant-design:copy-outlined" hFlip vFlip />
@@ -87,13 +91,17 @@ const Contact = () => {
             <div className="flex pb-6">
               <Icon icon="fa-brands:facebook-square" width="24" height="24" className="mr-4" />
               <p>
-                <a href={contactData.socialMedia.facebook.address}>{contactData.socialMedia.facebook.label}</a>
+                <a href={contactData.socialMedia.facebook.address} title="facebook pulire">
+                  {contactData.socialMedia.facebook.label}
+                </a>
               </p>
             </div>
             <div className="flex">
               <Icon icon="cib:instagram" width="22" height="22" className="mr-4" />
               <p>
-                <a href={contactData.socialMedia.instagram.address}>{contactData.socialMedia.instagram.label}</a>
+                <a href={contactData.socialMedia.instagram.address} title="instagram pulire">
+                  {contactData.socialMedia.instagram.label}
+                </a>
               </p>
             </div>
             <ContactForm />
