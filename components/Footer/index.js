@@ -13,7 +13,7 @@ const Footer = (props, ref) => {
     <footer ref={ref}>
       {pathnameUrl !== paths.contact ? (
         <>
-          <section className="flex flex-col justify-between p-4 w-full font-extralight text-white bg-neutral-800 sm:flex-row items-left justify-left xxs:p-6 tablet:p-8">
+          <section className="flex flex-col justify-between p-4 w-full font-extralight text-white bg-neutral-800 sm:flex-row items-left justify-left xxs:p-6 tablet:p-8 font-redHat">
             <FooterIntro />
             <FooterOffers />
             <FooterContact />
@@ -33,7 +33,7 @@ const Footer = (props, ref) => {
           </aside>
         </>
       ) : (
-        <aside>
+        <aside className="font-redHat">
           <Copyrights white />
           <div className="flex flex-col px-4 pt-2 w-full h-full bg-white xs:flex-row items-left justify-left xxs:px-6 tablet:px-8 tablet:pt-0 tablet:pb-8">
             <a
