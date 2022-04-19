@@ -19,7 +19,18 @@ const Contact = () => {
   const [timeoutIDs, setTimeoutIDs] = useState(initialSetTimeoutIDs);
   const { isDesktop } = useMobileNav();
 
-  const { companyName, shortDescription, contactText: rawContactText, phoneNumber, email, offerUrl } = contactData;
+  const {
+    companyName,
+    shortDescription,
+    contactText: rawContactText,
+    nazwaFirmy,
+    adresFirmy,
+    nip,
+    regon,
+    phoneNumber,
+    email,
+    offerUrl,
+  } = contactData;
   const contactPath = navButtonsData.contact.path;
 
   const contactText = addNonBreakableSpaces(rawContactText);
@@ -45,13 +56,20 @@ const Contact = () => {
 
   return (
     <>
-      <HeadSection title={head.contact.title} description={head.contact.description} ogData={contactData.ogData} />
+      <HeadSection
+        title={head.contact.title}
+        description={head.contact.description}
+        ogData={contactData.ogData}
+        url={head.contact.url}
+      />
       <BaseLayout currentPageUrl={contactPath}>
         <section className="flex flex-col lg:flex-row lg:justify-between text-justify w-full min-h-pageView tall:min-h-[70vh] tallMobile:min-h-[calc(100vh-100px)] font-redHat">
           <div className="lg:w-2/5">
             {isDesktop ? <Title title={companyName.toUpperCase()} /> : null}
             <p className="pb-6 text-sm xxs:text-base">{shortDescription.toUpperCase()}</p>
             <p className="pb-6 text-sm leading-8 xxs:text-base">{contactText}</p>
+            <p className="pb-2 text-sm leading-8 xxs:text-base">nip: {nip}</p>
+            <p className="pb-6 text-sm leading-8 xxs:text-base">regon: {regon}</p>
             <div className="flex py-4">
               <Icon icon="bx:bxs-phone-call" width="24" height="24" className="mr-4" />
               <div className="flex relative justify-between items-center w-32 lg:w-48">

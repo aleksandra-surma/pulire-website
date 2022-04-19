@@ -1,6 +1,6 @@
 {
   "name": "pulire",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "pulire - kompleksowe sprzątanie obiektów",
   "main": "index.js",
   "private": true,

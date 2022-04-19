@@ -6,9 +6,14 @@ import { useRouter } from 'next/router';
 import head from 'data/head';
 import HeadSection from 'components/HeadSection';
 import home from 'data/home';
+import { useEffect } from 'react';
 
 const FourZeroFour = () => {
   const router = useRouter();
+
+  useEffect(() => {
+    router.push('/404');
+  }, []);
 
   return (
     <>
@@ -17,6 +22,7 @@ const FourZeroFour = () => {
         description={head.fourZeroFour.description}
         indexing={false}
         ogData={home.ogData}
+        url={head.fourZeroFour.url}
       />
       <BaseLayout currentPageUrl={router.pathname}>
         <section className="flex flex-col lg:flex-row lg:items-center lg:justify-between text-justify w-full min-h-pageView tall:min-h-[70vh] tallMobile:min-h-[calc(100vh-100px)] font-redHat">
