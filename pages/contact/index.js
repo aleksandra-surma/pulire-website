@@ -23,8 +23,6 @@ const Contact = () => {
     companyName,
     shortDescription,
     contactText: rawContactText,
-    nazwaFirmy,
-    adresFirmy,
     nip,
     regon,
     phoneNumber,
