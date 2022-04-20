@@ -4,8 +4,8 @@ const Sitemap = () => {};
 
 export const getServerSideProps = ({ res }) => {
   const baseUrl = {
-    development: 'http://localhost:3000',
-    production: 'https://www.pulire.co',
+    development: 'localhost:3000',
+    production: 'www.pulire.co',
   }[process.env.NODE_ENV];
 
   const staticPages = fs
