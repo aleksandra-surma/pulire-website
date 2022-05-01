@@ -2,7 +2,6 @@ import spongeBlackMobile from 'public/images/sponge-black.jpg';
 import spongeBlackDesktop from 'public/images/sponge-black-500x487.jpg';
 import windowCleaner from 'public/images/window-cleaner-tool.jpeg';
 import brushStroke from 'public/images/brush-stroke-home-02.jpeg';
-// import dustDirt from 'public/images/dust-dirt-black-and-white-900x825.jpg';
 
 const home = {
   companyName: 'Pulire',
@@ -33,7 +32,7 @@ const home = {
   ogData: {
     title: 'Pulire - kompleksowe sprzątanie obiektów',
     description:
-      'Zajrzyj i napisz do nas. Oferujemy usługi w zakresie sprzątania przemysłowych, handlowo-usługowych, hoteli, biur i mieszkaniowych. W naszej ofercie znajduje się również sprzątanie poremontowe i pobudowlane. Wykonujemy indywidualne wyceny zgodnie z zapotrzebowaniem klienta.',
+      'Firma sprzątająca z Lublina. Oferujemy usługi w zakresie sprzątania budynków przemysłowych, handlowo-usługowych, hoteli, biur oraz mieszkaniowych. W naszej ofercie znajduje się również sprzątanie poremontowe i pobudowlane.',
     url: 'www.pulire.co',
     image: spongeBlackDesktop,
   },

@@ -8,6 +8,8 @@ export const contactData = {
   contactText:
     'Masz pytanie, chcesz otrzymać wycenę albo nawiązać współpracę? Skontaktuj się z nami za pomocą telefonu, maila albo formularza kontaktowego.',
   phoneNumber: '535 412 571',
+  nip: '9182067290',
+  regon: '521727546',
   email: 'info@pulire.co',
   offerUrl: stainPaintImg,
   socialMedia: {
@@ -17,7 +19,7 @@ export const contactData = {
   ogData: {
     title: 'Pulire - kontakt',
     description:
-      'Zajrzyj i napisz do nas. Oferujemy usługi w zakresie sprzątania przemysłowych, handlowo-usługowych, hoteli, biur i mieszkaniowych. W naszej ofercie znajduje się również sprzątanie poremontowe i pobudowlane. Wykonujemy indywidualne wyceny zgodnie z zapotrzebowaniem klienta.',
+      'Firma sprzątająca z Lublina. Oferujemy usługi w zakresie sprzątania budynków przemysłowych, handlowo-usługowych, hoteli, biur oraz mieszkaniowych. W naszej ofercie znajduje się również sprzątanie poremontowe i pobudowlane.',
     url: 'www.pulire.co/kontakt',
     image: napkinsImg,
   },

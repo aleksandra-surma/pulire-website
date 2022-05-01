@@ -4,9 +4,8 @@ const Sitemap = () => {};
 
 export const getServerSideProps = ({ res }) => {
   const baseUrl = {
-    development: 'http://localhost:3000',
-    // production: 'https://pulire.co', //todo: final change!
-    production: 'https://pulire-predeploy.vercel.app',
+    development: 'localhost:3000',
+    production: 'www.pulire.co',
   }[process.env.NODE_ENV];
 
   const staticPages = fs

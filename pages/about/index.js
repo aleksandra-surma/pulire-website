@@ -13,7 +13,12 @@ const About = () => {
 
   return (
     <>
-      <HeadSection title={head.about.title} description={head.about.description} ogData={aboutData.ogData} />
+      <HeadSection
+        title={head.about.title}
+        description={head.about.description}
+        ogData={aboutData.ogData}
+        url={head.about.url}
+      />
       <BaseLayout currentPageUrl={aboutPath}>
         <section className="flex flex-col lg:flex-row lg:items-center lg:justify-between text-justify w-full min-h-pageView tall:min-h-[70vh] tallMobile:min-h-[calc(100vh-100px)] font-redHat">
           <div className="about__textContentWrapper lg:w-2/5">

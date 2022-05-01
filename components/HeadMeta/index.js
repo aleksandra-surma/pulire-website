@@ -23,7 +23,7 @@ const HeadMeta = () => {
       <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`} />
       <meta
         name="keywords"
-        content="pulire, sprzątanie lublin, sprzątanie hoteli Lublin, sprzątanie obiektów komercyjnych Lublin, firma sprzątająca Lublin, sprzątanie obiektów handlowo-usługowych, sprzątanie biur, sprzątanie poremontowe lublin"
+        content="pulire, sprzątanie hoteli Lublin, sprzątanie obiektów komercyjnych Lublin, firma sprzątająca Lublin, sprzątanie obiektów handlowo-usługowych, sprzątanie biur, sprzątanie poremontowe lublin"
       />
       <meta property="og:locale" content="pl_PL" />
       {/* <meta property="fb:app_id" content="ХХХХХХХХХХХХХХХ" /> todo: add app_id - https://developers.facebook.com/docs/sharing/webmasters#markup  */}
@@ -40,10 +40,7 @@ const HeadMeta = () => {
           `,
         }}
       />
-      {/* <meta name="robots" content="noindex" /> */}
       <title>Pulire - kompleksowe sprzątanie obiektów</title>
-      <meta name="robots" content="all" />
-      {/* <meta name="robots" content="all" />//todo: robots */}
     </Head>
   );
 };
