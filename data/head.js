@@ -3,7 +3,7 @@ const head = {
     title: 'Pulire - kompleksowe sprzątanie obiektów',
     url: '/',
     description:
-      'Zajrzyj i napisz do nas. Oferujemy usługi w zakresie sprzątania przemysłowych, handlowo-usługowych, hoteli, biur i mieszkaniowych. W naszej ofercie znajduje się również sprzątanie poremontowe i pobudowlane. Wykonujemy indywidualne wyceny zgodnie z zapotrzebowaniem klienta.',
+      'Firma sprzątająca z Lublina. Oferujemy usługi w zakresie sprzątania budynków przemysłowych, handlowo-usługowych, hoteli, biur oraz mieszkaniowych. W naszej ofercie znajduje się również sprzątanie poremontowe i pobudowlane.',
   },
   about: {
     title: 'Pulire - o nas',
@@ -17,13 +17,13 @@ const head = {
     url: '/oferta',
 
     description:
-      'Zadzwoń lub napisz. W naszej ofercie znajdziesz usługi w zakresie sprzątania budynków przemysłowych, handlowo-usługowych, hoteli, biur, mieszkaniowych oraz sprzątanie poremontowe i pobudowlane.',
+      'Pulire to firma sprzątająca z Lublina. Świadczymy usługi w zakresie sprzątania budynków przemysłowych, handlowo-usługowych, hoteli, biur, mieszkaniowych oraz sprzątanie poremontowe i pobudowlane.',
   },
   contact: {
     title: 'Pulire - kontakt',
     url: '/kontakt',
     description:
-      'Pulire czeka na Ciebie! Zadzwoń lub napisz. W naszej ofercie znajdziesz usługi w zakresie sprzątania budynków przemysłowych, handlowo-usługowych, hoteli, biur, mieszkaniowych oraz sprzątanie poremontowe i pobudowlane.',
+      'Pulire to nowa jakość w sprzątaniu, nastawiamy się na dokładność i jakość. Zadowolenie klienta jest dla nas kluczowe. Działamy głównie na terenie Lublina i okolic.',
   },
   fourZeroFour: {
     title: 'Pulire - 404',

@@ -20,7 +20,7 @@ export const offersData = {
   ogData: {
     title: 'Pulire - oferta',
     description:
-      'Zajrzyj i napisz do nas. Oferujemy usługi w zakresie sprzątania w obiektach komercyjnych i użyteczności publicznej oraz sprzątanie poremontowe i pobudowlane.',
+      'Firma sprzątająca z Lublina. Oferujemy usługi w zakresie sprzątania budynków przemysłowych, handlowo-usługowych, hoteli, biur oraz mieszkaniowych. W naszej ofercie znajduje się również sprzątanie poremontowe i pobudowlane.',
     url: 'www.pulire.co/oferta',
   },
   offers: [
