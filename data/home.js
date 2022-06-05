@@ -32,7 +32,7 @@ const home = {
   ogData: {
     title: 'Pulire - kompleksowe sprzątanie obiektów',
     description:
-      'Firma sprzątająca z Lublina. Oferujemy usługi w zakresie sprzątania budynków przemysłowych, handlowo-usługowych, hoteli, biur oraz mieszkaniowych. W naszej ofercie znajduje się również sprzątanie poremontowe i pobudowlane.',
+      'Firma sprzątająca z Lublina. Świadczymy usługi w zakresie sprzątania budynków przemysłowych, handlowo-usługowych, hoteli, biur oraz mieszkaniowych. W naszej ofercie znajduje się również sprzątanie poremontowe i pobudowlane.',
     url: 'www.pulire.co',
     image: spongeBlackDesktop,
   },
