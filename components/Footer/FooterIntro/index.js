@@ -16,7 +16,7 @@ const FooterIntro = () => {
       </h2>
       <div className="">
         {home.shortDescription.map((paragraph) => (
-          <p key={uuid()} className="py-2 text-justify xs:text-left lg:text-justify font-extralight">
+          <p key={uuid()} className="py-2 xs:text-left lg:text-justify font-extralight">
             {paragraph}
           </p>
         ))}

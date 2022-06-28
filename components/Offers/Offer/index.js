@@ -24,9 +24,9 @@ const Offer = ({ offer }) => {
       <div className="lg:w-1/2 lg:mr-10">
         <div className="flex items-center mb-5">
           <div className="m-3 animate-none hover:animate-shake">{offer.icon}</div>
-          <h3 className="ml-4 text-base font-semibold text-left">{offer.title}</h3>
+          <h3 className="ml-4 text-base font-semibold">{offer.title}</h3>
         </div>
-        <div className="mb-8 leading-8 text-left xxs:text-justify">
+        <div className="mb-8 leading-8 text-left">
           <p>{isOpened ? description : shortDescription}</p>
         </div>
         {isOpened && !isDesktop ? (

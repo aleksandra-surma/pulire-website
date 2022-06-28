@@ -28,7 +28,7 @@ export default function HomeOffer() {
       <div className="flex flex-col justify-center lg:p-14 lg:w-3/5 min-h-[calc(100vh-80px)] tallMobile:min-h-[80vh] font-redHat">
         <div className="mb-8">
           <h3 className="pb-6 text-3xl font-semibold text-left">{heading}</h3>
-          <p className="text-justify">
+          <p>
             Naszą ofertę kierujemy do właścicieli obiektów komercyjnych jak i prywatnych. Posiadamy szerokie spektrum
             działań. Poniżej wymieniamy specjalności w których szczególnie dobrze się odnajdujemy:
           </p>
@@ -39,10 +39,10 @@ export default function HomeOffer() {
 
             return (
               <li key={uuid()} data-aos="fade-left" className="flex mb-12">
-                {isDesktop ? <div className="mr-4 text-justify">{icon}</div> : null}
+                {isDesktop ? <div className="mr-4">{icon}</div> : null}
                 <div>
                   <h4 className="flex items-center h-[40px] font-semibold text-xl mb-4">{title}</h4>
-                  <p className="text-left xxs:text-justify">{homeOfferDescription}</p>
+                  <p className="text-left">{homeOfferDescription}</p>
                 </div>
               </li>
             );
