@@ -22,7 +22,7 @@ const Footer = (props, ref) => {
           </section>
           <aside className="flex flex-col">
             <Copyrights />
-            <div className="flex px-4 pt-2 w-full h-full bg-neutral-800 xs:flex-row items-left justify-left xxs:px-6 tablet:px-8 tablet:pt-0 tablet:pb-8">
+            <div className="flex px-4 pt-2 pb-4 w-full h-full bg-neutral-800 xs:flex-row items-left justify-left xxs:px-6 tablet:px-8 tablet:pt-0 tablet:pb-8">
               <p className="text-xs font-extralight text-neutral-300">Created by</p>
               <a
                 className="text-xs font-bold text-neutral-300"
@@ -61,7 +61,7 @@ const Footer = (props, ref) => {
                     layout="fill"
                     objectFit="contain"
                     quality={65}
-                    alt="ioten, autor strony"
+                    alt="ioten, autor strony internetowej pulire"
                   />
                 </div>
                 <p className="text-xs font-bold text-neutral-300">ioten.io</p>
