@@ -12,8 +12,8 @@ const transporterDev = {
   host: 'smtp.ethereal.email',
   port: 587,
   auth: {
-    user: 'oliver.hamill67@ethereal.email',
-    pass: 'HYquw6xNbxGCbEqc49',
+    user: 'elvera10@ethereal.email',
+    pass: '95RZbdgWG2C8a1zHmT',
   },
 };
 

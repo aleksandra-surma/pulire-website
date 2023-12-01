@@ -23,4 +23,5 @@ export const navButtonsData = {
 
 export const formButtonsData = {
   submit: 'Wyślij',
+  submitting: 'Wysyłanie...',
 };

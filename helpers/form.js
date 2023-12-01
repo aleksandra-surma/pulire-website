@@ -9,8 +9,17 @@ export const handleOnChange = (event, formField, formState) => {
   setFormValues({ ...formValues, [formField]: text });
 };
 
-export const handleSubmit = async (e, { setFormValues, setError, setIsMessageSend }, offerFormRef, recaptcharef) => {
+export const handleSubmit = async (
+  e,
+  { setFormValues, setError, setIsMessageSend },
+  offerFormRef,
+  recaptcharef,
+  setIsSending,
+) => {
   e.preventDefault();
+
+  setIsSending(true);
+
   const payload = await getPayload(offerFormRef.current);
 
   const captchaToken = await recaptcharef.current.getValue();
