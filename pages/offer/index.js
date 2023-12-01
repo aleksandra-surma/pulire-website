@@ -23,7 +23,7 @@ const OffersView = () => {
         url={head.offer.url}
       />
       <BaseLayout currentPageUrl={offerPath}>
-        <section className="offers_offers flex flex-col lg:justify-center text-justify w-full min-h-pageView tall:min-h-[70vh] tallMobile:min-h-[calc(100vh-100px)] font-redHat">
+        <section className="offers_offers flex flex-col lg:justify-center lg:text-justify w-full min-h-pageView tall:min-h-[70vh] tallMobile:min-h-[calc(100vh-100px)] font-redHat">
           <Title title={offersData.title} />
           <Offers />
         </section>

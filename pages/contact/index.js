@@ -61,7 +61,7 @@ const Contact = () => {
         url={head.contact.url}
       />
       <BaseLayout currentPageUrl={contactPath}>
-        <section className="flex flex-col lg:flex-row lg:justify-between text-justify w-full min-h-pageView tall:min-h-[70vh] tallMobile:min-h-[calc(100vh-100px)] font-redHat">
+        <section className="flex flex-col lg:flex-row lg:justify-between lg:text-justify w-full min-h-pageView tall:min-h-[70vh] tallMobile:min-h-[calc(100vh-100px)] font-redHat">
           <div className="lg:w-2/5">
             {isDesktop ? <Title title={companyName.toUpperCase()} /> : null}
             <p className="pb-6 text-sm xxs:text-base">{shortDescription.toUpperCase()}</p>

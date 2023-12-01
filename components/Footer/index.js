@@ -22,25 +22,27 @@ const Footer = (props, ref) => {
           </section>
           <aside className="flex flex-col">
             <Copyrights />
-            <div className="flex px-4 pt-2 w-full h-full bg-neutral-800 xs:flex-row items-left justify-left xxs:px-6 tablet:px-8 tablet:pt-0 tablet:pb-8">
+            <div className="flex px-4 pt-2 pb-4 w-full h-full bg-neutral-800 xs:flex-row items-left justify-left xxs:px-6 tablet:px-8 tablet:pt-0 tablet:pb-8">
               <p className="text-xs font-extralight text-neutral-300">Created by</p>
-              <div className="relative w-[70px]">
-                <Image
-                  src={iotenWhiteLogo}
-                  priority
-                  layout="fill"
-                  objectFit="contain"
-                  quality={65}
-                  alt="czarna gąbka"
-                />
-              </div>
               <a
                 className="text-xs font-bold text-neutral-300"
                 href="https://www.ioten.io"
                 target="_blank"
                 title="autor strony"
                 rel="noopener noreferrer">
-                ioten.io
+                <div className="flex">
+                  <div className="relative w-[70px]">
+                    <Image
+                      src={iotenWhiteLogo}
+                      priority
+                      layout="fill"
+                      objectFit="contain"
+                      quality={65}
+                      alt="ioten, autor strony"
+                    />
+                  </div>
+                  ioten.io
+                </div>
               </a>
             </div>
           </aside>
@@ -58,8 +60,7 @@ const Footer = (props, ref) => {
                     priority
                     layout="fill"
                     objectFit="contain"
-                    quality={65}
-                    alt="czarna gąbka"
+                    alt="ioten, autor strony internetowej pulire"
                   />
                 </div>
                 <p className="text-xs font-bold text-neutral-300">ioten.io</p>
