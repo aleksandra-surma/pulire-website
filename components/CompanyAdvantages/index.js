@@ -31,6 +31,7 @@ export default function CompanyAdvantages() {
           quality={70}
           sizes="(min-width: 1200px) 50vw, (min-width: 768px) 100vh, (min-width: 0px) 50vw"
           alt="szary pył rzucający cień"
+          unoptimized
         />
       </div>
     </section>

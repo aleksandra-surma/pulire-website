@@ -40,6 +40,7 @@ const Footer = (props, ref) => {
                       objectFit="contain"
                       quality={65}
                       alt="ioten, autor strony"
+                      unoptimized
                     />
                   </div>
                   ioten.io
@@ -62,6 +63,7 @@ const Footer = (props, ref) => {
                     layout="fill"
                     objectFit="contain"
                     alt="ioten, autor strony internetowej pulire"
+                    unoptimized
                   />
                 </div>
                 <p className="text-xs font-bold text-neutral-300">ioten.io</p>

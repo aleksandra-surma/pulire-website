@@ -34,7 +34,14 @@ const FourZeroFour = () => {
           </div>
           <div className="p-2 py-8 lg:p-8 lg:w-1/2 lg:py-16">
             <div className="relative w-full h-[240px] sm:h-[320px] md:h-[400px]">
-              <Image priority src={napkinsImg} alt="Serwetki z logiem pulire" layout="fill" objectFit="contain" />
+              <Image
+                priority
+                src={napkinsImg}
+                alt="Serwetki z logiem pulire"
+                layout="fill"
+                objectFit="contain"
+                unoptimized
+              />
             </div>
           </div>
         </section>

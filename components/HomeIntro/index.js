@@ -41,6 +41,7 @@ export default function HomeIntro() {
           quality={65}
           alt="czarna gąbka"
           sizes="(min-width: 1200px) 50vw, (min-width: 768px) 100vh, (min-width: 0px) 50vw"
+          unoptimized
         />
       </div>
     </section>

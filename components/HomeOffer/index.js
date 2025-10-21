@@ -23,6 +23,7 @@ export default function HomeOffer() {
           quality={70}
           sizes="(min-width: 1200px) 60vw, (min-width: 0px) 30vw"
           alt="płyn do mycia szyb w czarnej butelce"
+          unoptimized
         />
       </div>
       <div className="flex flex-col justify-center lg:p-14 lg:w-3/5 min-h-[calc(100vh-80px)] tallMobile:min-h-[80vh] font-redHat">

@@ -32,7 +32,13 @@ const Offer = ({ offer }) => {
         {isOpened && !isDesktop ? (
           <div className="py-8 lg:p-8 lg:w-1/2 lg:py-16">
             <div className="relative w-full h-[240px]">
-              <Image src={offer.offerUrl} alt="Serwetki z logiem pulire" layout="fill" objectFit="contain" />
+              <Image
+                src={offer.offerUrl}
+                alt="Serwetki z logiem pulire"
+                layout="fill"
+                objectFit="contain"
+                unoptimized
+              />
             </div>
           </div>
         ) : null}
@@ -62,6 +68,7 @@ const Offer = ({ offer }) => {
             objectFit="cover"
             objectPosition="center center"
             alt={offer.offerImageAlt}
+            unoptimized
           />
         </div>
       ) : null}

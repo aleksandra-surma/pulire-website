@@ -36,6 +36,7 @@ const OffersView = () => {
                 layout="fill"
                 objectFit="contain"
                 alt="czarna szczotka, narzędzie do sprzątania"
+                unoptimized
               />
             </div>
           ) : null}
