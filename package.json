@@ -22,7 +22,7 @@
   },
   "homepage": "https://www.pulire.co",
   "engines": {
-    "node": "16.x"
+    "node": "20.x"
   },
   "dependencies": {
     "aos": "^2.3.4",
