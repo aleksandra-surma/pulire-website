@@ -31,7 +31,9 @@ const Offer = ({ offer }) => {
         </div>
         {isOpened && !isDesktop ? (
           <div className="py-8 lg:p-8 lg:w-1/2 lg:py-16">
-            <Image src={offer.offerUrl} alt="Serwetki z logiem pulire" />
+            <div className="relative w-full h-[240px]">
+              <Image src={offer.offerUrl} alt="Serwetki z logiem pulire" layout="fill" objectFit="contain" />
+            </div>
           </div>
         ) : null}
         {isOpened && offer.offerChecklist ? (
@@ -53,7 +55,7 @@ const Offer = ({ offer }) => {
         {isOpened ? <ButtonReserve /> : null}
       </div>
       {isDesktop ? (
-        <div className="relative w-1/2 min-h-full bg-blue-100">
+        <div className="relative w-1/2 min-h-full bg-blue-100 h-[280px] md:h-[360px] lg:h-auto">
           <Image
             src={offer.offerUrl}
             layout="fill"

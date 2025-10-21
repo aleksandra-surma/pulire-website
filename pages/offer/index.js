@@ -30,7 +30,7 @@ const OffersView = () => {
         <section className="offers w-full flex flex-col lg:flex-row lg:justify-between mt-10">
           <FAQ />
           {isDesktop ? (
-            <div className="relative p-2 py-12 lg:p-8 lg:w-[36%] flex justify-center">
+            <div className="relative p-2 py-12 lg:p-8 lg:w-[36%] flex justify-center h-[260px] md:h-[360px] lg:h-[calc(100vh-260px)]">
               <Image
                 src={faq.faqUrl}
                 layout="fill"

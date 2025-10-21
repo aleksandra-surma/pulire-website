@@ -32,7 +32,7 @@ const Footer = (props, ref) => {
                 title="autor strony"
                 rel="noopener noreferrer">
                 <div className="flex">
-                  <div className="relative w-[70px]">
+                  <div className="relative w-[70px] h-[16px]">
                     <Image
                       src={iotenWhiteLogo}
                       priority
