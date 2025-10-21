@@ -21,6 +21,9 @@
     "url": "https://github.com/sebastian-lucjan/pulire-website/issues"
   },
   "homepage": "https://www.pulire.co",
+  "engines": {
+    "node": "16.x"
+  },
   "dependencies": {
     "aos": "^2.3.4",
     "axios": "^0.24.0",

@@ -1,12 +1,13 @@
 import { useContext, forwardRef } from 'react';
 import { PageContext } from 'data/pageContext';
 import paths from 'data/paths';
-import iotenWhiteLogo from 'public/ioten-logo-white-small.png';
 import Image from 'next/image';
 import FooterIntro from './FooterIntro';
 import FooterOffers from './FooterOffers';
 import FooterContact from './FooterContact';
 import Copyrights from './Copyrights';
+
+const iotenWhiteLogo = '/ioten-logo-white-small.png';
 
 const Footer = (props, ref) => {
   const { currentPage: pathnameUrl } = useContext(PageContext);

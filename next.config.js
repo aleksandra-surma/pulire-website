@@ -39,6 +39,7 @@ module.exports = (phase) => {
     rewrites,
     images: {
       unoptimized: true,
+      disableStaticImages: true,
     },
   };
 };
