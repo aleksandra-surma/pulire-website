@@ -1,7 +1,7 @@
-import spongeBlackMobile from 'public/images/sponge-black.jpg';
-import spongeBlackDesktop from 'public/images/sponge-black-500x487.jpg';
-import windowCleaner from 'public/images/window-cleaner-tool.jpeg';
-import brushStroke from 'public/images/brush-stroke-home-02.jpeg';
+const spongeBlackMobile = '/images/sponge-black.jpg';
+const spongeBlackDesktop = '/images/sponge-black-500x487.jpg';
+const windowCleaner = '/images/window-cleaner-tool.jpeg';
+const brushStroke = '/images/brush-stroke-home-02.jpeg';
 
 const home = {
   companyName: 'Pulire',

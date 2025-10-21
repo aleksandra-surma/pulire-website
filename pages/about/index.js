@@ -4,9 +4,10 @@ import Title from 'components/Title';
 import { navButtonsData } from 'data/buttons';
 import AboutText from 'components/AboutText';
 import Image from 'next/image';
-import napkinsImg from 'public/images/napkins-pulire.jpeg';
 import HeadSection from 'components/HeadSection';
 import head from 'data/head';
+
+const napkinsImg = '/images/napkins-pulire.jpeg';
 
 const About = () => {
   const aboutPath = navButtonsData.about.path;

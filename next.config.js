@@ -37,5 +37,8 @@ module.exports = (phase) => {
     reactStrictMod,
     env,
     rewrites,
+    images: {
+      unoptimized: true,
+    },
   };
 };

@@ -1,12 +1,13 @@
 import BaseLayout from 'components/BaseLayout';
 import Image from 'next/image';
 import Title from 'components/Title';
-import napkinsImg from 'public/images/napkins-pulire.jpeg';
 import { useRouter } from 'next/router';
 import head from 'data/head';
 import HeadSection from 'components/HeadSection';
 import home from 'data/home';
 import { useEffect } from 'react';
+
+const napkinsImg = '/images/napkins-pulire.jpeg';
 
 const FourZeroFour = () => {
   const router = useRouter();

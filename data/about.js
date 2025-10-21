@@ -1,4 +1,4 @@
-import napkinsImg from 'public/images/napkins-pulire.jpeg';
+const napkinsImg = '/images/napkins-pulire.jpeg';
 
 const aboutData = {
   title: 'O\xa0nas',

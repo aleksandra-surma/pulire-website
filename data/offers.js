@@ -2,13 +2,14 @@ import { Icon } from '@iconify/react';
 import { BiBuildingHouse } from 'react-icons/bi';
 import { HiOutlineOfficeBuilding } from 'react-icons/hi';
 import { v4 as uuid } from 'uuid';
-import commercialImg from 'public/images/comertial-cleaining-800-533.jpeg';
-import productionLineImg from 'public/images/production-line-cleaning-800x505.jpeg';
-import postRenovationImg from 'public/images/cleaning-after-renovation-800x532.jpeg';
-import multiFamilyBuildingImg from 'public/images/multi-family-building-1000x563.jpg';
-import officeSpaceImg from 'public/images/offices-space-cleaning-800-533.jpeg';
-import hotelCleaningImg from 'public/images/hotel-cleanining-800x533.jpeg';
-import cleaningToolImg from 'public/images/cleaning-tool-filtered.jpeg';
+
+const commercialImg = '/images/comertial-cleaining-800-533.jpeg';
+const productionLineImg = '/images/production-line-cleaning-800x505.jpeg';
+const postRenovationImg = '/images/cleaning-after-renovation-800x532.jpeg';
+const multiFamilyBuildingImg = '/images/multi-family-building-1000x563.jpg';
+const officeSpaceImg = '/images/offices-space-cleaning-800-533.jpeg';
+const hotelCleaningImg = '/images/hotel-cleanining-800x533.jpeg';
+const cleaningToolImg = '/images/cleaning-tool-filtered.jpeg';
 
 const iconSize = 40;
 

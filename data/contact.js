@@ -1,5 +1,5 @@
-import stainPaintImg from 'public/images/stain-paint.jpg';
-import napkinsImg from 'public/images/napkins-pulire.jpeg';
+const stainPaintImg = '/images/stain-paint.jpg';
+const napkinsImg = '/images/napkins-pulire.jpeg';
 
 export const contactData = {
   companyName: 'Pulire',
