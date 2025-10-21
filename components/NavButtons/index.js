@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { Link } from 'routes';
+import Link from 'next/link';
 import { navButtonsData } from 'data/buttons';
 import { PageContext } from 'data/pageContext';
 
@@ -29,7 +29,7 @@ const NavButtons = ({ isMobile = true }) => {
             key={label}
             onClick={toggleMenuActive}
             className={isMobile ? mobileNavButtonClasses(path) : nonMobileNavButtonClasses(path)}>
-            <Link route={path}>{label}</Link>
+            <Link href={path}>{label}</Link>
           </div>
         );
       })}

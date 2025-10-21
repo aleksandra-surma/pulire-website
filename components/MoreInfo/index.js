@@ -1,8 +1,8 @@
-import { Link } from 'routes';
+import Link from 'next/link';
 
 const MoreInfo = ({ directionPage }) => {
   return (
-    <Link route={directionPage}>
+    <Link href={directionPage}>
       <a className="block pt-4 text-sm text-neutral-400 cursor-pointer">więcej...</a>
     </Link>
   );
